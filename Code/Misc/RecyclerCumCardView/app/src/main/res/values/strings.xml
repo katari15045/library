@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RecyclerCumCardView</string>
+    <string name="book_title">Three Easy Pieces</string>
+    <string name="book_author_heading">Authors :\ </string>
+    <string name="book_author_names">Bear Grylls, Roman AtWood et al</string>
+    <string name="book_checkout_title">Checkouts :\ </string>
+    <string name="book_holdings_title">On Hold :\ </string>
+</resources>
