@@ -15,10 +15,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        removeActionBar();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_activity_recycler_view);
         fillDatabase();
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(new MyAdapter(this, database));
+    }
+
+    private void removeActionBar(){
+        getSupportActionBar().hide();
     }
 
     private void fillDatabase(){
