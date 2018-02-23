@@ -1,6 +1,5 @@
 To Do
 -----
--> Horozontal recycler view similar to https://youtu.be/94rCjYxvzEE?t=5s
 -> Collapsing toolbar
 -> Splash screen similar to https://www.youtube.com/watch?v=va2IRW_e7_w&feature=youtu.be&t=11m9s 
 -> Update Android Studio on it's startup

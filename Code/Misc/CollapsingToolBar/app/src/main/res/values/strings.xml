@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CollapsingToolBar</string>
+    <string name="about_title">About</string>
+    <string name="about_content">It\'s been a long day...</string>
+</resources>
