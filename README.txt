@@ -1,6 +1,5 @@
 To Do
 -----
--> Collapsing toolbar
 -> Splash screen similar to https://www.youtube.com/watch?v=va2IRW_e7_w&feature=youtu.be&t=11m9s 
 -> Update Android Studio on it's startup
 -> Latest GUIs : https://medium.com/@mmbialas/30-new-android-libraries-and-projects-released-in-summer-2017-which-should-catch-your-attention-d3702bd9bdc6
