@@ -23,7 +23,7 @@
         android:layout_height="?attr/actionBarSize"
         android:paddingVertical="30dp"
         android:id="@+id/search_image_view_search_icon"
-        android:src="@drawable/ic_search"
+        android:src="@drawable/ic_action_search"
         android:tint="@color/white"
         android:layout_weight="1"
         android:background="@color/colorPrimary"
