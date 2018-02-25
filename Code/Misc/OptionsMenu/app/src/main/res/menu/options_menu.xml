@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/options_menu_about"
+        android:title="@string/about"
+        android:orderInCategory="0"/>
+
+    <item
+        android:id="@+id/options_menu_updates"
+        android:title="@string/updates"
+        android:orderInCategory="1"/>
+
+    <item
+        android:id="@+id/options_menu_occupancy"
+        android:title="@string/occupancy"
+        android:orderInCategory="2"/>
+</menu>
