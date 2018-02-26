@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">IIITD Library</string>
+
     <string name="splash_screen_startup_duration">3000</string>
     <string name="splash_screen_sleep_duration">5000</string>
     <string name="splash_screen_library_heading">Library</string>
+
+    <string name="nav_drawer_login_title">Login</string>
+    <string name="nav_drawer_header_library_title">Library</string>
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
 </resources>

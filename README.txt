@@ -12,6 +12,7 @@ Tutorials
 -> Splash screen with animation : https://www.youtube.com/watch?v=h_hTuaEpc-8
 -> Acivity transition animations : https://www.youtube.com/watch?v=0s6x3Sn4eYo
 -> Fragments : Slidenerd, Youtube
+-> Navigation Drawer for multiple activities : https://stackoverflow.com/questions/27797906/navigation-drawer-with-multiple-activities-nullpointerexception
 -> Add multiple resolutions of an image : https://www.youtube.com/watch?v=bbFLDR6X2D8
 -> Instead of writing the same property for all the children in xml, set a theme in parent which points to a style
 -> Java Coding Conventions -> https://google.github.io/styleguide/javaguide.html

@@ -18,7 +18,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        hideActionBar();
         startAnimation();
         startWaiter();
     }
@@ -38,10 +37,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     private void startWaiter(){
         Thread thread = new Thread(new Waiter(this));
         thread.start();
-    }
-
-    private void hideActionBar(){
-        getSupportActionBar().hide();
     }
 }
 
@@ -63,7 +58,7 @@ class Waiter implements Runnable{
         } catch (InterruptedException e){
             e.printStackTrace();
         }finally {
-            Intent intent = new Intent(context, HomeActivity.class);
+            Intent intent = new Intent(context, MainActivity.class);
             context.startActivity(intent);
             ((AppCompatActivity)context).finish();
         }
