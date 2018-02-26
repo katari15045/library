@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iiitd_logo_for_splash_screen"
+        android:id="@+id/activity_splash_screen_image_view_logo"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_splash_screen_text_view_library"
+        android:text="@string/splash_screen_library_heading"
+        android:textColor="@color/white"
+        android:textSize="64dp"
+        android:fontFamily="sans-serif-smallcaps"
+        />
+
+</LinearLayout>
