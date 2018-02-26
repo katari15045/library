@@ -3,5 +3,6 @@
     <item
         android:id="@+id/menu_nav_drawer_login"
         android:title="@string/nav_drawer_login_title"
-        android:icon="@drawable/ic_action_user" />
+        android:icon="@drawable/ic_action_user"
+        android:orderInCategory="0"/>
 </menu>
