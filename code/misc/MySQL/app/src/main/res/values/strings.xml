@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MySQL</string>
+    <string name="hint_input">Command</string>
+    <string name="radio_text">Query</string>
+    <string name="button_text">Execute</string>
+    <string name="result_text">Result Appears Here</string>
+    <string name="progress_dialog_text">processing...</string>
+</resources>
