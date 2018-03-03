@@ -24,3 +24,63 @@ Colors
 <color name="colorPrimaryDark">#30968f</color>
 <color name="colorAccent">#FFFFFF</color>
 <color name="white">#FFFFFF</color>
+
+Database - Table vs Description ~ 173 tables
+--------------------------------------------
+1.	Table -> borrowers
+   	Description ->  a user
+   	command -> select * from borrowers where borrowernumber=1645;
+
+2. 	Table -> biblio
+	Description -> a book; it can have multiple copies; each copy is an item.
+	command -> select * from biblio where biblionumber=6618;
+
+3. 	Table -> items
+	Description -> A copy of a book
+	command -> select * from items where itemnumber=8172
+			   select * from items where biblionumber=6610;
+
+4.	Table -> virtualShelves
+	Description -> No idea
+	command -> select * from virtualshelves where shelfnumber=101;
+
+.	Table -> statistics
+	Description -> 
+	Command -> select * from statistics where borrowernumber=750;
+
+Database queries
+----------------
+1. Procedures
+	inside sample.sql
+		CREATE PROCEDURE account_count()
+		SELECT COUNT(*) FROM borrowers;
+	MySQL Command line
+		SOURCE sample.sql;
+		CALL account_count();
+		DROP PROCEDURE account_count;
+
+2. Variables
+	inside sample.sql
+		CREATE PROCEDURE foo()
+		SET @size = (SELECT COUNT(*) FROM borrowers);
+		SELECT @size
+	MySQL Command line
+		DROP PROCEDURE foo;SOURCE sample.sql;CALL foo;
+
+3. if else
+	inside sample.sql
+		CREATE PROCEDURE foo()
+		SET @size = (SELECT COUNT(*) FROM borrowers);
+		SELECT CASE
+			WHEN (@size=0) THEN (SELECT "Empty")
+			ELSE (SELECT "Non-empty")
+		END;
+	MySQL Command line
+		 DROP PROCEDURE foo;SOURCE sample.sql;CALL foo;
+
+
+
+
+
+
+
