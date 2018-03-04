@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageViewer = new ImageViewer(this);
-        imageFetcher = new ImageFetcher("9788177583724", imageViewer);
+        //imageFetcher = new ImageFetcher(this, "9788177583724", imageViewer, false);
+        imageFetcher = new ImageFetcher(this, "6865", imageViewer, true);
         imageFetcher.execute();
     }
 }

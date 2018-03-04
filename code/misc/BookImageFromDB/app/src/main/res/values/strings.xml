@@ -2,6 +2,7 @@
     <string name="app_name">BookImageFromDB</string>
     <string name="progress_dialog_text">Processing...</string>
 
+    <string name="command_isbn_from_biblio">select isbn from biblioitems where biblionumber=</string>
     <string name="command_recent_100_isbns">select isbn from biblioitems where isbn>999999999
         order by timestamp limit 10;</string>
 </resources>
