@@ -4,7 +4,10 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -17,24 +20,29 @@ import java.sql.ResultSet;
 public class ImageFetcher extends AsyncTask<Void, Void, Void> {
 
     private Context context = null;
+    private AppCompatActivity activity = null;
     private String isbn = null;
     private String biblioNumber = null;
     private AsyncTask<Void, Void, Void> postExecTask = null;
     private static Bitmap imageBitmap = null;
+    private AlertDialog dialog = null;
 
     ImageFetcher(Context context, String number, AsyncTask<Void, Void, Void> postExecTask, boolean isBiblioNumber){
         this.context = context;
+        activity = (AppCompatActivity)context;
         if(isBiblioNumber){
             this.biblioNumber = number;
         }else{
             this.isbn = number;
         }
         this.postExecTask = postExecTask;
+        initProgressDialog();
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+        dialog.show();
     }
 
     @Override
@@ -105,10 +113,18 @@ public class ImageFetcher extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
+        dialog.dismiss();
         postExecTask.execute();
     }
 
     static Bitmap getImageBitmap(){
         return  imageBitmap;
+    }
+
+    private void initProgressDialog(){
+        View progressDialogView = activity.getLayoutInflater().inflate(R.layout.progress_dialog, null);
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+        dialogBuilder.setView(progressDialogView);
+        dialog = dialogBuilder.create();
     }
 }

@@ -1,6 +1,6 @@
 To Do
 -----
--> Splash screen similar to https://www.youtube.com/watch?v=va2IRW_e7_w&feature=youtu.be&t=11m9s 
+-> Progressbar for imageFetcher
 -> Update Android Studio on it's startup
 -> Latest GUIs : https://medium.com/@mmbialas/30-new-android-libraries-and-projects-released-in-summer-2017-which-should-catch-your-attention-d3702bd9bdc6
 -> Top 9 UI Design Trends for Mobile Apps in 2018: https://medium.com/life-never-dead-and-gone/top-9-ui-design-trends-for-mobile-apps-in-2018-645993c802d4
