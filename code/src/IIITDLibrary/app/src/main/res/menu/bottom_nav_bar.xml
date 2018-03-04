@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_bottom_nav_bar_home"
+        android:title="@string/bottom_nav_bar_title_home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/menu_bottom_nav_bar_search"
+        android:title="@string/bottom_nav_bar_title_search"
+        android:icon="@drawable/ic_search"/>
+
+    <item
+        android:id="@+id/menu_bottom_nav_bar_login"
+        android:title="@string/bottom_nav_bar_title_login"
+        android:icon="@drawable/ic_action_user"
+        />
+</menu>
