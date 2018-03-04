@@ -13,8 +13,14 @@
     <string name="bottom_nav_bar_title_home">Home</string>
     <string name="bottom_nav_bar_title_search">Search</string>
     <string name="bottom_nav_bar_title_login">Login</string>
+    <string name="bottom_nav_bar_title_profile">Profile</string>
 
     <string name="progress_dialog_text">Processing...</string>
+
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_label">Login</string>
+    <string name="login_fragment_title">Login</string>
 
     <string name="command_isbn_from_biblio">select isbn from biblioitems where biblionumber=</string>
     <string name="command_recent_books">select isbn, biblionumber from biblioitems where isbn>999999999
