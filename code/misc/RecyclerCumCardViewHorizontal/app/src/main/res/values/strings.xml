@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RecyclerCumCardViewHorizontal</string>
+    <string name="progress_dialog_text">Processing...</string>
+
+    <string name="command_isbn_from_biblio">select isbn from biblioitems where biblionumber=</string>
+    <string name="command_recent_books">select isbn, biblionumber from biblioitems where isbn>999999999
+        order by timestamp limit</string>
 </resources>

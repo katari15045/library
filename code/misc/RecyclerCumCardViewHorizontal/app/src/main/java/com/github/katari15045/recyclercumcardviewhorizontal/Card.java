@@ -1,17 +1,37 @@
 package com.github.katari15045.recyclercumcardviewhorizontal;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by Saketh Katari on 23-02-2018.
  */
 
 public class Card {
-    private int image;
+    private Bitmap image = null;
+    private String isbn = null;
+    private String biblionumber = null;
 
-    public void setImage(int image){
+    String getIsbn(){
+        return isbn;
+    }
+
+    void setIsbn(String isbn){
+        this.isbn = isbn;
+    }
+
+    String getBiblionumber(){
+        return biblionumber;
+    }
+
+    void setBiblionumber(String biblionumber){
+        this.biblionumber = biblionumber;
+    }
+
+    void setImage(Bitmap image){
         this.image = image;
     }
 
-    public int getImage(){
+    Bitmap getImage(){
         return image;
     }
 }

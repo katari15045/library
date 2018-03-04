@@ -1,6 +1,7 @@
 package com.github.katari15045.recyclercumcardviewhorizontal;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +34,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Card card = database.get(position);
-        holder.imageView.setImageResource(card.getImage());
+        holder.imageView.setImageBitmap(card.getImage());
+        holder.imageView.setOnClickListener(new MyListener(context, card));
     }
 
     @Override
@@ -52,18 +54,19 @@ class MyViewHolder extends RecyclerView.ViewHolder{
         this.view = view;
         this.context = context;
         imageView = (ImageView) view.findViewById(R.id.card_image_view_book);
-        view.setOnClickListener(new MyListener(context));
     }
 }
 
 class MyListener implements View.OnClickListener{
     private Context context = null;
+    private Card card = null;
 
-    public MyListener(Context context){
+    public MyListener(Context context, Card card){
         this.context = context;
+        this.card = card;
     }
 
     public void onClick(View view){
-        Toast.makeText(context, "Coming soon...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "biblionumber : " + card.getBiblionumber(), Toast.LENGTH_SHORT).show();
     }
 }
