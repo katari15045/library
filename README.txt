@@ -8,6 +8,7 @@ To Do
 
 Tutorials
 ---------
+-> Get book cover from ISBN : https://stackoverflow.com/questions/14422528/how-to-get-book-cover-from-isbn-using-google-book-api
 -> Recycler View : https://medium.com/@harivigneshjayapalan/android-implementing-custom-recycler-view-part-i-9ce5e9af7fea
 -> layout_weight : https://stackoverflow.com/a/3996104/8279892
 -> Splash screen with animation : https://www.youtube.com/watch?v=h_hTuaEpc-8
@@ -48,8 +49,13 @@ Database - Table vs Description ~ 173 tables
 	Description -> 
 	Command -> select * from statistics where borrowernumber=750;
 
-Database queries
-----------------
+Database queries - library
+--------------------------
+1. Get timestamp of 10 most recent books : select timestamp from biblio order by timestamp limit 10;
+2. ISBN & timestamp of 10 most recent books : select isbn, timestamp from biblioitems where isbn>999999999 order by timestamp limit 10;
+
+Database queries - general
+--------------------------
 1. Procedures
 	inside sample.sql
 		CREATE PROCEDURE account_count()
