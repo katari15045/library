@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">library</string>
+
+    <string name = "text_home">Home</string>
+    <string name = "text_search">Search</string>
+    <string name = "text_profile">Profile</string>
+
+    <string name = "text_about">About</string>
+    <string name = "text_resources">Resources</string>
+    <string name = "text_services">Services</string>
+    <string name = "text_occupancy">Occupancy</string>
+    <string name = "text_giving">Giving</string>
+</resources>
