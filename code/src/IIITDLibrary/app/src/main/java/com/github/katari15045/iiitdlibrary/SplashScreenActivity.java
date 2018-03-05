@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -13,25 +14,31 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     private ImageView imageViewLogo = null;
     private TextView textViewLibrary = null;
+    static boolean hasStarted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("SAK", "SplashScreenActivity starts");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        startWaiter();
+        if(!hasStarted){
+            Log.d("SAK", "Starting startupService...");
+            startStartupService();
+            hasStarted = true;
+        }
     }
 
-    private void startWaiter(){
-        Thread thread = new Thread(new Waiter(this));
+    private void startStartupService(){
+        Thread thread = new Thread(new StartupService(this));
         thread.start();
     }
 }
 
-class Waiter implements Runnable{
+class StartupService implements Runnable{
 
     private Context context = null;
 
-    Waiter(Context context){
+    StartupService(Context context){
         this.context = context;
     }
 
