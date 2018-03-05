@@ -6,7 +6,7 @@
     <string name="splash_screen_library_heading">Library</string>
     <string name="splash_screen_loading">Loading...</string>
 
-    <string name="nav_drawer_login_title">Login</string>
+    <string name="nav_drawer_About_title">About</string>
     <string name="nav_drawer_header_library_title">Library</string>
     <string name="nav_drawer_open">Open navigation drawer</string>
     <string name="nav_drawer_close">Close navigation drawer</string>

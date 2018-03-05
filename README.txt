@@ -1,7 +1,5 @@
 To Do
 -----
--> Add e-resources
--> Add textviews for e-resources and new arrivals
 -> same set of new arrivals should be displayed if app is started multiple times (assuming, no new book is added)
 -> Don't hardcode urls
 -> Update Android Studio on it's startup

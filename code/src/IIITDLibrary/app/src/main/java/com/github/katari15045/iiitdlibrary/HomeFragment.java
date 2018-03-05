@@ -93,7 +93,6 @@ public class HomeFragment extends Fragment {
         eResourceCards.add(eResourceCard14);
         eResourceCards.add(eResourceCard15);
         eResourceCards.add(eResourceCard16);
-
     }
 
     private void addRecyclerViewForNewArrivals(){

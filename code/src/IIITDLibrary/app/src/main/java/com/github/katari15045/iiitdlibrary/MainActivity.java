@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     static Fragment currentFragment = null;
     private static Context context = null;
-    private NavDrawer navDrawer = null;
+    private static NavDrawer navDrawer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,5 +55,13 @@ public class MainActivity extends AppCompatActivity {
 
     static Context getContext(){
         return  context;
+    }
+
+    static void setNavDrawer(NavDrawer navDrawer){
+        MainActivity.navDrawer = navDrawer;
+    }
+
+    static NavDrawer getNavDrawer(){
+        return navDrawer;
     }
 }

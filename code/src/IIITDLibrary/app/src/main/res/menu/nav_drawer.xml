@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_nav_drawer_login"
-        android:title="@string/nav_drawer_login_title"
-        android:icon="@drawable/ic_action_user"
+        android:id="@+id/menu_nav_drawer_about"
+        android:title="@string/nav_drawer_About_title"
+        android:icon="@drawable/ic_info"
         android:orderInCategory="0"/>
 </menu>

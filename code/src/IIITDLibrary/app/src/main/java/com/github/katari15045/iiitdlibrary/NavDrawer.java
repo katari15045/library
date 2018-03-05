@@ -8,7 +8,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * Created by Saketh Katari on 26-02-2018.
@@ -32,11 +34,13 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item){
+        Log.d("SAK", "Clicked Nav Drawer item");
         Fragment fragment = null;
-        if(item.getItemId() == R.id.menu_nav_drawer_login){
+        if(item.getItemId() == R.id.menu_nav_drawer_about){
+            Log.d("SAK", "Clicked About");
             fragment = new LoginFragment();
             hideItemInNavDrawer(item.getOrder());
-            lockNavDrawer();
+            //lockNavDrawer();
         }else{
             drawerLayout.closeDrawer(GravityCompat.START);
         }
@@ -53,7 +57,24 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
     private void initNavDrawer(){
         appCompatActivity.setSupportActionBar(toolbar);
         actionBarDrawerToggle = new ActionBarDrawerToggle(appCompatActivity,
-                drawerLayout, toolbar, R.string.nav_drawer_open, R.string.nav_drawer_close);
+                drawerLayout, toolbar, R.string.nav_drawer_open, R.string.nav_drawer_close){
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+                super.onDrawerSlide(drawerView, slideOffset);
+                drawerView.bringToFront();
+                drawerView.requestLayout();
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+        };
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
