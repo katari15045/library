@@ -1,8 +1,8 @@
 To Do
 -----
--> Handle rotation at splash screen
--> same set of new arrivals should be displayed if app is started multiple times (assuming, no new book is added)
 -> Add e-resources
+-> Add textviews for e-resources and new arrivals
+-> same set of new arrivals should be displayed if app is started multiple times (assuming, no new book is added)
 -> Don't hardcode urls
 -> Update Android Studio on it's startup
 -> Latest GUIs : https://medium.com/@mmbialas/30-new-android-libraries-and-projects-released-in-summer-2017-which-should-catch-your-attention-d3702bd9bdc6
@@ -21,6 +21,27 @@ Tutorials
 -> Add multiple resolutions of an image : https://www.youtube.com/watch?v=bbFLDR6X2D8
 -> Instead of writing the same property for all the children in xml, set a theme in parent which points to a style
 -> Java Coding Conventions -> https://google.github.io/styleguide/javaguide.html
+
+E-Resources - 16 in total
+-------------------------
+ieee -> http://ieeexplore.ieee.org/Xplore/home.jsp
+elsevier -> https://www.sciencedirect.com/
+epw -> http://www.epw.in/frontpage?0=ip_login_no_cache%3Dd94336b76282d826ae6e4eca56f7bf3d
+acs -> https://www.acs.org/content/acs/en.html
+acm -> https://dl.acm.org/
+saa -> http://www.southasiaarchive.com/
+wbl -> http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245
+urkund -> http://www.urkund.com/en
+wbw -> http://onlinelibrary.wiley.com/browse/publications?type=journal&activeLetter=
+now -> https://www.nowpublishers.com/
+nature -> https://www.nature.com/nature/
+tfo -> https://www.tandfonline.com/
+jstor -> http://www.jstor.org/
+springer_cse -> https://link.springer.com/bookseries/558
+springer_link -> https://link.springer.com/
+siam -> https://www.siam.org/journals/
+
+
 
 Colors
 ------

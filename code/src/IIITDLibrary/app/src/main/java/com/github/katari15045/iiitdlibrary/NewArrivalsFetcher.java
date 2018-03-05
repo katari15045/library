@@ -13,7 +13,7 @@ public class NewArrivalsFetcher implements Runnable {
 
     private Context context = null;
     private int totalBooks = -1;
-    private static ArrayList<Card> cards = null;
+    private static ArrayList<NewArrivalCard> cards = null;
 
     NewArrivalsFetcher(Context context, int totalBooks){
         this.context = context;
@@ -36,11 +36,11 @@ public class NewArrivalsFetcher implements Runnable {
         }
     }
 
-    private ArrayList<Card> storeCards(ResultSet resultSet){
-        ArrayList<Card> cards = new ArrayList<>(totalBooks);
+    private ArrayList<NewArrivalCard> storeCards(ResultSet resultSet){
+        ArrayList<NewArrivalCard> cards = new ArrayList<>(totalBooks);
         try{
             while(resultSet.next()){
-                Card card = new Card();
+                NewArrivalCard card = new NewArrivalCard();
                 card.setIsbn(resultSet.getString(1));
                 card.setBiblionumber(resultSet.getString(2));
                 ImageFetcher imageFetcher = new ImageFetcher(context, card.getIsbn(),
@@ -63,7 +63,7 @@ public class NewArrivalsFetcher implements Runnable {
         return cards;
     }
 
-    static ArrayList<Card> getCards(){
+    static ArrayList<NewArrivalCard> getCards(){
         return cards;
     }
 }

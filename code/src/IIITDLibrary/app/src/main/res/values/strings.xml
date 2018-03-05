@@ -27,5 +27,25 @@
     <string name="command_recent_books">select isbn, biblionumber from biblioitems where isbn>999999999
         order by timestamp limit</string>
 
+    <string name="home_fragment_new_arrivals_title">New Arrivals</string>
+    <string name="home_fragment_e_resources_title">E Resources</string>
     <string name="home_fragment_total_new_arrivals">10</string>
+    <string name="home_fragment_total_e_resources">16</string>
+
+    <string name="e_resource_url_acm">https://dl.acm.org/</string>
+    <string name="e_resource_url_acs">https://www.acs.org/content/acs/en.html</string>
+    <string name="e_resource_url_elsevier">https://www.sciencedirect.com/</string>
+    <string name="e_resource_url_epw">http://www.epw.in/frontpage?0=ip_login_no_cache%3Dd94336b76282d826ae6e4eca56f7bf3d</string>
+    <string name="e_resource_url_ieee">http://ieeexplore.ieee.org/Xplore/home.jsp</string>
+    <string name="e_resource_url_jstor">http://www.jstor.org/</string>
+    <string name="e_resource_url_nature">https://www.nature.com/nature/</string>
+    <string name="e_resource_url_now">https://www.nowpublishers.com/</string>
+    <string name="e_resource_url_saa">http://www.southasiaarchive.com/</string>
+    <string name="e_resource_url_siam">https://www.siam.org/journals/</string>
+    <string name="e_resource_url_springer_cse">https://link.springer.com/bookseries/558</string>
+    <string name="e_resource_url_springer_link">https://link.springer.com/</string>
+    <string name="e_resource_url_tfo">https://www.tandfonline.com/</string>
+    <string name="e_resource_url_urkund">http://www.urkund.com/en</string>
+    <string name="e_resource_url_wbl">http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245</string>
+    <string name="e_resource_url_wbw">http://onlinelibrary.wiley.com/browse/publications?type=journal&amp;activeLetter=</string>
 </resources>
