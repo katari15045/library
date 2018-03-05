@@ -4,6 +4,7 @@
     <string name="splash_screen_startup_duration">3000</string>
     <string name="splash_screen_sleep_duration">5000</string>
     <string name="splash_screen_library_heading">Library</string>
+    <string name="splash_screen_loading">Loading...</string>
 
     <string name="nav_drawer_login_title">Login</string>
     <string name="nav_drawer_header_library_title">Library</string>
@@ -25,4 +26,6 @@
     <string name="command_isbn_from_biblio">select isbn from biblioitems where biblionumber=</string>
     <string name="command_recent_books">select isbn, biblionumber from biblioitems where isbn>999999999
         order by timestamp limit</string>
+
+    <string name="home_fragment_total_new_arrivals">10</string>
 </resources>

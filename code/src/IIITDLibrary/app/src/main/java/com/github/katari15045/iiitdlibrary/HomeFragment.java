@@ -30,61 +30,19 @@ public class HomeFragment extends Fragment {
         Log.d("SAK", "cur_frag -> " + toString());
         this.view = inflater.inflate(R.layout.fragment_home, container, false);
         this.activity = (AppCompatActivity)view.getContext();
-        if(NewArrivalsFetcher.getCards() == null){
-            Log.d("SAK", "filling DB...");
-            fillDatabase(10);
-        }else{
-            Log.d("SAK", "Processing re-visit...");
-            handleRevisit();
-        }
+        addRecyclerViewForHrzntlSlider();
         return view;
     }
 
-    private void handleRevisit(){
+    private void addRecyclerViewForHrzntlSlider(){
         RecyclerView recyclerView = view.findViewById(R.id.fragment_home_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),
                 LinearLayoutManager.HORIZONTAL, false));
         recyclerView.setAdapter(new HrzntlSliderAdapter(view.getContext(), NewArrivalsFetcher.getCards()));
     }
 
-    private void fillDatabase(int totalBooks){
-        NewArrivalsFetcher newArrivalsFetcher = new NewArrivalsFetcher(view.getContext(),
-                totalBooks, new PostDBFillingTask(view.getContext()));
-        newArrivalsFetcher.execute();
-    }
-
     @Override
     public String toString() {
         return "HomeFragment";
-    }
-}
-
-class PostDBFillingTask extends AsyncTask<Void, Void, Void> {
-
-    private Context context = null;
-    private AppCompatActivity activity = null;
-
-    PostDBFillingTask(Context context){
-        this.context = context;
-        this.activity = (AppCompatActivity) context;
-    }
-
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
-    protected Void doInBackground(Void... voids) {
-        return null;
-    }
-
-    @Override
-    protected void onPostExecute(Void aVoid) {
-        super.onPostExecute(aVoid);
-        RecyclerView recyclerView = activity.findViewById(R.id.fragment_home_recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(context,
-                LinearLayoutManager.HORIZONTAL, false));
-        recyclerView.setAdapter(new HrzntlSliderAdapter(context, NewArrivalsFetcher.getCards()));
     }
 }

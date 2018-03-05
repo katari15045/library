@@ -18,13 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        collectViews();
         startWaiter();
-    }
-
-    private void collectViews(){
-        imageViewLogo = (ImageView) findViewById(R.id.activity_splash_screen_image_view_logo);
-        textViewLibrary = (TextView) findViewById(R.id.activity_splash_screen_text_view_library);
     }
 
     private void startWaiter(){
@@ -36,24 +30,25 @@ public class SplashScreenActivity extends AppCompatActivity {
 class Waiter implements Runnable{
 
     private Context context = null;
-    private Integer sleepTime = null;
 
-    public Waiter(Context context){
+    Waiter(Context context){
         this.context = context;
     }
 
     @Override
     public void run() {
         try{
-            sleepTime = Integer.valueOf(context.getResources().getString(R.string
-                    .splash_screen_sleep_duration));
-            Thread.sleep(sleepTime);
-        } catch (InterruptedException e){
-            e.printStackTrace();
-        }finally {
+            int totalBooks = Integer.valueOf(context.getResources().getString
+                    (R.string.home_fragment_total_new_arrivals));
+            NewArrivalsFetcher newArrivalsFetcher = new NewArrivalsFetcher(context, totalBooks);
+            Thread newArrivalFetcherThread = new Thread(newArrivalsFetcher);
+            newArrivalFetcherThread.start();
+            newArrivalFetcherThread.join();
             Intent intent = new Intent(context, MainActivity.class);
             context.startActivity(intent);
             ((AppCompatActivity)context).finish();
+        }catch(Exception e){
+            e.printStackTrace();
         }
     }
 }
