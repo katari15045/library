@@ -22,22 +22,25 @@ import com.github.katari15045.iiitdlibrary.R;
 public class HomeFragment extends Fragment {
 
     private View view = null;
+    private AppCompatActivity activity = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d("SAK", "cur_frag -> " + toString());
         this.view = inflater.inflate(R.layout.fragment_home, container, false);
+        this.activity = (AppCompatActivity)view.getContext();
         if(NewArrivalsFetcher.getCards() == null){
             Log.d("SAK", "filling DB...");
             fillDatabase(10);
         }else{
-            Log.d("SAK", "Processing screen rotation...");
-            handleScreenRotation();
+            Log.d("SAK", "Processing re-visit...");
+            handleRevisit();
         }
         return view;
     }
 
-    private void handleScreenRotation(){
+    private void handleRevisit(){
         RecyclerView recyclerView = view.findViewById(R.id.fragment_home_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),
                 LinearLayoutManager.HORIZONTAL, false));
@@ -48,6 +51,11 @@ public class HomeFragment extends Fragment {
         NewArrivalsFetcher newArrivalsFetcher = new NewArrivalsFetcher(view.getContext(),
                 totalBooks, new PostDBFillingTask(view.getContext()));
         newArrivalsFetcher.execute();
+    }
+
+    @Override
+    public String toString() {
+        return "HomeFragment";
     }
 }
 

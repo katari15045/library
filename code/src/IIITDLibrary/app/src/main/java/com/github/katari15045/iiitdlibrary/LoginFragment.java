@@ -8,6 +8,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class LoginFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        Log.d("SAK", "cur_frag = " + toString());
         this.view = inflater.inflate(R.layout.fragment_login, container, false);
         this.activity = (AppCompatActivity)view.getContext();
         changeActionBarTitle();
@@ -44,6 +46,11 @@ public class LoginFragment extends Fragment {
         buttonLogin = view.findViewById(R.id.fragment_login_button_login);
         buttonLogin.setOnClickListener(new LoginListener(view.getContext()));
     }
+
+    @Override
+    public String toString() {
+        return "LoginFragment";
+    }
 }
 
 class LoginListener implements View.OnClickListener{
@@ -57,8 +64,9 @@ class LoginListener implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         Toast.makeText(context, "Login", Toast.LENGTH_SHORT).show();
-        BottomNavigationView bottomNavigationView = MainActivity.getBottomNavBar();
+        /* If login is successful -
+        BottomNavigationView bottomNavigationView = BottomNavBar.getBottomNavBar();
         bottomNavigationView.getMenu().getItem(2).setTitle(context.getResources().
-                getString(R.string.bottom_nav_bar_title_profile));
+                getString(R.string.bottom_nav_bar_title_profile));*/
     }
 }
