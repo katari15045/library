@@ -39,7 +39,7 @@ public class ImageFetcher implements Runnable {
                 isbn = getIsbnFromBiblioNumber();
                 Log.d("SAK", "biblionumber -> " + biblioNumber + "; isbn -> " + isbn);
             }
-            String urlString = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn;
+            String urlString = context.getResources().getString(R.string.image_fetcher_api) + isbn;
             WebAPI webAPIImageURL = new WebAPI(urlString);
             Thread threadImageURL = new Thread(webAPIImageURL);
             threadImageURL.start();
