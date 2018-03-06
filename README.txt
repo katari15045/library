@@ -4,6 +4,7 @@ To Do
 -> Update Android Studio on it's startup
 -> Latest GUIs : https://medium.com/@mmbialas/30-new-android-libraries-and-projects-released-in-summer-2017-which-should-catch-your-attention-d3702bd9bdc6
 -> Top 9 UI Design Trends for Mobile Apps in 2018: https://medium.com/life-never-dead-and-gone/top-9-ui-design-trends-for-mobile-apps-in-2018-645993c802d4
+-> Change variable names to m<varName>
 
 
 Tutorials
@@ -11,6 +12,7 @@ Tutorials
 -> Get book cover from ISBN : https://stackoverflow.com/questions/14422528/how-to-get-book-cover-from-isbn-using-google-book-api
 -> Recycler View : https://medium.com/@harivigneshjayapalan/android-implementing-custom-recycler-view-part-i-9ce5e9af7fea
 -> layout_weight : https://stackoverflow.com/a/3996104/8279892
+-> Tab Layout : https://www.youtube.com/watch?v=bNpWGI_hGGg
 -> Splash screen with animation : https://www.youtube.com/watch?v=h_hTuaEpc-8
 -> Acivity transition animations : https://www.youtube.com/watch?v=0s6x3Sn4eYo
 -> Fragments : Slidenerd, Youtube
