@@ -19,6 +19,7 @@ class Database implements Runnable{
     private ResultSet resultSet = null;
     private String command = null;
     private boolean isQuery;
+    private static boolean isConnected = false;
 
     Database(String command, boolean isQuery){
         this.command = command;
@@ -29,7 +30,11 @@ class Database implements Runnable{
     public void run() {
         try{
             Log.d("SAK", "Connecting...");
-            connect();
+            if(!connect()){
+                isConnected = false;
+                return;
+            }
+            isConnected = true;
             Log.d("SAK", "Connected");
             preparedStatement = connection.prepareStatement(command);
             if(isQuery){
@@ -45,7 +50,7 @@ class Database implements Runnable{
         }
     }
 
-    private void connect(){
+    private boolean connect(){
         try{
             String url = "jdbc:mysql://192.168.48.144:3306/lib";
             String username = "root";
@@ -55,8 +60,10 @@ class Database implements Runnable{
             Log.d("SAK", "Validating credentials...");
             connection = DriverManager.getConnection(url, username, password);
         }catch (Exception e) {
-            e.printStackTrace();
+            Log.d("SAK", "Can't connect to DB");
+            return  false;
         }
+        return true;
     }
 
     void close(){
@@ -73,6 +80,10 @@ class Database implements Runnable{
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    static boolean isConnected(){
+        return isConnected;
     }
 
     ResultSet getResultSet(){

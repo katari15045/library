@@ -41,6 +41,7 @@ public class WebAPI implements Runnable {
                 stringBuilder.append(line);
             }while(true);
         }catch (Exception e){
+            Log.d("SAK", "Can't connect to the Web API.");
             e.printStackTrace();
         }
         dataFetched = stringBuilder.toString();

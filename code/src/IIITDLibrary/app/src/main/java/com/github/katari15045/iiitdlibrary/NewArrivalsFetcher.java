@@ -29,6 +29,9 @@ public class NewArrivalsFetcher implements Runnable {
             Thread dbThread = new Thread(database);
             dbThread.start();
             dbThread.join();
+            if(!Database.isConnected()){
+                return;
+            }
             cards = storeCards(database.getResultSet());
             database.close();
         }catch(Exception e){

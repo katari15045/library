@@ -1,6 +1,7 @@
 To Do
 -----
--> same set of new arrivals should be displayed if app is started multiple times (assuming, no new book is added)
+-> Handle the case when there's no internet connection
+-> Add comments mentioning the resources and explaining the code.
 -> Update Android Studio on it's startup
 -> Latest GUIs : https://medium.com/@mmbialas/30-new-android-libraries-and-projects-released-in-summer-2017-which-should-catch-your-attention-d3702bd9bdc6
 -> Top 9 UI Design Trends for Mobile Apps in 2018: https://medium.com/life-never-dead-and-gone/top-9-ui-design-trends-for-mobile-apps-in-2018-645993c802d4
