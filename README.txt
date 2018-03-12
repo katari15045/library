@@ -1,5 +1,6 @@
 To Do
 -----
+-> Write Log.d debugging statements in the form className::method() for all overridden methods
 -> Increase the font size of new_arrivals, E-Resources in the home screen
 -> Remove author tags in .Java files
 -> Remove unused imports

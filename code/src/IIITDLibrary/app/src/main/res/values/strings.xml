@@ -7,6 +7,7 @@
     <string name="splash_screen_loading">Loading...</string>
 
     <string name="nav_drawer_About_title">About</string>
+    <string name="nav_drawer_resources_title">Resources</string>
     <string name="nav_drawer_header_library_title">Library</string>
     <string name="nav_drawer_open">Open navigation drawer</string>
     <string name="nav_drawer_close">Close navigation drawer</string>
@@ -57,4 +58,7 @@
     <string name="e_resource_url_wbw">http://onlinelibrary.wiley.com/browse/publications?type=journal&amp;activeLetter=</string>
 
     <string name="about_fragment_title">About</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

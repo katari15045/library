@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("SAK", "MainActivity");
+        Log.d("SAK", "MainActivity::onCreate()");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = this;
@@ -35,10 +35,8 @@ public class MainActivity extends AppCompatActivity {
         actionBar = getSupportActionBar();
         // Don't replace the home fragment with Home Fragment which is of no use - screen rotation
         if(currentFragment == null){
-            Log.d("SAK", "cur_frag = null");
             displayHome();
         }
-        Log.d("SAK", "MainActivity ends");
     }
 
     public static void changeActionBarTitle(String newTitle){
@@ -47,13 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
     // Displays the Home fragment by replacing the current fragment
     private void displayHome(){
-        Log.d("SAK", "Display home starts");
         HomeFragment homeFragment = new HomeFragment();
-        Log.d("SAK", "cur_frag = home_frag...");
         currentFragment = homeFragment;
-        Log.d("SAK", "Replacing frag...");
         replaceFragment(homeFragment);
-        Log.d("SAK", "Display home ends");
     }
 
     // If Navigation drawer is opened then close it on a back button press

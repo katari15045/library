@@ -32,11 +32,18 @@ public class LoginFragment extends Fragment {
         title = MainActivity.getContext().getResources().getString(R.string.login_fragment_title);
     }
 
+    @Override
+    public void onResume() {
+        Log.d("SAK", "LoginFragment::onResume()");
+        super.onResume();
+        ((AppCompatActivity)MainActivity.getContext()).getSupportActionBar().setTitle(title);
+    }
+
     // Inflates the fragment, Changes the action bar's title & collects all the views
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        Log.d("SAK", "cur_frag = " + toString());
+        Log.d("SAK", "LoginFragment::onCreateView()");
         this.view = inflater.inflate(R.layout.fragment_login, container, false);
         this.activity = (AppCompatActivity)view.getContext();
         collectViews();

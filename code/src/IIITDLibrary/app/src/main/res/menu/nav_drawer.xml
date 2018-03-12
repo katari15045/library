@@ -5,4 +5,10 @@
         android:title="@string/nav_drawer_About_title"
         android:icon="@drawable/ic_info"
         android:orderInCategory="0"/>
+
+    <item
+        android:id="@+id/menu_nav_drawer_resources"
+        android:title="@string/nav_drawer_resources_title"
+        android:icon="@drawable/ic_resources"
+        android:orderInCategory="1"/>
 </menu>

@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Fragment.AboutFragment;
+import com.github.katari15045.iiitdlibrary.Fragment.ResourcesFragment;
 import com.github.katari15045.iiitdlibrary.R;
 
 /**
@@ -41,12 +42,15 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
     // Listener for a click on a navigation drawer item
     @Override
     public boolean onNavigationItemSelected(MenuItem item){
-        Log.d("SAK", "Clicked Nav Drawer item");
         Fragment fragment = null;
         if(item.getItemId() == R.id.menu_nav_drawer_about){
-            Log.d("SAK", "Clicked About");
+            Log.d("SAK", "Clicked NavDrawer::About");
             fragment = new AboutFragment();
             MainActivity.changeActionBarTitle(AboutFragment.getTitle());
+        }else if(item.getItemId() == R.id.menu_nav_drawer_resources){
+            Log.d("SAK", "Clicked NavDrawer::Resources");
+            fragment = new ResourcesFragment();
+            MainActivity.changeActionBarTitle(ResourcesFragment.getTitle());
         }
         closeNavDrawer();
         MainActivity.replaceFragment(fragment);

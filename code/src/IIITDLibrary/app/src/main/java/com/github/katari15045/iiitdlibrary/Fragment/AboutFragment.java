@@ -3,6 +3,8 @@ package com.github.katari15045.iiitdlibrary.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,12 +24,15 @@ public class AboutFragment extends Fragment{
 
     @Override
     public void onResume() {
+        Log.d("SAK", "AboutFragment::onResume()");
         super.onResume();
         NavDrawer.hideItem(0);
+        ((AppCompatActivity)MainActivity.getContext()).getSupportActionBar().setTitle(title);
     }
 
     @Override
     public void onPause() {
+        Log.d("SAK", "AboutFragment::onPause()");
         super.onPause();
         NavDrawer.showItem(0);
     }
@@ -35,6 +40,7 @@ public class AboutFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Log.d("SAK", "AboutFragment::onCreateView()");
         view = inflater.inflate(R.layout.fragment_about, null);
         return view;
     }
