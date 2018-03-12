@@ -61,7 +61,23 @@
     <string name="e_resource_url_wbw">http://onlinelibrary.wiley.com/browse/publications?type=journal&amp;activeLetter=</string>
 
     <string name="about_fragment_title">About</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_fragment_brief_heading">Brief</string>
+    <string name="about_fragment_brief">The Library and Information Center of the Institute is housed in a separate building in its Campus. The Library is fully automated using RFID Technology with EM Security System.</string>
+    <string name="about_fragment_timings_heading">Timings</string>
+    <string name="about_fragment_mon_to_fri_normal_days">Monday to Friday during normal days</string>
+    <string name="about_fragment_library_opening_hours_heading">Opening Hours</string>
+    <string name="about_fragment_library_opening_hours">8:30 AM to 12:00 Mid Night</string>
+    <string name="about_fragment_issue_return_heading">Issue/Return Hours</string>
+    <string name="about_fragment_issue_return_timing">9:00 AM to 9:00 PM</string>
+    <string name="about_fragment_saturday_normal_days_heading">Saturday during normal days</string>
+    <string name="about_fragment_saturday_normal_days_opening_hours">8:30 AM to 6:00 PM</string>
+    <string name="about_fragment_saturday_normal_days_issue_return_hours">9:00 AM to 5:45 PM</string>
+    <string name="about_fragment_mon_to_sun_during_exams_heading">Mon-Sun during 3 days before Mid-Sem/End-Sem Exams till it\'s completion</string>
+    <string name="about_fragment_mon_to_sun_during_exams_opening_hours">8:30 AM to 2:00 AM</string>
+    <string name="about_fragment_mon_to_sun_during_exams_issue_return_hours">9:00 AM to 9:00 PM</string>
+    <string name="about_fragment_mon_to_sat_during_semester_break_mid_recess_public_holidays_heading">Mon-Sat during Semester Break, Mid recess, Public Holidays</string>
+    <string name="about_fragment_mon_to_sat_during_semester_break_mid_recess_public_holidays_opening_hours">8:30 AM to 6:00 PM</string>
+    <string name="about_fragment_mon_to_sat_during_semester_break_mid_recess_public_holidays_issue_return__hours">9:00 AM to 5:45 PM</string>
+    <string name="about_fragment_open_reading_hall_heading">Open Reading Hall</string>
+    <string name="about_fragment_open_reading_hall_timings">24 x 7</string>
 </resources>

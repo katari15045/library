@@ -1,5 +1,6 @@
 To Do
 -----
+-> On rotation, scrollView should show the same location that user was seeing before rotation.
 -> Use NewArrivals-Card-EResources-Card ... layout to display static pages
 -> Decrease the startup time
 -> Write Log.d debugging statements in the form className::method() for all overridden methods
