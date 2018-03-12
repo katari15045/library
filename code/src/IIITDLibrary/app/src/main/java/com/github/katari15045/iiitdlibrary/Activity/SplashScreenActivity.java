@@ -1,7 +1,6 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Activity;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
@@ -9,17 +8,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.github.katari15045.iiitdlibrary.Helper.Database;
+import com.github.katari15045.iiitdlibrary.Helper.NewArrivalsFetcher;
+import com.github.katari15045.iiitdlibrary.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
     private ImageView imageViewLogo = null;
     private TextView textViewLibrary = null;
-    static boolean hasStarted = false;
+    public static boolean hasStarted = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

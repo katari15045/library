@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Helper;
 
 import android.graphics.Bitmap;
 
@@ -11,27 +11,27 @@ public class NewArrivalCard {
     private String isbn = null;
     private String biblionumber = null;
 
-    String getIsbn(){
+    public String getIsbn(){
         return isbn;
     }
 
-    void setIsbn(String isbn){
+    public void setIsbn(String isbn){
         this.isbn = isbn;
     }
 
-    String getBiblionumber(){
+    public String getBiblionumber(){
         return biblionumber;
     }
 
-    void setBiblionumber(String biblionumber){
+    public void setBiblionumber(String biblionumber){
         this.biblionumber = biblionumber;
     }
 
-    void setImage(Bitmap image){
+    public void setImage(Bitmap image){
         this.image = image;
     }
 
-    Bitmap getImage(){
+    public Bitmap getImage(){
         return image;
     }
 }

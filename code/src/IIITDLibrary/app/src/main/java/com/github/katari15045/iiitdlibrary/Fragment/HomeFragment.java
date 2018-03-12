@@ -1,22 +1,21 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Fragment;
 
 
-import android.content.Context;
 import android.content.res.Resources;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 
+import com.github.katari15045.iiitdlibrary.Helper.EResourceCard;
+import com.github.katari15045.iiitdlibrary.Gui.HrzntlSliderEResourcesAdapter;
+import com.github.katari15045.iiitdlibrary.Gui.HrzntlSliderNewArrivalsAdapter;
+import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Helper.NewArrivalsFetcher;
 import com.github.katari15045.iiitdlibrary.R;
 
 import java.util.ArrayList;
@@ -60,7 +59,7 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(new HrzntlSliderEResourcesAdapter(view.getContext(), eResourceCards));
     }
 
-    static String getTitle(){
+    public static String getTitle(){
         return  title;
     }
 

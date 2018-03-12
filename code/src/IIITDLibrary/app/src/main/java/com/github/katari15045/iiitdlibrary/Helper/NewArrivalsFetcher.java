@@ -1,6 +1,8 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Helper;
 
 import android.content.Context;
+
+import com.github.katari15045.iiitdlibrary.R;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -15,7 +17,7 @@ public class NewArrivalsFetcher implements Runnable {
     private int totalBooks = -1;
     private static ArrayList<NewArrivalCard> cards = null;
 
-    NewArrivalsFetcher(Context context, int totalBooks){
+    public NewArrivalsFetcher(Context context, int totalBooks){
         this.context = context;
         this.totalBooks = totalBooks;
     }
@@ -66,7 +68,7 @@ public class NewArrivalsFetcher implements Runnable {
         return cards;
     }
 
-    static ArrayList<NewArrivalCard> getCards(){
+    public static ArrayList<NewArrivalCard> getCards(){
         return cards;
     }
 }

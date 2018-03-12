@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Helper;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -8,9 +8,9 @@ import org.json.JSONObject;
  */
 
 // Parses the JSON string from Google API to extract the URL of the cover image of a book
-class JsonParser {
+public class JsonParser {
 
-    static String parse(String unParsedData){
+    public static String parse(String unParsedData){
         String parsedData = null;
         try{
             JSONObject root = new JSONObject(unParsedData);

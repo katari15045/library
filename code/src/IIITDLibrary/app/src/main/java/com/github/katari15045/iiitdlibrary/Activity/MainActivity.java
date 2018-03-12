@@ -1,8 +1,6 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Activity;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -10,13 +8,16 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
-import android.widget.Toast;
+
+import com.github.katari15045.iiitdlibrary.Gui.BottomNavBar;
+import com.github.katari15045.iiitdlibrary.Fragment.HomeFragment;
+import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
+import com.github.katari15045.iiitdlibrary.R;
 
 // Adds Bottom Navigation Bar, Navigation Drawer and displays Home Fragment
 public class MainActivity extends AppCompatActivity {
 
-    static Fragment currentFragment = null;
+    public static Fragment currentFragment = null;
     private static Context context = null;
     private static NavDrawer navDrawer = null;
     private static ActionBar actionBar = null;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("SAK", "MainActivity ends");
     }
 
-    static void changeActionBarTitle(String newTitle){
+    public static void changeActionBarTitle(String newTitle){
         actionBar.setTitle(newTitle);
     }
 
@@ -65,21 +66,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    static void replaceFragment(Fragment fragment){
+    public static void replaceFragment(Fragment fragment){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.activity_main_fragment_container, fragment);
         transaction.commit();
     }
 
-    static Context getContext(){
+    public static Context getContext(){
         return  context;
     }
 
-    static void setNavDrawer(NavDrawer navDrawer){
+    public static void setNavDrawer(NavDrawer navDrawer){
         MainActivity.navDrawer = navDrawer;
     }
 
-    static NavDrawer getNavDrawer(){
+    public static NavDrawer getNavDrawer(){
         return navDrawer;
     }
 }

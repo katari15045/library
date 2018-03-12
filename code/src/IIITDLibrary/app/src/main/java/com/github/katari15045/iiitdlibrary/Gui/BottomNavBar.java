@@ -1,14 +1,18 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Gui;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Fragment.HomeFragment;
+import com.github.katari15045.iiitdlibrary.Fragment.LoginFragment;
+import com.github.katari15045.iiitdlibrary.R;
 
 /**
  * Created by Saketh Katari on 05-03-2018.
@@ -22,7 +26,7 @@ public class BottomNavBar {
     private static BottomNavigationView bottomNavigationBar = null;
 
     // Sets the listener when an item of Bottom Navigation bar is Clicked
-    static void addBottomNavBar(){
+    public static void addBottomNavBar(){
         context = MainActivity.getContext();
         activity = (AppCompatActivity)context;
         bottomNavigationBar = activity.findViewById(R.id.activity_main_bottom_nav_view);
@@ -31,7 +35,7 @@ public class BottomNavBar {
         Log.d("SAK", "bot_nav_bar added");
     }
 
-    static BottomNavigationView getBottomNavBar(){
+    public static BottomNavigationView getBottomNavBar(){
         return bottomNavigationBar;
     }
 }

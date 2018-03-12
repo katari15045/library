@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Gui;
 
 import android.content.Context;
 import android.support.design.widget.NavigationView;
@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Fragment.AboutFragment;
+import com.github.katari15045.iiitdlibrary.R;
 
 /**
  * Created by Saketh Katari on 26-02-2018.
@@ -27,7 +31,7 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
     private Toolbar toolbar = null;
 
     // Initializes the Navigation drawer
-    NavDrawer(Context context){
+    public NavDrawer(Context context){
         this.context = context;
         appCompatActivity = ((AppCompatActivity) context);
         captureViews();
@@ -82,31 +86,31 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    static void hideItem(int itemId){
+    public static void hideItem(int itemId){
         navigationView.getMenu().getItem(itemId).setVisible(false);
     }
 
-    static void showItem(int itemId){
+    public static void showItem(int itemId){
         navigationView.getMenu().getItem(itemId).setVisible(true);
     }
 
-    boolean isDrawerOpen(){
+    public boolean isDrawerOpen(){
         return  drawerLayout.isDrawerOpen(GravityCompat.START);
     }
 
-    void closeNavDrawer(){
+    public void closeNavDrawer(){
         drawerLayout.closeDrawer(GravityCompat.START);
     }
 
-    void openNavDrawer(){
+    public void openNavDrawer(){
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
-    void unlockNavDrawer(){
+    public void unlockNavDrawer(){
         changeNavDrawerState(DrawerLayout.LOCK_MODE_UNLOCKED, true);
     }
 
-    void lockNavDrawer(){
+    public void lockNavDrawer(){
         changeNavDrawerState(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, false);
     }
 

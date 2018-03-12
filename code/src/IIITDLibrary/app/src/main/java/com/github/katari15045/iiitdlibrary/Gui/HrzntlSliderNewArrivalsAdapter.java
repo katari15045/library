@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Gui;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.github.katari15045.iiitdlibrary.Helper.NewArrivalCard;
+import com.github.katari15045.iiitdlibrary.R;
 
 import java.util.ArrayList;
 

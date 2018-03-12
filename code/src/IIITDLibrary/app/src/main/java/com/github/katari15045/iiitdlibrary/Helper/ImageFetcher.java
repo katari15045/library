@@ -1,10 +1,12 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Helper;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import com.github.katari15045.iiitdlibrary.R;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -26,7 +28,7 @@ public class ImageFetcher implements Runnable {
     private String biblioNumber = null;
     private static Bitmap imageBitmap = null;
 
-    ImageFetcher(Context context, String number, boolean isBiblioNumber){
+    public ImageFetcher(Context context, String number, boolean isBiblioNumber){
         this.context = context;
         activity = (AppCompatActivity)context;
         if(isBiblioNumber){
@@ -100,7 +102,7 @@ public class ImageFetcher implements Runnable {
         return null;
     }
 
-    static Bitmap getImageBitmap(){
+    public static Bitmap getImageBitmap(){
         return  imageBitmap;
     }
 }

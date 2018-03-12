@@ -1,7 +1,5 @@
 To Do
 -----
--> Nav Drawer items are not preserved on rotation.
--> Create folders for .java & XML files
 -> Increase the font size of new_arrivals, E-Resources in the home screen
 -> Remove author tags in .Java files
 -> Remove unused imports

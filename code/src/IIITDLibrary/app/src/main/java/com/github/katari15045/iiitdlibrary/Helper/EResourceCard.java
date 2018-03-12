@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Helper;
 
 import android.graphics.Bitmap;
 
@@ -9,26 +9,26 @@ import android.graphics.Bitmap;
 // POJO class for an item in E-Resources Slider
 public class EResourceCard {
     private int image = -1;
-    String urlString = null;
+    private String urlString = null;
 
-    EResourceCard(int image, String urlString){
+    public EResourceCard(int image, String urlString){
         this.image = image;
         this.urlString = urlString;
     }
 
-    void setImage(int image){
+    public void setImage(int image){
         this.image = image;
     }
 
-    int getImage(){
+    public int getImage(){
         return image;
     }
 
-    void setUrlString(String urlString){
+    public void setUrlString(String urlString){
         this.urlString = urlString;
     }
 
-    String getUrlString(){
+    public String getUrlString(){
         return  urlString;
     }
 }

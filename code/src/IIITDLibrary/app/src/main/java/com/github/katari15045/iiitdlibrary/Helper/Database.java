@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Helper;
 
 import android.util.Log;
 
@@ -12,7 +12,7 @@ import java.sql.ResultSet;
  */
 
 // Close the connection from the caller end manually after parsing the resultset
-class Database implements Runnable{
+public class Database implements Runnable{
 
     private Connection connection = null;
     private PreparedStatement preparedStatement = null;
@@ -21,7 +21,7 @@ class Database implements Runnable{
     private boolean isQuery;
     private static boolean isConnected = false;
 
-    Database(String command, boolean isQuery){
+    public Database(String command, boolean isQuery){
         this.command = command;
         this.isQuery = isQuery;
     }
@@ -73,7 +73,7 @@ class Database implements Runnable{
     }
 
     // Closes the resources
-    void close(){
+    public void close(){
         try{
             if(connection != null){
                 connection.close();
@@ -89,11 +89,11 @@ class Database implements Runnable{
         }
     }
 
-    static boolean isConnected(){
+    public static boolean isConnected(){
         return isConnected;
     }
 
-    ResultSet getResultSet(){
+    public ResultSet getResultSet(){
         return resultSet;
     }
 }

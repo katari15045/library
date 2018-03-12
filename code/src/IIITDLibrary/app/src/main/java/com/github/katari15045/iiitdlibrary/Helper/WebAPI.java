@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Helper;
 
 import android.os.AsyncTask;
 import android.util.Log;
@@ -16,7 +16,7 @@ public class WebAPI implements Runnable {
     private URL url = null;
     private String dataFetched = null;
 
-    WebAPI(String urlStr){
+    public WebAPI(String urlStr){
         try{
             url = new URL(urlStr);
         }catch (Exception e){
@@ -47,7 +47,7 @@ public class WebAPI implements Runnable {
         dataFetched = stringBuilder.toString();
     }
 
-    String getDataFetched(){
+    public String getDataFetched(){
         return  dataFetched;
     }
 }
