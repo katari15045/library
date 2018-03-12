@@ -55,4 +55,6 @@
     <string name="e_resource_url_urkund">http://www.urkund.com/en</string>
     <string name="e_resource_url_wbl">http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245</string>
     <string name="e_resource_url_wbw">http://onlinelibrary.wiley.com/browse/publications?type=journal&amp;activeLetter=</string>
+
+    <string name="about_fragment_title">About</string>
 </resources>

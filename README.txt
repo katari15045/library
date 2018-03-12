@@ -1,6 +1,11 @@
 To Do
 -----
 -> Nav Drawer items are not preserved on rotation.
+-> Create folders for .java & XML files
+-> Increase the font size of new_arrivals, E-Resources in the home screen
+-> Remove author tags in .Java files
+-> Remove unused imports
+-> Implement Login using Koha API (Link shared by saurabh on group)
 -> Add comments mentioning the resources and explaining the code - Resume from NavDrawer
 -> Update Android Studio on it's startup
 -> Latest GUIs : https://medium.com/@mmbialas/30-new-android-libraries-and-projects-released-in-summer-2017-which-should-catch-your-attention-d3702bd9bdc6

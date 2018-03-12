@@ -22,7 +22,7 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
     private Context context = null;
     private AppCompatActivity appCompatActivity = null;
     private DrawerLayout drawerLayout = null;
-    private NavigationView navigationView = null;
+    private static NavigationView navigationView = null;
     private ActionBarDrawerToggle actionBarDrawerToggle = null;
     private Toolbar toolbar = null;
 
@@ -41,10 +41,9 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
         Fragment fragment = null;
         if(item.getItemId() == R.id.menu_nav_drawer_about){
             Log.d("SAK", "Clicked About");
-            fragment = new LoginFragment(); // Just for testing
-            MainActivity.changeActionBarTitle(LoginFragment.getTitle());
+            fragment = new AboutFragment();
+            MainActivity.changeActionBarTitle(AboutFragment.getTitle());
         }
-        hideItemInNavDrawer(item.getOrder());
         closeNavDrawer();
         MainActivity.replaceFragment(fragment);
         MainActivity.currentFragment = fragment;
@@ -83,8 +82,12 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    void hideItemInNavDrawer(int itemId){
+    static void hideItem(int itemId){
         navigationView.getMenu().getItem(itemId).setVisible(false);
+    }
+
+    static void showItem(int itemId){
+        navigationView.getMenu().getItem(itemId).setVisible(true);
     }
 
     boolean isDrawerOpen(){
