@@ -15,10 +15,10 @@ import android.view.View;
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Fragment.AboutFragment;
 import com.github.katari15045.iiitdlibrary.Fragment.ResourcesFragment;
-import com.github.katari15045.iiitdlibrary.GivingFragment;
-import com.github.katari15045.iiitdlibrary.OccupancyFragment;
+import com.github.katari15045.iiitdlibrary.Fragment.GivingFragment;
+import com.github.katari15045.iiitdlibrary.Fragment.OccupancyFragment;
 import com.github.katari15045.iiitdlibrary.R;
-import com.github.katari15045.iiitdlibrary.ServicesFragment;
+import com.github.katari15045.iiitdlibrary.Fragment.ServicesFragment;
 
 /**
  * Created by Saketh Katari on 26-02-2018.

@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,36 +11,37 @@ import android.view.ViewGroup;
 
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
+import com.github.katari15045.iiitdlibrary.R;
 
-public class GivingFragment extends Fragment {
+public class OccupancyFragment extends Fragment {
     private View view = null;
     private static String title = null;
 
-    public GivingFragment() {
+    public OccupancyFragment() {
         title = ((AppCompatActivity) MainActivity.getContext()).getResources().getString
-                (R.string.nav_drawer_giving_title);
+                (R.string.nav_drawer_occupancy_title);
     }
 
     @Override
     public void onResume() {
-        Log.d("SAK", "GivingFragment::onResume()");
+        Log.d("SAK", "OccupancyFragment::onResume()");
         super.onResume();
         MainActivity.changeActionBarTitle(title);
-        NavDrawer.hideItem(4);
+        NavDrawer.hideItem(3);
     }
 
     @Override
     public void onPause() {
-        Log.d("SAK", "GivingFragment::onPause()");
+        Log.d("SAK", "OccupancyFragment::onPause()");
         super.onPause();
-        NavDrawer.showItem(4);
+        NavDrawer.showItem(3);
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Log.d("SAK", "GivingFragment::onCreateView()");
-        view = inflater.inflate(R.layout.fragment_giving, null);
+        Log.d("SAK", "OccupancyFragment::onCreateView()");
+        view = inflater.inflate(R.layout.fragment_occupancy, null);
         return view;
     }
 

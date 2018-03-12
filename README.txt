@@ -1,6 +1,5 @@
 To Do
 -----
--> Increase the font size of new_arrivals, E-Resources in the home screen
 -> Use NewArrivals-Card-EResources-Card ... layout to display static pages
 -> Decrease the startup time
 -> Write Log.d debugging statements in the form className::method() for all overridden methods
