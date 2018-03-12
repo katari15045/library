@@ -36,7 +36,7 @@ public class LoginFragment extends Fragment {
     public void onResume() {
         Log.d("SAK", "LoginFragment::onResume()");
         super.onResume();
-        ((AppCompatActivity)MainActivity.getContext()).getSupportActionBar().setTitle(title);
+        MainActivity.changeActionBarTitle(title);
     }
 
     // Inflates the fragment, Changes the action bar's title & collects all the views

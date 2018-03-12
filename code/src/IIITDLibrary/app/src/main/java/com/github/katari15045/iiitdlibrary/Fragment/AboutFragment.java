@@ -27,7 +27,7 @@ public class AboutFragment extends Fragment{
         Log.d("SAK", "AboutFragment::onResume()");
         super.onResume();
         NavDrawer.hideItem(0);
-        ((AppCompatActivity)MainActivity.getContext()).getSupportActionBar().setTitle(title);
+        MainActivity.changeActionBarTitle(title);
     }
 
     @Override

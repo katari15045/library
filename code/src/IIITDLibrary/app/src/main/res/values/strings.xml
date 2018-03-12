@@ -8,6 +8,7 @@
 
     <string name="nav_drawer_About_title">About</string>
     <string name="nav_drawer_resources_title">Resources</string>
+    <string name="nav_drawer_services_title">Services</string>
     <string name="nav_drawer_header_library_title">Library</string>
     <string name="nav_drawer_open">Open navigation drawer</string>
     <string name="nav_drawer_close">Close navigation drawer</string>

@@ -28,7 +28,7 @@ public class ResourcesFragment extends Fragment{
         Log.d("SAK", "ResourceFragment::onResume()");
         super.onResume();
         NavDrawer.hideItem(1);
-        ((AppCompatActivity)MainActivity.getContext()).getSupportActionBar().setTitle(title);
+        MainActivity.changeActionBarTitle(title);
     }
 
     @Override

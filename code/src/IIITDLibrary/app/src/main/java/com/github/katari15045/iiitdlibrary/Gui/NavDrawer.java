@@ -16,6 +16,7 @@ import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Fragment.AboutFragment;
 import com.github.katari15045.iiitdlibrary.Fragment.ResourcesFragment;
 import com.github.katari15045.iiitdlibrary.R;
+import com.github.katari15045.iiitdlibrary.ServicesFragment;
 
 /**
  * Created by Saketh Katari on 26-02-2018.
@@ -46,11 +47,12 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
         if(item.getItemId() == R.id.menu_nav_drawer_about){
             Log.d("SAK", "Clicked NavDrawer::About");
             fragment = new AboutFragment();
-            MainActivity.changeActionBarTitle(AboutFragment.getTitle());
         }else if(item.getItemId() == R.id.menu_nav_drawer_resources){
             Log.d("SAK", "Clicked NavDrawer::Resources");
             fragment = new ResourcesFragment();
-            MainActivity.changeActionBarTitle(ResourcesFragment.getTitle());
+        }else if(item.getItemId() == R.id.menu_nav_drawer_services){
+            Log.d("SAK", "Clicked NavDrawer::Services");
+            fragment = new ServicesFragment();
         }
         closeNavDrawer();
         MainActivity.replaceFragment(fragment);

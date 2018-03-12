@@ -1,7 +1,9 @@
 To Do
 -----
--> Write Log.d debugging statements in the form className::method() for all overridden methods
+-> HomeFragment rotation should be handled in home frag & not in Main Activity
 -> Increase the font size of new_arrivals, E-Resources in the home screen
+-> Use NewArrivals-Card-EResources-Card ... layout to display static pages
+-> Write Log.d debugging statements in the form className::method() for all overridden methods
 -> Remove author tags in .Java files
 -> Remove unused imports
 -> Implement Login using Koha API (Link shared by saurabh on group)
