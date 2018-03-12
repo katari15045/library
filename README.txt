@@ -4,6 +4,7 @@ To Do
 -> Use NewArrivals-Card-EResources-Card ... layout to display static pages
 -> Decrease the startup time
 -> Write Log.d debugging statements in the form className::method() for all overridden methods
+-> Instead of creating new instances of fragments everytime, use factory design pattern
 -> Remove author tags in .Java files
 -> Remove unused imports
 -> Implement Login using Koha API (Link shared by saurabh on group)

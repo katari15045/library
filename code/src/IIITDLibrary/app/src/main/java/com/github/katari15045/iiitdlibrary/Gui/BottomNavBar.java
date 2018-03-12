@@ -32,7 +32,7 @@ public class BottomNavBar {
         bottomNavigationBar = activity.findViewById(R.id.activity_main_bottom_nav_view);
         bottomNavigationBar.setOnNavigationItemSelectedListener(
                 new BottomNavBarListener(context));
-        Log.d("SAK", "bot_nav_bar added");
+        Log.d("SAK", "bottom_nav_bar added");
     }
 
     public static BottomNavigationView getBottomNavBar(){
@@ -53,35 +53,21 @@ class BottomNavBarListener implements BottomNavigationView.OnNavigationItemSelec
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Log.d("SAK", "cur_frag -> " + MainActivity.currentFragment.toString());
-        Log.d("SAK", "Clicked on -> " + item.getTitle());
         Fragment fragment = null;
         if(item.getItemId() == R.id.menu_bottom_nav_bar_home){
-            // Opens the Home Fragment
-            Log.d("SAK", "Home");
+            Log.d("SAK", "BottomNavBar::Home");
             if(MainActivity.currentFragment.getClass() != HomeFragment.class){
-                Log.d("SAK", "cur_frag != home_frag");
                 fragment = new HomeFragment();
-                MainActivity.changeActionBarTitle(HomeFragment.getTitle());
             }
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_search){
+            Log.d("SAK", "BottomNavBar::Search");
             Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show();
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_login){
-            // Opens the Login Fragment
-            Log.d("SAK", "Login");
             if(item.getTitle().equals(context.getResources().getString(
                     R.string.bottom_nav_bar_title_login))){
-                Log.d("SAK", "Clicked on Login");
-                // Opens new Login Fragment if the current fragment is not a Login Fragment
+                Log.d("SAK", "BottomNavBar::Login");
                 if(MainActivity.currentFragment.getClass() != LoginFragment.class){
-                    Log.d("SAK", "cur_frag != login_frag");
                     fragment = new LoginFragment();
-                    Log.d("SAK", "Login Fragment Initialized");
-                    if(LoginFragment.getTitle() == null){
-                        Log.d("SAK", "Login Fragment title is null");
-                    }
-                    MainActivity.changeActionBarTitle(LoginFragment.getTitle());
-                    Log.d("SAK", "Action bar title changed");
                 }
             }
         }
@@ -89,7 +75,7 @@ class BottomNavBarListener implements BottomNavigationView.OnNavigationItemSelec
             MainActivity.replaceFragment(fragment);
             MainActivity.currentFragment = fragment;
         }
-        return false;
+        return true;
     }
 }
 

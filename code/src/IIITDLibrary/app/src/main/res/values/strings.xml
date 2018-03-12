@@ -9,6 +9,8 @@
     <string name="nav_drawer_About_title">About</string>
     <string name="nav_drawer_resources_title">Resources</string>
     <string name="nav_drawer_services_title">Services</string>
+    <string name="nav_drawer_occupancy_title">Occupancy</string>
+    <string name="nav_drawer_giving_title">Giving</string>
     <string name="nav_drawer_header_library_title">Library</string>
     <string name="nav_drawer_open">Open navigation drawer</string>
     <string name="nav_drawer_close">Close navigation drawer</string>
@@ -20,8 +22,8 @@
 
     <string name="progress_dialog_text">Processing...</string>
 
-    <string name="alert_dialog_cant_connect_text_view_title_db">Can\'t connect to the Database!
-        Make sure you are connected to the internet</string>
+    <string name="alert_dialog_cant_connect_text_view_title_db">Can\'t connect to the Database;
+        make sure you are connected to the internet.</string>
     <string name="alert_dialog_cant_connect_button_title">Retry</string>
 
     <string name="username_hint">Username</string>
