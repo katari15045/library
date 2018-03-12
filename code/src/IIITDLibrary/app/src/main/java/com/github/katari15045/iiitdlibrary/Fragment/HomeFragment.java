@@ -33,6 +33,13 @@ public class HomeFragment extends Fragment {
         title = MainActivity.getContext().getResources().getString(R.string.home_fragment_title);
     }
 
+    @Override
+    public void onResume() {
+        Log.d("SAK", "HomeFragment::onResume()");
+        super.onResume();
+        MainActivity.changeActionBarTitle(title);
+    }
+
     // Adds New-Nrrivals & E-Resources to the Home Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
