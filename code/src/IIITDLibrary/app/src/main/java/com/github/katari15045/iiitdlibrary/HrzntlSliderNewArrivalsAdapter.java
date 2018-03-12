@@ -14,6 +14,7 @@ import java.util.ArrayList;
  * Created by Saketh Katari on 23-02-2018.
  */
 
+// Adapter for the recycler view that holds new arrivals
 public class HrzntlSliderNewArrivalsAdapter extends RecyclerView.Adapter<NewArrivalViewHolder>{
     private Context context = null;
     private ArrayList<NewArrivalCard> database = null;
@@ -23,6 +24,7 @@ public class HrzntlSliderNewArrivalsAdapter extends RecyclerView.Adapter<NewArri
         this.database = database;
     }
 
+    // // Returns a view holder that holds an item of recycler view
     @Override
     public NewArrivalViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -30,6 +32,7 @@ public class HrzntlSliderNewArrivalsAdapter extends RecyclerView.Adapter<NewArri
         return new NewArrivalViewHolder(view, context);
     }
 
+    // Sets Backend resources for all the elements in an item of recycler view
     @Override
     public void onBindViewHolder(NewArrivalViewHolder holder, int position) {
         NewArrivalCard card = database.get(position);
@@ -43,6 +46,7 @@ public class HrzntlSliderNewArrivalsAdapter extends RecyclerView.Adapter<NewArri
     }
 }
 
+// View Holder that holds an item of recycler view
 class NewArrivalViewHolder extends RecyclerView.ViewHolder{
     private View view = null;
     private Context context = null;
@@ -56,6 +60,7 @@ class NewArrivalViewHolder extends RecyclerView.ViewHolder{
     }
 }
 
+// Listener for a click on an item in recycler view
 class NewArrivalListener implements View.OnClickListener{
     private Context context = null;
     private NewArrivalCard card = null;

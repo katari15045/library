@@ -21,17 +21,22 @@ import com.github.katari15045.iiitdlibrary.R;
 
 import java.util.ArrayList;
 
-
+// The Home Fragment that contains new arrivals & E-Resources
 public class HomeFragment extends Fragment {
 
     private View view = null;
     private AppCompatActivity activity = null;
     private ArrayList<EResourceCard> eResourceCards = null;
+    private static String title = null;
 
+    public HomeFragment(){
+        title = MainActivity.getContext().getResources().getString(R.string.home_fragment_title);
+    }
+
+    // Adds New-Nrrivals & E-Resources to the Home Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.d("SAK", "cur_frag -> " + toString());
         this.view = inflater.inflate(R.layout.fragment_home, container, false);
         this.activity = (AppCompatActivity)view.getContext();
         fillEResources();
@@ -40,6 +45,26 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    private void addRecyclerViewForNewArrivals(){
+        RecyclerView recyclerView = view.findViewById(R.id.fragment_home_recycler_view_new_arrivals);
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),
+                LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setAdapter(new HrzntlSliderNewArrivalsAdapter(view.getContext(),
+                NewArrivalsFetcher.getCards()));
+    }
+
+    private void addRecyclerViewForEResources(){
+        RecyclerView recyclerView = view.findViewById(R.id.fragment_home_recycler_view_e_resources);
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),
+                LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setAdapter(new HrzntlSliderEResourcesAdapter(view.getContext(), eResourceCards));
+    }
+
+    static String getTitle(){
+        return  title;
+    }
+
+    // Prepares a list of E-Resources
     private void fillEResources(){
         int totalEResources = Integer.valueOf(view.getResources().getString(
                 R.string.home_fragment_total_e_resources));
@@ -93,25 +118,5 @@ public class HomeFragment extends Fragment {
         eResourceCards.add(eResourceCard14);
         eResourceCards.add(eResourceCard15);
         eResourceCards.add(eResourceCard16);
-    }
-
-    private void addRecyclerViewForNewArrivals(){
-        RecyclerView recyclerView = view.findViewById(R.id.fragment_home_recycler_view_new_arrivals);
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),
-                LinearLayoutManager.HORIZONTAL, false));
-        recyclerView.setAdapter(new HrzntlSliderNewArrivalsAdapter(view.getContext(),
-                NewArrivalsFetcher.getCards()));
-    }
-
-    private void addRecyclerViewForEResources(){
-        RecyclerView recyclerView = view.findViewById(R.id.fragment_home_recycler_view_e_resources);
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),
-                LinearLayoutManager.HORIZONTAL, false));
-        recyclerView.setAdapter(new HrzntlSliderEResourcesAdapter(view.getContext(), eResourceCards));
-    }
-
-    @Override
-    public String toString() {
-        return "HomeFragment";
     }
 }

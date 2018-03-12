@@ -16,6 +16,7 @@ import java.util.ArrayList;
  * Created by Saketh Katari on 05-03-2018.
  */
 
+// Adapter for the recycler view that holds E-Resources
 public class HrzntlSliderEResourcesAdapter extends RecyclerView.Adapter<EResourceViewHolder>{
     private Context context = null;
     private ArrayList<EResourceCard> database = null;
@@ -25,6 +26,7 @@ public class HrzntlSliderEResourcesAdapter extends RecyclerView.Adapter<EResourc
         this.database = database;
     }
 
+    // Returns a view holder that holds an item of recycler view
     @Override
     public EResourceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -32,6 +34,7 @@ public class HrzntlSliderEResourcesAdapter extends RecyclerView.Adapter<EResourc
         return new EResourceViewHolder(view, context);
     }
 
+    // Sets Backend resources for all the elements in an item of recycler view
     @Override
     public void onBindViewHolder(EResourceViewHolder holder, int position) {
         EResourceCard card = database.get(position);
@@ -45,6 +48,7 @@ public class HrzntlSliderEResourcesAdapter extends RecyclerView.Adapter<EResourc
     }
 }
 
+// View Holder that holds an item of recycler view
 class EResourceViewHolder extends RecyclerView.ViewHolder{
     private View view = null;
     private Context context = null;
@@ -58,6 +62,7 @@ class EResourceViewHolder extends RecyclerView.ViewHolder{
     }
 }
 
+// Listener for a click on an item in recycler view
 class EResourceListener implements View.OnClickListener{
     private Context context = null;
     private EResourceCard card = null;
@@ -67,6 +72,7 @@ class EResourceListener implements View.OnClickListener{
         this.card = card;
     }
 
+    // Opens the url on the default browser
     public void onClick(View view){
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(card.getUrlString()));
         context.startActivity(intent);

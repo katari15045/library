@@ -7,6 +7,7 @@ import org.json.JSONObject;
  * Created by Saketh Katari on 04-03-2018.
  */
 
+// Parses the JSON string from Google API to extract the URL of the cover image of a book
 class JsonParser {
 
     static String parse(String unParsedData){

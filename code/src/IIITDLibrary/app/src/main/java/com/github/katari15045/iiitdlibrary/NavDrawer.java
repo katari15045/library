@@ -16,6 +16,7 @@ import android.view.View;
  * Created by Saketh Katari on 26-02-2018.
  */
 
+// The Navigation Drawer - three lines
 public class NavDrawer implements NavigationView.OnNavigationItemSelectedListener{
 
     private Context context = null;
@@ -25,6 +26,7 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
     private ActionBarDrawerToggle actionBarDrawerToggle = null;
     private Toolbar toolbar = null;
 
+    // Initializes the Navigation drawer
     NavDrawer(Context context){
         this.context = context;
         appCompatActivity = ((AppCompatActivity) context);
@@ -32,19 +34,20 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
         initNavDrawer();
     }
 
+    // Listener for a click on a navigation drawer item
     @Override
     public boolean onNavigationItemSelected(MenuItem item){
         Log.d("SAK", "Clicked Nav Drawer item");
         Fragment fragment = null;
         if(item.getItemId() == R.id.menu_nav_drawer_about){
             Log.d("SAK", "Clicked About");
-            fragment = new LoginFragment();
-            hideItemInNavDrawer(item.getOrder());
-            //lockNavDrawer();
-        }else{
-            drawerLayout.closeDrawer(GravityCompat.START);
+            fragment = new LoginFragment(); // Just for testing
+            MainActivity.changeActionBarTitle(LoginFragment.getTitle());
         }
-        ((MainActivity)context).replaceFragment(fragment);
+        hideItemInNavDrawer(item.getOrder());
+        closeNavDrawer();
+        MainActivity.replaceFragment(fragment);
+        MainActivity.currentFragment = fragment;
         return true;
     }
 

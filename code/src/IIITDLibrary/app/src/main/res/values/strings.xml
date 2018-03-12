@@ -33,6 +33,7 @@
 
     <string name="image_fetcher_api">https://www.googleapis.com/books/v1/volumes?q=isbn:</string>
 
+    <string name="home_fragment_title">Home</string>
     <string name="home_fragment_new_arrivals_title">New Arrivals</string>
     <string name="home_fragment_e_resources_title">E Resources</string>
     <string name="home_fragment_total_new_arrivals">10</string>

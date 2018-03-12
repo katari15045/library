@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
  * Created by Saketh Katari on 05-03-2018.
  */
 
+// POJO class for an item in E-Resources Slider
 public class EResourceCard {
     private int image = -1;
     String urlString = null;

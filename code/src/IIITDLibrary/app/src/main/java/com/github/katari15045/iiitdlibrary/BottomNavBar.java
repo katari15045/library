@@ -14,13 +14,14 @@ import android.widget.Toast;
  * Created by Saketh Katari on 05-03-2018.
  */
 
+// The Bottom Navigation Bar that contains Home, Search & Login/Profile icons
 public class BottomNavBar {
 
     private static Context context = null;
     private static AppCompatActivity activity = null;
     private static BottomNavigationView bottomNavigationBar = null;
 
-
+    // Sets the listener when an item of Bottom Navigation bar is Clicked
     static void addBottomNavBar(){
         context = MainActivity.getContext();
         activity = (AppCompatActivity)context;
@@ -34,6 +35,8 @@ public class BottomNavBar {
         return bottomNavigationBar;
     }
 }
+
+// listener for a click on an item in Bottom Navigation bar
 class BottomNavBarListener implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     private Context context = null;
@@ -48,36 +51,41 @@ class BottomNavBarListener implements BottomNavigationView.OnNavigationItemSelec
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Log.d("SAK", "cur_frag -> " + MainActivity.currentFragment.toString());
         Log.d("SAK", "Clicked on -> " + item.getTitle());
+        Fragment fragment = null;
         if(item.getItemId() == R.id.menu_bottom_nav_bar_home){
+            // Opens the Home Fragment
             Log.d("SAK", "Home");
             if(MainActivity.currentFragment.getClass() != HomeFragment.class){
                 Log.d("SAK", "cur_frag != home_frag");
-                HomeFragment homeFragment = new HomeFragment();
-                replaceFragment(homeFragment);
-                MainActivity.currentFragment = homeFragment;
+                fragment = new HomeFragment();
+                MainActivity.changeActionBarTitle(HomeFragment.getTitle());
             }
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_search){
             Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show();
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_login){
+            // Opens the Login Fragment
             Log.d("SAK", "Login");
             if(item.getTitle().equals(context.getResources().getString(
                     R.string.bottom_nav_bar_title_login))){
                 Log.d("SAK", "Clicked on Login");
+                // Opens new Login Fragment if the current fragment is not a Login Fragment
                 if(MainActivity.currentFragment.getClass() != LoginFragment.class){
                     Log.d("SAK", "cur_frag != login_frag");
-                    LoginFragment loginFragment = new LoginFragment();
-                    replaceFragment(loginFragment);
-                    MainActivity.currentFragment = loginFragment;
+                    fragment = new LoginFragment();
+                    Log.d("SAK", "Login Fragment Initialized");
+                    if(LoginFragment.getTitle() == null){
+                        Log.d("SAK", "Login Fragment title is null");
+                    }
+                    MainActivity.changeActionBarTitle(LoginFragment.getTitle());
+                    Log.d("SAK", "Action bar title changed");
                 }
             }
         }
+        if(fragment != null){
+            MainActivity.replaceFragment(fragment);
+            MainActivity.currentFragment = fragment;
+        }
         return false;
-    }
-
-    void replaceFragment(Fragment fragment){
-        FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.activity_main_fragment_container, fragment);
-        transaction.commit();
     }
 }
 

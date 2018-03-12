@@ -14,6 +14,10 @@ import java.sql.ResultSet;
  * Created by Saketh Katari on 04-03-2018.
  */
 
+/**
+ * Given a biblio number or an ISBN number of a book, it fetches it's cover image from a Google API
+ * if biblio number is given, it first fetches corresponding ISBN number from the database
+ */
 public class ImageFetcher implements Runnable {
 
     private Context context = null;
@@ -39,11 +43,14 @@ public class ImageFetcher implements Runnable {
                 isbn = getIsbnFromBiblioNumber();
                 Log.d("SAK", "biblionumber -> " + biblioNumber + "; isbn -> " + isbn);
             }
+            // At this stage, ISBN number is known;
             String urlString = context.getResources().getString(R.string.image_fetcher_api) + isbn;
             WebAPI webAPIImageURL = new WebAPI(urlString);
             Thread threadImageURL = new Thread(webAPIImageURL);
             threadImageURL.start();
+            // Wait until you get a JSON string from Google API that contains the URL of cover image
             threadImageURL.join();
+            // Parse the Google API Json String to extract the URL of cover image
             String imageUrl = JsonParser.parse(webAPIImageURL.getDataFetched());
             imageBitmap = getImageFromUrl(imageUrl);
         }catch (Exception e){
@@ -51,6 +58,7 @@ public class ImageFetcher implements Runnable {
         }
     }
 
+    // Queries the Database to get an ISBN number of a book, given it's biblio number
     private String getIsbnFromBiblioNumber(){
         try{
             String command = context.getResources().getString(R.string.command_isbn_from_biblio)
@@ -58,8 +66,11 @@ public class ImageFetcher implements Runnable {
             Database database = new Database(command, true);
             Thread dbThread = new Thread(database);
             dbThread.start();
+            // Wait until the database fetches the results
             dbThread.join();
+            // Parse the results obtained from Database
             String isbn = parseDBQuery(database.getResultSet());
+            // Make sure you close the resources of the database
             database.close();
             return isbn;
         }catch (Exception e){

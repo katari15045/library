@@ -26,22 +26,27 @@ class Database implements Runnable{
         this.isQuery = isQuery;
     }
 
+    // Connects to a Database and executes a query or an update
     @Override
     public void run() {
         try{
             Log.d("SAK", "Connecting...");
             if(!connect()){
+                // Couldn't connect to the database
                 isConnected = false;
                 return;
             }
+            // Connected to the Database
             isConnected = true;
             Log.d("SAK", "Connected");
             preparedStatement = connection.prepareStatement(command);
             if(isQuery){
+                // Execute te Query
                 Log.d("SAK", "executing query...");
                 resultSet = preparedStatement.executeQuery();
                 Log.d("SAK", "Parsing result...");
             }else{
+                // Execute the update
                 Log.d("SAK", "executing update...");
                 preparedStatement.executeUpdate();
             }
@@ -50,6 +55,7 @@ class Database implements Runnable{
         }
     }
 
+    // Connectes to a database and returns whether it is connected or not
     private boolean connect(){
         try{
             String url = "jdbc:mysql://192.168.48.144:3306/lib";
@@ -66,6 +72,7 @@ class Database implements Runnable{
         return true;
     }
 
+    // Closes the resources
     void close(){
         try{
             if(connection != null){

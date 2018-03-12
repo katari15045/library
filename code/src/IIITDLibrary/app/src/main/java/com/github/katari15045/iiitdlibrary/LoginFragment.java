@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+// Login Fragment that contains fields for username, password and a login button
 public class LoginFragment extends Fragment {
 
     private View view = null;
@@ -23,21 +24,22 @@ public class LoginFragment extends Fragment {
     private EditText editTextUsername = null;
     private EditText editTextPassword = null;
     private Button buttonLogin = null;
+    private static String title = null;
 
+    public LoginFragment(){
+        super();
+        title = MainActivity.getContext().getResources().getString(R.string.login_fragment_title);
+    }
+
+    // Inflates the fragment, Changes the action bar's title & collects all the views
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         Log.d("SAK", "cur_frag = " + toString());
         this.view = inflater.inflate(R.layout.fragment_login, container, false);
         this.activity = (AppCompatActivity)view.getContext();
-        changeActionBarTitle();
         collectViews();
         return view;
-    }
-
-    private void changeActionBarTitle(){
-        ActionBar actionBar = activity.getSupportActionBar();
-        actionBar.setTitle(view.getResources().getString(R.string.login_fragment_title));
     }
 
     private void collectViews(){
@@ -47,12 +49,12 @@ public class LoginFragment extends Fragment {
         buttonLogin.setOnClickListener(new LoginListener(view.getContext()));
     }
 
-    @Override
-    public String toString() {
-        return "LoginFragment";
+    static String getTitle() {
+        return title;
     }
 }
 
+// Listener for a click on Login button
 class LoginListener implements View.OnClickListener{
 
     private Context context = null;
