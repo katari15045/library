@@ -1,5 +1,6 @@
 To Do
 -----
+-> Stop registering multiple clicks on tabs
 -> On pressing back button and opening the app, it stays forever at splash screen
 -> In no_internet_dialog replace the button with the Colored text
 -> Decrease the startup time

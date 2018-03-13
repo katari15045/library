@@ -17,6 +17,8 @@ import com.github.katari15045.iiitdlibrary.R;
 
 public class MyTabLayout {
     private static TabLayout tabLayout = null;
+    public static boolean tabZeroClicked = false;
+    public static boolean tabOneClicked = false;
 
     public static void init(int index){
         tabLayout = MainActivity.getTabLayout();
@@ -58,11 +60,21 @@ class MyTabListener implements TabLayout.OnTabSelectedListener{
     public void onTabSelected(TabLayout.Tab tab) {
         Fragment fragment = null;
         if(tab.getPosition() == 0){
+            if(MyTabLayout.tabZeroClicked){
+                return;
+            }
             Log.d("SAK", "Clicked on Book::Overview");
             fragment = new BiblioOverviewFragment();
+            MyTabLayout.tabZeroClicked = true;
+            MyTabLayout.tabOneClicked = false;
         }else if(tab.getPosition() == 1){
+            if(MyTabLayout.tabOneClicked){
+                return;
+            }
             Log.d("SAK", "Clicked on Book::Copies");
             fragment = new BiblioCopyFragment();
+            MyTabLayout.tabZeroClicked = false;
+            MyTabLayout.tabOneClicked = true;
         }
         MainActivity.replaceFragment(fragment);
         MainActivity.currentFragment = fragment;
