@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class ResourcesFragment extends Fragment{
@@ -19,7 +20,7 @@ public class ResourcesFragment extends Fragment{
     private static String title = null;
 
     public ResourcesFragment(){
-        title = ((AppCompatActivity)MainActivity.getContext()).getResources().getString
+        title = ((AppCompatActivity) Global.context).getResources().getString
                 (R.string.nav_drawer_resources_title);
     }
 
@@ -28,7 +29,7 @@ public class ResourcesFragment extends Fragment{
         Log.d("SAK", "ResourceFragment::onResume()");
         super.onResume();
         NavDrawer.hideItem(1);
-        MainActivity.changeActionBarTitle(title);
+        Global.changeActionBarTitle(title);
     }
 
     @Override

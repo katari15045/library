@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 /**
@@ -21,7 +22,7 @@ public class MyTabLayout {
     public static boolean tabOneClicked = false;
 
     public static void init(int index){
-        tabLayout = MainActivity.getTabLayout();
+        tabLayout = Global.tabLayout;
         addTabs();
         tabLayout.getTabAt(index).select();
         tabLayout.addOnTabSelectedListener(new MyTabListener());
@@ -31,7 +32,7 @@ public class MyTabLayout {
         if(tabLayout.getTabAt(0) != null){
             return;
         }
-        Resources resources = ((AppCompatActivity)MainActivity.getContext()).getResources();
+        Resources resources = ((AppCompatActivity)Global.context).getResources();
         TabLayout.Tab tabOverview = tabLayout.newTab();
         tabOverview.setText(resources.getString(R.string.biblio_fragment_overview_title));
         tabLayout.addTab(tabOverview);
@@ -41,17 +42,11 @@ public class MyTabLayout {
     }
 
     public static void hideTabLayout(){
-        MainActivity.getTabLayout().setVisibility(View.GONE);
-        MainActivity.getViewPager().setVisibility(View.GONE);
+        Global.tabLayout.setVisibility(View.GONE);
     }
 
     public static void showTabLayout(){
-        MainActivity.getTabLayout().setVisibility(View.VISIBLE);
-        MainActivity.getViewPager().setVisibility(View.VISIBLE);
-    }
-
-    public static TabLayout getTabLayout(){
-        return tabLayout;
+        Global.tabLayout.setVisibility(View.VISIBLE);
     }
 }
 
@@ -77,7 +72,7 @@ class MyTabListener implements TabLayout.OnTabSelectedListener{
             MyTabLayout.tabOneClicked = true;
         }
         MainActivity.replaceFragment(fragment);
-        MainActivity.currentFragment = fragment;
+        Global.currentFragment = fragment;
     }
 
     @Override

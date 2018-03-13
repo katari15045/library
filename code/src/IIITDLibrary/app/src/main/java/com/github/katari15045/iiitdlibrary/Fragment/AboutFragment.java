@@ -3,15 +3,14 @@ package com.github.katari15045.iiitdlibrary.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class AboutFragment extends Fragment{
@@ -21,7 +20,7 @@ public class AboutFragment extends Fragment{
     private ScrollView scrollView = null;
 
     public AboutFragment(){
-        title = MainActivity.getContext().getResources().getString(R.string.about_fragment_title);
+        title = Global.context.getResources().getString(R.string.about_fragment_title);
     }
 
     @Override
@@ -29,7 +28,7 @@ public class AboutFragment extends Fragment{
         Log.d("SAK", "AboutFragment::onResume()");
         super.onResume();
         NavDrawer.hideItem(0);
-        MainActivity.changeActionBarTitle(title);
+        Global.changeActionBarTitle(title);
     }
 
     // Storing & Retrieving Scroll position : https://stackoverflow.com/a/29208325/8279892

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class GivingFragment extends Fragment {
@@ -18,7 +19,7 @@ public class GivingFragment extends Fragment {
     private static String title = null;
 
     public GivingFragment() {
-        title = ((AppCompatActivity) MainActivity.getContext()).getResources().getString
+        title = ((AppCompatActivity) Global.context).getResources().getString
                 (R.string.nav_drawer_giving_title);
     }
 
@@ -26,7 +27,7 @@ public class GivingFragment extends Fragment {
     public void onResume() {
         Log.d("SAK", "GivingFragment::onResume()");
         super.onResume();
-        MainActivity.changeActionBarTitle(title);
+        Global.changeActionBarTitle(title);
         NavDrawer.hideItem(4);
     }
 

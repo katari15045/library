@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Fragment.Biblio.BiblioOverviewFragment;
 import com.github.katari15045.iiitdlibrary.Fragment.Biblio.MyTabLayout;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.Helper.NewArrivalCard;
 import com.github.katari15045.iiitdlibrary.R;
 
@@ -80,6 +81,6 @@ class NewArrivalListener implements View.OnClickListener{
         Log.d("SAK", "Clicked NewArrivals::Book");
         BiblioOverviewFragment biblioOverviewFragment = new BiblioOverviewFragment();
         MainActivity.replaceFragment(biblioOverviewFragment);
-        MainActivity.currentFragment = biblioOverviewFragment;
+        Global.currentFragment = biblioOverviewFragment;
     }
 }

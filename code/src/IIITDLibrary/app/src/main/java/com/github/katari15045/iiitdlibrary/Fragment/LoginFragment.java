@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 // Login Fragment that contains fields for username, password and a login button
@@ -29,14 +30,14 @@ public class LoginFragment extends Fragment {
 
     public LoginFragment(){
         super();
-        title = MainActivity.getContext().getResources().getString(R.string.login_fragment_title);
+        title = Global.context.getResources().getString(R.string.login_fragment_title);
     }
 
     @Override
     public void onResume() {
         Log.d("SAK", "LoginFragment::onResume()");
         super.onResume();
-        MainActivity.changeActionBarTitle(title);
+        Global.changeActionBarTitle(title);
     }
 
     // Inflates the fragment, Changes the action bar's title & collects all the views

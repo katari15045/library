@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class ServicesFragment extends Fragment {
@@ -19,7 +20,7 @@ public class ServicesFragment extends Fragment {
     private static String title = null;
 
     public ServicesFragment(){
-        title = MainActivity.getContext().getResources().
+        title = Global.context.getResources().
                 getString(R.string.nav_drawer_services_title);
     }
 
@@ -28,7 +29,7 @@ public class ServicesFragment extends Fragment {
         Log.d("SAK", "ServicesFragment::onResume()");
         super.onResume();
         NavDrawer.hideItem(2);
-        ((AppCompatActivity)MainActivity.getContext()).getSupportActionBar().setTitle(title);
+        ((AppCompatActivity) Global.context).getSupportActionBar().setTitle(title);
     }
 
     @Override

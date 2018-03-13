@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class BiblioOverviewFragment extends Fragment {
@@ -29,8 +29,8 @@ public class BiblioOverviewFragment extends Fragment {
     public void onResume() {
         Log.d("SAK", "BiblioOverviewFragment::onResume()");
         super.onResume();
-        MainActivity.changeActionBarTitle(title);
-        MainActivity.currentFragment = this;
+        Global.changeActionBarTitle(title);
+        Global.currentFragment = this;
         MyTabLayout.showTabLayout();
         MyTabLayout.init(0);
     }

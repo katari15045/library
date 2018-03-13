@@ -17,6 +17,7 @@ import com.github.katari15045.iiitdlibrary.Fragment.AboutFragment;
 import com.github.katari15045.iiitdlibrary.Fragment.ResourcesFragment;
 import com.github.katari15045.iiitdlibrary.Fragment.GivingFragment;
 import com.github.katari15045.iiitdlibrary.Fragment.OccupancyFragment;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.Fragment.ServicesFragment;
 
@@ -64,7 +65,7 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
         }
         closeNavDrawer();
         MainActivity.replaceFragment(fragment);
-        MainActivity.currentFragment = fragment;
+        Global.currentFragment = fragment;
         return true;
     }
 

@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Fragment.HomeFragment;
 import com.github.katari15045.iiitdlibrary.Fragment.LoginFragment;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 /**
@@ -27,7 +28,7 @@ public class BottomNavBar {
 
     // Sets the listener when an item of Bottom Navigation bar is Clicked
     public static void addBottomNavBar(){
-        context = MainActivity.getContext();
+        context = Global.context;
         activity = (AppCompatActivity)context;
         bottomNavigationBar = activity.findViewById(R.id.activity_main_bottom_nav_view);
         bottomNavigationBar.setOnNavigationItemSelectedListener(
@@ -56,7 +57,7 @@ class BottomNavBarListener implements BottomNavigationView.OnNavigationItemSelec
         Fragment fragment = null;
         if(item.getItemId() == R.id.menu_bottom_nav_bar_home){
             Log.d("SAK", "BottomNavBar::Home");
-            if(MainActivity.currentFragment.getClass() != HomeFragment.class){
+            if(Global.currentFragment.getClass() != HomeFragment.class){
                 fragment = new HomeFragment();
             }
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_search){
@@ -66,14 +67,14 @@ class BottomNavBarListener implements BottomNavigationView.OnNavigationItemSelec
             if(item.getTitle().equals(context.getResources().getString(
                     R.string.bottom_nav_bar_title_login))){
                 Log.d("SAK", "BottomNavBar::Login");
-                if(MainActivity.currentFragment.getClass() != LoginFragment.class){
+                if(Global.currentFragment.getClass() != LoginFragment.class){
                     fragment = new LoginFragment();
                 }
             }
         }
         if(fragment != null){
             MainActivity.replaceFragment(fragment);
-            MainActivity.currentFragment = fragment;
+            Global.currentFragment = fragment;
         }
         return true;
     }

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
 import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class OccupancyFragment extends Fragment {
@@ -18,7 +19,7 @@ public class OccupancyFragment extends Fragment {
     private static String title = null;
 
     public OccupancyFragment() {
-        title = ((AppCompatActivity) MainActivity.getContext()).getResources().getString
+        title = ((AppCompatActivity) Global.context).getResources().getString
                 (R.string.nav_drawer_occupancy_title);
     }
 
@@ -26,7 +27,7 @@ public class OccupancyFragment extends Fragment {
     public void onResume() {
         Log.d("SAK", "OccupancyFragment::onResume()");
         super.onResume();
-        MainActivity.changeActionBarTitle(title);
+        Global.changeActionBarTitle(title);
         NavDrawer.hideItem(3);
     }
 

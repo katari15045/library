@@ -2,14 +2,13 @@ package com.github.katari15045.iiitdlibrary.Fragment.Biblio;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class BiblioCopyFragment extends Fragment {
@@ -21,8 +20,8 @@ public class BiblioCopyFragment extends Fragment {
     public void onResume() {
         Log.d("SAK", "BiblioCopyFragment::onResume()");
         super.onResume();
-        MainActivity.changeActionBarTitle(title);
-        MainActivity.currentFragment = this;
+        Global.changeActionBarTitle(title);
+        Global.currentFragment = this;
         MyTabLayout.showTabLayout();
         MyTabLayout.init(1);
     }

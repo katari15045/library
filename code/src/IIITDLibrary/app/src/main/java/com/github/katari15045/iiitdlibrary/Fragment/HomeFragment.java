@@ -18,6 +18,7 @@ import com.github.katari15045.iiitdlibrary.Helper.EResourceCard;
 import com.github.katari15045.iiitdlibrary.Gui.HrzntlSliderEResourcesAdapter;
 import com.github.katari15045.iiitdlibrary.Gui.HrzntlSliderNewArrivalsAdapter;
 import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Helper.Global;
 import com.github.katari15045.iiitdlibrary.Helper.NewArrivalsFetcher;
 import com.github.katari15045.iiitdlibrary.R;
 
@@ -33,7 +34,7 @@ public class HomeFragment extends Fragment {
     private ScrollView scrollView = null;
 
     public HomeFragment(){
-        title = MainActivity.getContext().getResources().getString(R.string.home_fragment_title);
+        title = Global.context.getResources().getString(R.string.home_fragment_title);
     }
 
     // Storing & Retrieving Scroll position : https://stackoverflow.com/a/29208325/8279892
@@ -68,7 +69,7 @@ public class HomeFragment extends Fragment {
     public void onResume() {
         Log.d("SAK", "HomeFragment::onResume()");
         super.onResume();
-        MainActivity.changeActionBarTitle(title);
+        Global.changeActionBarTitle(title);
     }
 
     // Adds New-Nrrivals & E-Resources to the Home Fragment
