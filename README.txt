@@ -1,5 +1,7 @@
 To Do
 -----
+-> On pressing back button and opening the app, it stays forever at splash screen
+-> In no_internet_dialog replace the button with the Colored text
 -> Decrease the startup time
 -> Write Log.d debugging statements in the form className::method() for all overridden methods
 -> Instead of creating new instances of fragments everytime, use factory design pattern

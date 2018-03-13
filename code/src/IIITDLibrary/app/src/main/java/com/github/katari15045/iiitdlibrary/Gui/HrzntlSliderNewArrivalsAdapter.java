@@ -2,12 +2,15 @@ package com.github.katari15045.iiitdlibrary.Gui;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
+import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
+import com.github.katari15045.iiitdlibrary.Fragment.Biblio.BiblioOverviewFragment;
+import com.github.katari15045.iiitdlibrary.Fragment.Biblio.MyTabLayout;
 import com.github.katari15045.iiitdlibrary.Helper.NewArrivalCard;
 import com.github.katari15045.iiitdlibrary.R;
 
@@ -74,6 +77,9 @@ class NewArrivalListener implements View.OnClickListener{
     }
 
     public void onClick(View view){
-        Toast.makeText(context, "biblionumber : " + card.getBiblionumber(), Toast.LENGTH_SHORT).show();
+        Log.d("SAK", "Clicked NewArrivals::Book");
+        BiblioOverviewFragment biblioOverviewFragment = new BiblioOverviewFragment();
+        MainActivity.replaceFragment(biblioOverviewFragment);
+        MainActivity.currentFragment = biblioOverviewFragment;
     }
 }

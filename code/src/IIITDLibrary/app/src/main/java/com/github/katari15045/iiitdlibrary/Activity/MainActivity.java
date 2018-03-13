@@ -1,9 +1,11 @@
 package com.github.katari15045.iiitdlibrary.Activity;
 
 import android.content.Context;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private static NavDrawer navDrawer = null;
     private static ActionBar actionBar = null;
     private static FragmentManager fragmentManager = null;
+    private static TabLayout tabLayout = null;
+    private static ViewPager viewPager = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = this;
+        collectViews();
         fragmentManager = getSupportFragmentManager();
         BottomNavBar.addBottomNavBar();
         navDrawer = new NavDrawer(this);
@@ -37,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         if(currentFragment == null){
             displayHome();
         }
+    }
+
+    private void collectViews(){
+        tabLayout = findViewById(R.id.activity_main_tab_layout);
+        viewPager = findViewById(R.id.activity_main_view_pager);
     }
 
     @Override
@@ -71,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+    public static void removeCurFrag(){
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.remove(currentFragment);
+        transaction.commit();
+    }
+
     public static Context getContext(){
         return  context;
     }
@@ -81,5 +97,17 @@ public class MainActivity extends AppCompatActivity {
 
     public static NavDrawer getNavDrawer(){
         return navDrawer;
+    }
+
+    public static TabLayout getTabLayout(){
+        return tabLayout;
+    }
+
+    public static ViewPager getViewPager(){
+        return viewPager;
+    }
+
+    public static FragmentManager getFragManager(){
+        return fragmentManager;
     }
 }

@@ -80,4 +80,7 @@
     <string name="about_fragment_mon_to_sat_during_semester_break_mid_recess_public_holidays_issue_return__hours">9:00 AM to 5:45 PM</string>
     <string name="about_fragment_open_reading_hall_heading">Open Reading Hall</string>
     <string name="about_fragment_open_reading_hall_timings">24 x 7</string>
+
+    <string name="biblio_fragment_overview_title">Overview</string>
+    <string name="biblio_fragment_copies_title">Copies</string>
 </resources>
