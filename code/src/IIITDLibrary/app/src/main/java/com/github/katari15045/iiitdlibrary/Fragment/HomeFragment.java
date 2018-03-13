@@ -3,6 +3,7 @@ package com.github.katari15045.iiitdlibrary.Fragment;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 
 import com.github.katari15045.iiitdlibrary.Helper.EResourceCard;
 import com.github.katari15045.iiitdlibrary.Gui.HrzntlSliderEResourcesAdapter;
@@ -28,9 +30,38 @@ public class HomeFragment extends Fragment {
     private AppCompatActivity activity = null;
     private ArrayList<EResourceCard> eResourceCards = null;
     private static String title = null;
+    private ScrollView scrollView = null;
 
     public HomeFragment(){
         title = MainActivity.getContext().getResources().getString(R.string.home_fragment_title);
+    }
+
+    // Storing & Retrieving Scroll position : https://stackoverflow.com/a/29208325/8279892
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        Log.d("SAK", "HomeFragment::onSaveInstanceState()");
+        super.onSaveInstanceState(outState);
+        float[] scrollPos = {scrollView.getScrollX(), scrollView.getScrollY()};
+        outState.putFloatArray("SCROLL_POS", scrollPos);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        Log.d("SAK", "HomeFragment::onActivityCreated()");
+        super.onActivityCreated(savedInstanceState);
+        if(savedInstanceState == null){
+            return;
+        }
+        final float[] scrollPos = savedInstanceState.getFloatArray("SCROLL_POS");
+        if(scrollPos == null){
+            return;
+        }
+        scrollView.post(new Runnable() {
+            @Override
+            public void run() {
+                scrollView.scrollTo((int)scrollPos[0], (int)scrollPos[1]);
+            }
+        });
     }
 
     @Override
@@ -47,6 +78,7 @@ public class HomeFragment extends Fragment {
         Log.d("SAK", "HomeFragment::onCreateView()");
         this.view = inflater.inflate(R.layout.fragment_home, container, false);
         this.activity = (AppCompatActivity)view.getContext();
+        scrollView = view.findViewById(R.id.fragment_home_scroll_view);
         fillEResources();
         addRecyclerViewForNewArrivals();
         addRecyclerViewForEResources();

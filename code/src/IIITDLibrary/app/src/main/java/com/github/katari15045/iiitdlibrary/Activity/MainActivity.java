@@ -39,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
     public static void changeActionBarTitle(String newTitle){
         actionBar.setTitle(newTitle);
     }
