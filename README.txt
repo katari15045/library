@@ -1,11 +1,11 @@
 To Do
 -----
--> Add collapsing toolbar to static screens
 -> On pressing back button and opening the app, it stays forever at splash screen
--> In no_internet_dialog replace the button with the Colored text
+-> Handle the case when internet is disconnected while fetching new arrivals - always display 10 new arrivals in home screen
 -> Decrease the startup time
--> Write Log.d debugging statements in the form className::method() for all overridden methods
 -> Instead of creating new instances of fragments everytime, use factory design pattern
+-> Add collapsing toolbar to static screens
+-> Write Log.d debugging statements in the form className::method() for all overridden methods
 -> Remove author tags in .Java files
 -> Remove unused imports
 -> Implement Login using Koha API (Link shared by saurabh on group)
