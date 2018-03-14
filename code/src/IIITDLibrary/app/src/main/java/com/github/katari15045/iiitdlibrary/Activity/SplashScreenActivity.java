@@ -37,9 +37,11 @@ public class SplashScreenActivity extends AppCompatActivity {
 
 class StartupService extends AsyncTask<Void, Void, Void>{
 
+    private int totalBooks = -1;
+
     @Override
     protected void onPostExecute(Void aVoid) {
-        if(!Database.isConnected()){
+        if(!Database.isConnected() || NewArrivalsFetcher.getCards().size() < totalBooks){
             SplashScreenActivity.hasStarted = false;
             MyAlertDialog.build(SplashScreenActivity.class);
         }
@@ -49,13 +51,13 @@ class StartupService extends AsyncTask<Void, Void, Void>{
     protected Void doInBackground(Void... voids) {
         Context context = Global.context;
         try{
-            int totalBooks = Integer.valueOf(context.getResources().getString
+            totalBooks = Integer.valueOf(context.getResources().getString
                     (R.string.home_fragment_total_new_arrivals));
             NewArrivalsFetcher newArrivalsFetcher = new NewArrivalsFetcher(context, totalBooks);
             Thread newArrivalFetcherThread = new Thread(newArrivalsFetcher);
             newArrivalFetcherThread.start();
             newArrivalFetcherThread.join();
-            if(!Database.isConnected()){
+            if(!Database.isConnected() || NewArrivalsFetcher.getCards().size() < totalBooks){
                 return null;
             }
             SplashScreenActivity.hasStarted = true;

@@ -1,7 +1,6 @@
 To Do
 -----
 -> On pressing back button and opening the app, it stays forever at splash screen
--> Handle the case when internet is disconnected while fetching new arrivals - always display 10 new arrivals in home screen
 -> Decrease the startup time
 -> Instead of creating new instances of fragments everytime, use factory design pattern
 -> Add collapsing toolbar to static screens
