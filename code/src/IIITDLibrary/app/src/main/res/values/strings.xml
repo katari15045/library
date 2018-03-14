@@ -36,6 +36,7 @@
         order by timestamp limit</string>
 
     <string name="image_fetcher_api">https://www.googleapis.com/books/v1/volumes?q=isbn:</string>
+    <string name="please_wait">Please wait</string>
 
     <string name="home_fragment_title">Home</string>
     <string name="home_fragment_new_arrivals_title">New Arrivals</string>

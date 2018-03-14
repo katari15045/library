@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.webkit.WebView;
+import android.widget.Toast;
 
 import com.github.katari15045.iiitdlibrary.Gui.MyAlertDialog;
 import com.github.katari15045.iiitdlibrary.Helper.Database;
@@ -32,6 +34,13 @@ public class SplashScreenActivity extends AppCompatActivity {
     private void startStartupService(){
         StartupService startupService = new StartupService();
         startupService.execute();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.d("SAK", "SplashScreen::BackButton");
+        Toast.makeText(this, getResources().getString(R.string.please_wait),
+                Toast.LENGTH_SHORT).show();
     }
 }
 

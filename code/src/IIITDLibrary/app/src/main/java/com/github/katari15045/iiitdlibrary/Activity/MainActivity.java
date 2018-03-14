@@ -51,10 +51,15 @@ public class MainActivity extends AppCompatActivity {
     // If Navigation drawer is opened then close it on a back button press
     @Override
     public void onBackPressed() {
+        Log.d("SAK", "MainActivity::BackButton");
         if (Global.navDrawer.isDrawerOpen()) {
             Global.navDrawer.closeNavDrawer();
-        } else {
-            super.onBackPressed();
+            return;
+        }
+        if(Global.currentFragment.getClass() == HomeFragment.class){
+            Log.d("SAK", "AlertDialog::Exit");
+        } else{
+            MainActivity.replaceFragment(new HomeFragment());
         }
     }
 

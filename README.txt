@@ -1,6 +1,6 @@
 To Do
 -----
--> On pressing back button and opening the app, it stays forever at splash screen
+-> Handle back button press at HomeFragment - With an alertDialog, ask if user wants to exit; DefaultPackage -> Gui -> AlertDialog -> NetworkIssue.java, Exit.java
 -> Decrease the startup time
 -> Instead of creating new instances of fragments everytime, use factory design pattern
 -> Add collapsing toolbar to static screens
