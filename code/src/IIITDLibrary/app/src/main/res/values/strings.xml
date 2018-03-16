@@ -82,6 +82,44 @@
     <string name="about_fragment_open_reading_hall_heading">Open Reading Hall</string>
     <string name="about_fragment_open_reading_hall_timings">24 x 7</string>
 
+    <string name="resources_e_resources">E-Resources</string>
+    <string name="resources_daily_news_papers">Daily News Papers</string>
+    <string name="resources_computing_books_by_indian_authors">Computing Books by Indian Authors</string>
+    <string name="resources_journals_magazines">Journals &amp; magazines</string>
+    <string name="resources_proof_reader">Proof Reader</string>
+    <string name="resources_proof_reader_link">https://support.grammarly.com/hc/en-us/categories/115000018631-Tips-Tutorials</string>
+    <string name="resources_anti_plagiarism_tool_urkund">Anti Plagiarism Tool, Urkund</string>
+    <string name="resources_anti_plagiarism_tool_urkund_link">http://www.urkund.com/en/</string>
+    <string name="resources_video_lectures_nptel">Video Lectures, NPTEL</string>
+    <string name="resources_video_lectures_nptel_link">http://library.iiitd.edu.in/nptel/</string>
+    <string name="resources_citation_tools">Citation Tools</string>
+    <string name="resources_mendeley">Mendeley</string>
+    <string name="resources_mendeley_link">https://www.mendeley.com/guides</string>
+    <string name="resources_zotero">Zotero</string>
+    <string name="resources_zotero_link">https://www.zotero.org/support/quick_start_guide</string>
+    <string name="resources_online_courses">Online Courses</string>
+    <string name="resources_academic_earth">Academic Earth</string>
+    <string name="resources_academic_earth_link">http://academicearth.org/</string>
+    <string name="resources_coursera">Coursera</string>
+    <string name="resources_coursera_link">https://www.coursera.org/</string>
+    <string name="resources_edx">edX</string>
+    <string name="resources_edx_link">https://www.edx.org/</string>
+    <string name="resources_mit_opencourseware">MIT OpenCourseWare</string>
+    <string name="resources_mit_opencourseware_link">https://ocw.mit.edu/index.htm</string>
+    <string name="resources_nptel">NPTEL</string>
+    <string name="resources_nptel_link">https://onlinecourses.nptel.ac.in/</string>
+    <string name="resources_research_data_repo">Research Data Repositories</string>
+    <string name="resources_re3data">re3data</string>
+    <string name="resources_re3data_link">https://www.re3data.org/</string>
+    <string name="resources_plos">Plos</string>
+    <string name="resources_plos_link">http://journals.plos.org/plosone/s/data-availability#loc-recommended-repositories</string>
+    <string name="resources_scientific">Scientific</string>
+    <string name="resources_scientific_link">https://www.nature.com/sdata/policies/repositories#close</string>
+    <string name="resources_simmons">Simmons</string>
+    <string name="resources_simmons_link">http://oad.simmons.edu/oadwiki/Data_repositories</string>
+    <string name="resources_university_of_minnesota">University of Minnesota</string>
+    <string name="resources_university_of_minnesota_link">https://www.lib.umn.edu/datamanagement/datacenters</string>
+
     <string name="biblio_fragment_overview_title">Overview</string>
     <string name="biblio_fragment_copies_title">Copies</string>
 </resources>

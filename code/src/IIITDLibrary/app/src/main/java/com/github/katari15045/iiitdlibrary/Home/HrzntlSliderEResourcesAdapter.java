@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Gui;
+package com.github.katari15045.iiitdlibrary.Home;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.github.katari15045.iiitdlibrary.Helper.EResourceCard;
 import com.github.katari15045.iiitdlibrary.R;
 
 import java.util.ArrayList;

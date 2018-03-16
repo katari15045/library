@@ -1,20 +1,14 @@
-package com.github.katari15045.iiitdlibrary.Activity;
+package com.github.katari15045.iiitdlibrary.Main;
 
-import android.content.Context;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
-import com.github.katari15045.iiitdlibrary.Gui.BottomNavBar;
-import com.github.katari15045.iiitdlibrary.Fragment.HomeFragment;
-import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
+import com.github.katari15045.iiitdlibrary.Home.HomeFragment;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 // Adds Bottom Navigation Bar, Navigation Drawer and displays Home Fragment
@@ -58,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(Global.currentFragment.getClass() == HomeFragment.class){
             Log.d("SAK", "AlertDialog::Exit");
+            Toast.makeText(this, "Coming soon...", Toast.LENGTH_SHORT).show();
         } else{
             MainActivity.replaceFragment(new HomeFragment());
         }

@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Activity;
+package com.github.katari15045.iiitdlibrary;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,14 +6,13 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.webkit.WebView;
 import android.widget.Toast;
 
-import com.github.katari15045.iiitdlibrary.Gui.MyAlertDialog;
-import com.github.katari15045.iiitdlibrary.Helper.Database;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
-import com.github.katari15045.iiitdlibrary.Helper.NewArrivalsFetcher;
-import com.github.katari15045.iiitdlibrary.R;
+import com.github.katari15045.iiitdlibrary.Main.MyAlertDialog;
+import com.github.katari15045.iiitdlibrary.Misc.Database;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
+import com.github.katari15045.iiitdlibrary.Home.NewArrivalsFetcher;
+import com.github.katari15045.iiitdlibrary.Main.MainActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

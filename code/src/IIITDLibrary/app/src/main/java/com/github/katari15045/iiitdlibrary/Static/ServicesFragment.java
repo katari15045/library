@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Fragment;
+package com.github.katari15045.iiitdlibrary.Static;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,9 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
-import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
+import com.github.katari15045.iiitdlibrary.Main.NavDrawer;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class ServicesFragment extends Fragment {

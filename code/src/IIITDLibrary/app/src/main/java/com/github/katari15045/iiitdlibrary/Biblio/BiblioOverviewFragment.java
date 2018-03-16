@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Fragment.Biblio;
+package com.github.katari15045.iiitdlibrary.Biblio;
 
 
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.katari15045.iiitdlibrary.Helper.Global;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 public class BiblioOverviewFragment extends Fragment {

@@ -1,15 +1,14 @@
-package com.github.katari15045.iiitdlibrary.Fragment.Biblio;
+package com.github.katari15045.iiitdlibrary.Biblio;
 
 import android.content.res.Resources;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
+import com.github.katari15045.iiitdlibrary.Main.MainActivity;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 /**

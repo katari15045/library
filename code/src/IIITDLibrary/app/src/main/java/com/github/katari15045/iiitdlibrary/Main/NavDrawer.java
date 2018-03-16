@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Gui;
+package com.github.katari15045.iiitdlibrary.Main;
 
 import android.content.Context;
 import android.support.design.widget.NavigationView;
@@ -12,14 +12,13 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
-import com.github.katari15045.iiitdlibrary.Fragment.AboutFragment;
-import com.github.katari15045.iiitdlibrary.Fragment.ResourcesFragment;
-import com.github.katari15045.iiitdlibrary.Fragment.GivingFragment;
-import com.github.katari15045.iiitdlibrary.Fragment.OccupancyFragment;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
+import com.github.katari15045.iiitdlibrary.Static.AboutFragment;
+import com.github.katari15045.iiitdlibrary.Static.ResourcesFragment;
+import com.github.katari15045.iiitdlibrary.Static.GivingFragment;
+import com.github.katari15045.iiitdlibrary.Static.OccupancyFragment;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
-import com.github.katari15045.iiitdlibrary.Fragment.ServicesFragment;
+import com.github.katari15045.iiitdlibrary.Static.ServicesFragment;
 
 /**
  * Created by Saketh Katari on 26-02-2018.

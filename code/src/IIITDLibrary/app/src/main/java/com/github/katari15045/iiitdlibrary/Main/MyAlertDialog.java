@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Gui;
+package com.github.katari15045.iiitdlibrary.Main;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,10 +6,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.github.katari15045.iiitdlibrary.Helper.Global;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 /**

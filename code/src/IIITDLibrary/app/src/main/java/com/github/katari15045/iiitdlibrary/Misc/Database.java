@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Helper;
+package com.github.katari15045.iiitdlibrary.Misc;
 
 import android.util.Log;
 

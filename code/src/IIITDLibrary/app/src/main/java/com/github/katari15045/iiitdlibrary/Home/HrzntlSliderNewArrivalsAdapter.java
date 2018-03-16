@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Gui;
+package com.github.katari15045.iiitdlibrary.Home;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,11 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
-import com.github.katari15045.iiitdlibrary.Fragment.Biblio.BiblioOverviewFragment;
-import com.github.katari15045.iiitdlibrary.Fragment.Biblio.MyTabLayout;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
-import com.github.katari15045.iiitdlibrary.Helper.NewArrivalCard;
+import com.github.katari15045.iiitdlibrary.Main.MainActivity;
+import com.github.katari15045.iiitdlibrary.Biblio.BiblioOverviewFragment;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 import java.util.ArrayList;

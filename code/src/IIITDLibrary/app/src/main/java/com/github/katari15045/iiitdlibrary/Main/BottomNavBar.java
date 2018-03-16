@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Gui;
+package com.github.katari15045.iiitdlibrary.Main;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,10 +9,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
-import com.github.katari15045.iiitdlibrary.Fragment.HomeFragment;
-import com.github.katari15045.iiitdlibrary.Fragment.LoginFragment;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
+import com.github.katari15045.iiitdlibrary.Home.HomeFragment;
+import com.github.katari15045.iiitdlibrary.Login.LoginFragment;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 /**

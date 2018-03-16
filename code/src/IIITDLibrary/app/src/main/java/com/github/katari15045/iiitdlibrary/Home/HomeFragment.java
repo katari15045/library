@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Fragment;
+package com.github.katari15045.iiitdlibrary.Home;
 
 
 import android.content.res.Resources;
@@ -14,12 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
 
-import com.github.katari15045.iiitdlibrary.Helper.EResourceCard;
-import com.github.katari15045.iiitdlibrary.Gui.HrzntlSliderEResourcesAdapter;
-import com.github.katari15045.iiitdlibrary.Gui.HrzntlSliderNewArrivalsAdapter;
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
-import com.github.katari15045.iiitdlibrary.Helper.NewArrivalsFetcher;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 import java.util.ArrayList;

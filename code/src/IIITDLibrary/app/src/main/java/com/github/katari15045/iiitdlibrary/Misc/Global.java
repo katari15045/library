@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Helper;
+package com.github.katari15045.iiitdlibrary.Misc;
 
 import android.content.Context;
 import android.support.design.widget.TabLayout;
@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 
-import com.github.katari15045.iiitdlibrary.Gui.NavDrawer;
+import com.github.katari15045.iiitdlibrary.Main.NavDrawer;
 
 /**
  * Created by Saketh Katari on 14-03-2018.

@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Fragment;
+package com.github.katari15045.iiitdlibrary.Login;
 
 
 import android.content.Context;
@@ -14,8 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.github.katari15045.iiitdlibrary.Activity.MainActivity;
-import com.github.katari15045.iiitdlibrary.Helper.Global;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 // Login Fragment that contains fields for username, password and a login button

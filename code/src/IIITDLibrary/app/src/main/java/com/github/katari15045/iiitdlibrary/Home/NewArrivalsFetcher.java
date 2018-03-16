@@ -1,7 +1,9 @@
-package com.github.katari15045.iiitdlibrary.Helper;
+package com.github.katari15045.iiitdlibrary.Home;
 
 import android.content.Context;
 
+import com.github.katari15045.iiitdlibrary.Misc.Database;
+import com.github.katari15045.iiitdlibrary.Misc.ImageFetcher;
 import com.github.katari15045.iiitdlibrary.R;
 
 import java.sql.ResultSet;

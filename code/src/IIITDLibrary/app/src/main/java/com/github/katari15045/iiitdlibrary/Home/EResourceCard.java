@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary.Helper;
+package com.github.katari15045.iiitdlibrary.Home;
 
 import android.graphics.Bitmap;
 
