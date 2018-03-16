@@ -161,49 +161,87 @@
         <item>Scientific American - Trail Access</item>
     </string-array>
 
-   <string-array name="eresources_fragment_links">
-       <item>https://dl.acm.org/</item>
-       <item>https://pubs.acs.org/</item>
-       <item>https://www.doabooks.org/doab?func=browse&amp;uiLanguage=en</item>
-       <item>https://doaj.org/</item>
-       <item>http://www.opendoar.org/search.php</item>
-       <item>https://pqdtopen.proquest.com/search.html</item>
-       <item>http://shodhganga.inflibnet.ac.in/</item>
-       <item>http://www.epw.in/frontpage?0=ip_login_no_cache%3D9cb9c47f40a4b4523d6c1e02bcfdd76c</item>
-       <item>https://jgateplus.com/search/journalFinder/</item>
-       <item>https://www.sciencedirect.com/</item>
-       <item>http://www.freefictionbooks.org/</item>
-       <item>http://ieeexplore.ieee.org/Xplore/home.jsp</item>
-       <item>http://isid.org.in/</item>
-       <item>https://archive.org/</item>
-       <item>https://www.inflibnet.ac.in/ess/journals.php?pg=collection&amp;id=JSTOR</item>
-       <item>https://ndl.iitkgp.ac.in/</item>
-       <item>https://nsdl.oercommons.org/</item>
-       <item>https://www.nature.com/nature/</item>
-       <item>https://www.nowpublishers.com/</item>
-       <item>http://www.oapen.org/home</item>
-       <item>https://docstore.mik.ua/orelly/bookshelfs.html</item>
-       <item>http://www.gutenberg.org/</item>
-       <item>https://www.siam.org/journals/</item>
-       <item>http://www.southasiaarchive.com/</item>
-       <item>https://link.springer.com/</item>
-       <item>https://www.tandfonline.com/</item>
-       <item>https://www.ucl.ac.uk/ucl-press/browse-books</item>
-       <item>http://onlinelibrary.wiley.com/browse/publications?type=journal&amp;activeLetter=</item>
-       <item>https://www.wdl.org/en/</item>
-       <item>http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245</item>
-       <item>https://search.proquest.com/business/192373</item>
-       <item>https://www.sciencedirect.com/</item>
-       <item>https://www.nature.com/nmeth/</item>
-       <item>https://www.nature.com/nbt/</item>
-       <item>https://www.nature.com/ng/</item>
-       <item>https://www.nature.com/scientificamerican/index.html</item>
-   </string-array>
+    <string-array name="eresources_fragment_links">
+        <item>https://dl.acm.org/</item>
+        <item>https://pubs.acs.org/</item>
+        <item>https://www.doabooks.org/doab?func=browse&amp;uiLanguage=en</item>
+        <item>https://doaj.org/</item>
+        <item>http://www.opendoar.org/search.php</item>
+        <item>https://pqdtopen.proquest.com/search.html</item>
+        <item>http://shodhganga.inflibnet.ac.in/</item>
+        <item>http://www.epw.in/frontpage?0=ip_login_no_cache%3D9cb9c47f40a4b4523d6c1e02bcfdd76c</item>
+        <item>https://jgateplus.com/search/journalFinder/</item>
+        <item>https://www.sciencedirect.com/</item>
+        <item>http://www.freefictionbooks.org/</item>
+        <item>http://ieeexplore.ieee.org/Xplore/home.jsp</item>
+        <item>http://isid.org.in/</item>
+        <item>https://archive.org/</item>
+        <item>https://www.inflibnet.ac.in/ess/journals.php?pg=collection&amp;id=JSTOR</item>
+        <item>https://ndl.iitkgp.ac.in/</item>
+        <item>https://nsdl.oercommons.org/</item>
+        <item>https://www.nature.com/nature/</item>
+        <item>https://www.nowpublishers.com/</item>
+        <item>http://www.oapen.org/home</item>
+        <item>https://docstore.mik.ua/orelly/bookshelfs.html</item>
+        <item>http://www.gutenberg.org/</item>
+        <item>https://www.siam.org/journals/</item>
+        <item>http://www.southasiaarchive.com/</item>
+        <item>https://link.springer.com/</item>
+        <item>https://www.tandfonline.com/</item>
+        <item>https://www.ucl.ac.uk/ucl-press/browse-books</item>
+        <item>http://onlinelibrary.wiley.com/browse/publications?type=journal&amp;activeLetter=</item>
+        <item>https://www.wdl.org/en/</item>
+        <item>http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245</item>
+        <item>https://search.proquest.com/business/192373</item>
+        <item>https://www.sciencedirect.com/</item>
+        <item>https://www.nature.com/nmeth/</item>
+        <item>https://www.nature.com/nbt/</item>
+        <item>https://www.nature.com/ng/</item>
+        <item>https://www.nature.com/scientificamerican/index.html</item>
+    </string-array>
 
+    <string-array name="eresources_daily_newspaper_titles">
+        <item>Business Standard</item>
+        <item>Deccan Chronicle</item>
+        <item>Deccan Herald</item>
+        <item>DNA</item>
+        <item>Hindustan Times</item>
+        <item>Times Group</item>
+        <item>Indian Express</item>
+        <item>Mail Today</item>
+        <item>Mint</item>
+        <item>The Asian Age</item>
+        <item>Financial Express</item>
+        <item>The Pioneer</item>
+        <item>The Statesman</item>
+        <item>The Tribune</item>
+        <item>Amar Ujala</item>
+        <item>Dhainik Bhaskar</item>
+        <item>Dhainik jagaran</item>
+    </string-array>
+
+    <string-array name="eresources_daily_newspaper_links">
+        <item>http://epaper.business-standard.com/bsepaper/login.php</item>
+        <item>http://epaper.deccanchronicle.com/states.aspx</item>
+        <item>http://deccanheraldepaper.com/</item>
+        <item>http://epaper.dnaindia.com/</item>
+        <item>http://paper.hindustantimes.com/epaper/viewer.aspx</item>
+        <item>https://epaper.timesgroup.com/TOI/TimesOfIndia/index.html?a=c</item>
+        <item>http://epaper.indianexpress.com/</item>
+        <item>http://epaper.mailtoday.in/</item>
+        <item>http://epaper.livemint.com/epaper/viewer.aspx</item>
+        <item>http://onlineepaper.asianage.com/</item>
+        <item>http://epaper.financialexpress.com/</item>
+        <item>http://www.dailypioneer.com/</item>
+        <item>http://www.thestatesman.net/</item>
+        <item>http://www.tribuneindia.com/</item>
+        <item>http://www.e-paperview.com/amar-ujala.html</item>
+        <item>http://epaper.bhaskar.com/</item>
+        <item>http://epaper.jagran.com/homepage.aspx</item>
+    </string-array>
 
     <string name="biblio_fragment_overview_title">Overview</string>
     <string name="biblio_fragment_copies_title">Copies</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="eresources_daily_news_papers">Daily News Papers</string>
 </resources>

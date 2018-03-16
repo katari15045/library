@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.github.katari15045.iiitdlibrary.Home.HomeFragment;
 import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
+import com.github.katari15045.iiitdlibrary.Static.Resources.DailyNewsPapers.DailyNewsPapersFragment;
 import com.github.katari15045.iiitdlibrary.Static.Resources.EResource.EResourcesFragment;
 import com.github.katari15045.iiitdlibrary.Static.Resources.ResourcesFragment;
 
@@ -56,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         if(Global.currentFragment.getClass() == HomeFragment.class){
             Log.d("SAK", "AlertDialog::Exit");
             Toast.makeText(this, "Coming soon...", Toast.LENGTH_SHORT).show();
-        } else if(Global.currentFragment.getClass() == EResourcesFragment.class){
+        } else if(Global.currentFragment.getClass() == EResourcesFragment.class ||
+                Global.currentFragment.getClass() == DailyNewsPapersFragment.class){
             Global.replaceFragment(new ResourcesFragment());
         } else{
             Global.replaceFragment(new HomeFragment());

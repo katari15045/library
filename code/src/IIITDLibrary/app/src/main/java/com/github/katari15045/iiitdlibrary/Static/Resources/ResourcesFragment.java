@@ -14,6 +14,7 @@ import android.widget.ScrollView;
 import com.github.katari15045.iiitdlibrary.Main.NavDrawer;
 import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
+import com.github.katari15045.iiitdlibrary.Static.Resources.DailyNewsPapers.DailyNewsPapersFragment;
 import com.github.katari15045.iiitdlibrary.Static.Resources.EResource.EResourcesFragment;
 
 public class ResourcesFragment extends Fragment{
@@ -81,12 +82,21 @@ public class ResourcesFragment extends Fragment{
 
     private void setListeners(){
         CardView cardViewEResources = view.findViewById(R.id.fragment_resource_cardview_e_resources);
+        CardView cardViewDailyNewsPapers = view.findViewById(R.id.fragment_resource_cardview_daily_news_papers);
         cardViewEResources.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("SAK", "Clicked Resources::EResources");
                 EResourcesFragment eResourcesFragment = new EResourcesFragment();
                 Global.replaceFragment(eResourcesFragment);
+            }
+        });
+        cardViewDailyNewsPapers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("SAK", "Clicked Resources::DailyNewsPapers");
+                DailyNewsPapersFragment dailyNewsPapersFragment = new DailyNewsPapersFragment();
+                Global.replaceFragment(dailyNewsPapersFragment);
             }
         });
     }
