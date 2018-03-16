@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.github.katari15045.iiitdlibrary.Static.AboutFragment;
-import com.github.katari15045.iiitdlibrary.Static.ResourcesFragment;
+import com.github.katari15045.iiitdlibrary.Static.Resources.ResourcesFragment;
 import com.github.katari15045.iiitdlibrary.Static.GivingFragment;
 import com.github.katari15045.iiitdlibrary.Static.OccupancyFragment;
 import com.github.katari15045.iiitdlibrary.Misc.Global;
@@ -63,8 +63,7 @@ public class NavDrawer implements NavigationView.OnNavigationItemSelectedListene
             fragment = new GivingFragment();
         }
         closeNavDrawer();
-        MainActivity.replaceFragment(fragment);
-        Global.currentFragment = fragment;
+        Global.replaceFragment(fragment);
         return true;
     }
 

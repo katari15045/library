@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.github.katari15045.iiitdlibrary.R;
 
@@ -76,6 +77,8 @@ class EResourceListener implements View.OnClickListener{
     // Opens the url on the default browser
     public void onClick(View view){
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(card.getUrlString()));
+        Toast.makeText(context, context.getResources().getString(R.string.please_wait),
+                Toast.LENGTH_SHORT).show();
         context.startActivity(intent);
     }
 }

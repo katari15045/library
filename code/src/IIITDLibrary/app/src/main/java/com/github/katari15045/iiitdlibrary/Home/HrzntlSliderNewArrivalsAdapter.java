@@ -78,7 +78,6 @@ class NewArrivalListener implements View.OnClickListener{
     public void onClick(View view){
         Log.d("SAK", "Clicked NewArrivals::Book");
         BiblioOverviewFragment biblioOverviewFragment = new BiblioOverviewFragment();
-        MainActivity.replaceFragment(biblioOverviewFragment);
-        Global.currentFragment = biblioOverviewFragment;
+        Global.replaceFragment(biblioOverviewFragment);
     }
 }

@@ -70,7 +70,7 @@ class MyTabListener implements TabLayout.OnTabSelectedListener{
             MyTabLayout.tabZeroClicked = false;
             MyTabLayout.tabOneClicked = true;
         }
-        MainActivity.replaceFragment(fragment);
+        Global.replaceFragment(fragment);
         Global.currentFragment = fragment;
     }
 

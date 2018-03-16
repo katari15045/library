@@ -72,8 +72,7 @@ class BottomNavBarListener implements BottomNavigationView.OnNavigationItemSelec
             }
         }
         if(fragment != null){
-            MainActivity.replaceFragment(fragment);
-            Global.currentFragment = fragment;
+            Global.replaceFragment(fragment);
         }
         return true;
     }

@@ -1,6 +1,8 @@
 To Do
 -----
--> Change java Directory structure to home, login, resources, about etc
+-> use string-array in strings.xml for e-resources in home etc
+-> Make e-resources in home point to eResources Fragment
+-> Remove Context args in hrzntl sliders
 -> Handle back button press at HomeFragment - With an alertDialog, ask if user wants to exit; DefaultPackage -> Gui -> MyAlertDialog -> NetworkIssue.java, Exit.java
 -> Decrease the startup time
 -> Instead of creating new instances of fragments everytime, use factory design pattern
@@ -47,36 +49,37 @@ Resources Static Page
 	Nature Biotech (Trial Access) : https://www.nature.com/nbt/
 	Nature Genetics (Trial Access)  :  https://www.nature.com/ng/
 	Scientific American (Trial Access)  : https://www.nature.com/scientificamerican/index.html
+
+	ACM Digital Library : https://dl.acm.org/
+	American Chemical Society (ACS) : https://pubs.acs.org/
 	Directory of Open Access Books : https://www.doabooks.org/doab?func=browse&uiLanguage=en
 	Directory of Open Access Journal : https://doaj.org/
 	Directory of Open Access Repositories : http://www.opendoar.org/search.php
-	Dissertation and Theses (Proquest) : https://pqdtopen.proquest.com/search.html
-	Dissertation and Theses (Shodhganga-INFLIBNET) : http://shodhganga.inflibnet.ac.in/
+	Dissertation and Thesis (Proquest) : https://pqdtopen.proquest.com/search.html
+	Dissertation and Thesis (Shodhganga-INFLIBNET) : http://shodhganga.inflibnet.ac.in/
+	Economic & Political Weekly : http://www.epw.in/frontpage?0=ip_login_no_cache%3D9cb9c47f40a4b4523d6c1e02bcfdd76c
 	E-Journal Gateway : https://jgateplus.com/search/journalFinder/
+	Elsevier Science Direct Online Journals (CS & Maths collection) : https://www.sciencedirect.com/
 	FreeFictionBooks : http://www.freefictionbooks.org/
+	IEL online (IEEE/IET Electronic Library) : http://ieeexplore.ieee.org/Xplore/home.jsp
+	Institute for Studies in Industrial Development Database : http://isid.org.in/
 	Internet Archive : https://archive.org/
+	JSTOR : https://www.inflibnet.ac.in/ess/journals.php?pg=collection&id=JSTOR
+	Kindle E-Books : Open Search results for kindle edition books
 	National Digital Library : https://ndl.iitkgp.ac.in/
 	National Science Digital Library : https://nsdl.oercommons.org/
+	Nature Online Journal : https://www.nature.com/nature/
+	Now Publishers - Computer Science Package : https://www.nowpublishers.com/
 	OAPEN : http://www.oapen.org/home
 	O'Reilly's CD Bookshelf : https://docstore.mik.ua/orelly/bookshelfs.html
 	Project Gutenberg  : http://www.gutenberg.org/
-	UCL Press : https://www.ucl.ac.uk/ucl-press/browse-books
-	World Digital Library : https://www.wdl.org/en/ 
-	Kindle E-Books : Open Search results for kindle edition books
-	ACM Digital Library : https://dl.acm.org/
-	American Chemical Society (ACS) : https://pubs.acs.org/
-	Economic & Political Weekly : http://www.epw.in/frontpage?0=ip_login_no_cache%3D9cb9c47f40a4b4523d6c1e02bcfdd76c
-	Elsevier Science Direct Online Journals (CS & Maths collection) : https://www.sciencedirect.com/
-	IEL online (IEEE/IET Electronic Library) : http://ieeexplore.ieee.org/Xplore/home.jsp
-	Institute for Studies in Industrial Development Database : http://isid.org.in/
-	JSTOR : https://www.inflibnet.ac.in/ess/journals.php?pg=collection&id=JSTOR
-	Nature Online Journal : https://www.nature.com/nature/
-	Now Publishers - Computer Science Package : https://www.nowpublishers.com/
 	SIAM Online Journals  : https://www.siam.org/journals/
-	Springer's Online Journals : https://link.springer.com/ 
 	South Asia Archive : http://www.southasiaarchive.com/
+	Springer's Online Journals : https://link.springer.com/ 
 	Taylor & Francis Online Journals : https://www.tandfonline.com/
+	UCL Press : https://www.ucl.ac.uk/ucl-press/browse-books
 	Wiley-Blackwell Online Journals  : http://onlinelibrary.wiley.com/browse/publications?type=journal&activeLetter=
+	World Digital Library : https://www.wdl.org/en/ 
 	World eBook Library : http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245
 
 -> Daily News papers
