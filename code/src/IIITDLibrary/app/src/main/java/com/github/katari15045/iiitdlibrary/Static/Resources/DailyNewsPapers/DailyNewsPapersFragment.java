@@ -25,7 +25,7 @@ public class DailyNewsPapersFragment extends Fragment {
 
     public DailyNewsPapersFragment(){
         title = Global.context.getResources().
-                getString(R.string.eresources_daily_news_papers);
+                getString(R.string.resources_daily_news_papers);
     }
 
     @Override
@@ -54,8 +54,8 @@ public class DailyNewsPapersFragment extends Fragment {
     }
 
     private void storeData(){
-        titleArray = view.getResources().getStringArray(R.array.eresources_daily_newspaper_titles);
-        linksArray = view.getResources().getStringArray(R.array.eresources_daily_newspaper_links);
+        titleArray = view.getResources().getStringArray(R.array.resources_daily_newspaper_titles);
+        linksArray = view.getResources().getStringArray(R.array.resources_daily_newspaper_links);
     }
 
     public static String getTitle(){

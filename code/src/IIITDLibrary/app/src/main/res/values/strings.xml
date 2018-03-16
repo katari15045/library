@@ -85,7 +85,9 @@
     <string name="resources_e_resources">E-Resources</string>
     <string name="resources_daily_news_papers">Daily News Papers</string>
     <string name="resources_computing_books_by_indian_authors">Computing Books by Indian Authors</string>
-    <string name="resources_journals_magazines">Journals &amp; magazines (Hard Copy)</string>
+    <string name="resources_computing_books_by_indian_authors_link">http://library.iiitd.edu.in/opac-tmpl/bootstrap/en/includes/cbia.html</string>
+    <string name="resources_journals_magazines">Journals &amp; magazines (Hard Copy in Library)</string>
+    <string name="resources_journals_magazines_link">http://library.iiitd.edu.in/opac-tmpl/bootstrap/en/includes/Subscribed%20Magazines.pdf</string>
     <string name="resources_proof_reader">Proof Reader</string>
     <string name="resources_proof_reader_link">https://support.grammarly.com/hc/en-us/categories/115000018631-Tips-Tutorials</string>
     <string name="resources_anti_plagiarism_tool_urkund">Anti Plagiarism Tool, Urkund</string>
@@ -200,7 +202,7 @@
         <item>https://www.nature.com/scientificamerican/index.html</item>
     </string-array>
 
-    <string-array name="eresources_daily_newspaper_titles">
+    <string-array name="resources_daily_newspaper_titles">
         <item>Business Standard</item>
         <item>Deccan Chronicle</item>
         <item>Deccan Herald</item>
@@ -220,7 +222,7 @@
         <item>Dhainik jagaran</item>
     </string-array>
 
-    <string-array name="eresources_daily_newspaper_links">
+    <string-array name="resources_daily_newspaper_links">
         <item>http://epaper.business-standard.com/bsepaper/login.php</item>
         <item>http://epaper.deccanchronicle.com/states.aspx</item>
         <item>http://deccanheraldepaper.com/</item>
@@ -242,6 +244,4 @@
 
     <string name="biblio_fragment_overview_title">Overview</string>
     <string name="biblio_fragment_copies_title">Copies</string>
-
-    <string name="eresources_daily_news_papers">Daily News Papers</string>
 </resources>
