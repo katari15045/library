@@ -1,6 +1,7 @@
 To Do
 -----
--> Handle back button press at HomeFragment - With an alertDialog, ask if user wants to exit; DefaultPackage -> Gui -> AlertDialog -> NetworkIssue.java, Exit.java
+-> Change java Directory structure to home, login, resources, about etc
+-> Handle back button press at HomeFragment - With an alertDialog, ask if user wants to exit; DefaultPackage -> Gui -> MyAlertDialog -> NetworkIssue.java, Exit.java
 -> Decrease the startup time
 -> Instead of creating new instances of fragments everytime, use factory design pattern
 -> Add collapsing toolbar to static screens
@@ -13,6 +14,91 @@ To Do
 -> Latest GUIs : https://medium.com/@mmbialas/30-new-android-libraries-and-projects-released-in-summer-2017-which-should-catch-your-attention-d3702bd9bdc6
 -> Top 9 UI Design Trends for Mobile Apps in 2018: https://medium.com/life-never-dead-and-gone/top-9-ui-design-trends-for-mobile-apps-in-2018-645993c802d4
 -> Change variable names to m<varName>
+
+Resources Static Page
+---------------------
+-> Resources Page
+	-> E-Resources
+	-> Daily News Papers
+	-> Computing Books by Indian authors
+	-> Journals/Magazines
+	ProofReader : https://support.grammarly.com/hc/en-us/categories/115000018631-Tips-Tutorials
+	Anti-Plagiarism tool, Urkund : http://www.urkund.com/en/
+	Video Lectures, NPTEL : http://library.iiitd.edu.in/nptel/
+	Citation Tools
+		Mendeley : https://www.mendeley.com/guides
+		Zotero : https://www.zotero.org/support/quick_start_guide
+	Online Courses
+		Academic Earth : http://academicearth.org/
+		Coursera : https://www.coursera.org/
+		edX : https://www.edx.org/
+		MIT OpenCourseWare : https://ocw.mit.edu/index.htm
+		NPTEl : https://onlinecourses.nptel.ac.in/
+	Research Data Repositories
+		re3data : https://www.re3data.org/
+		Plos : http://journals.plos.org/plosone/s/data-availability#loc-recommended-repositories
+		Scientific : https://www.nature.com/sdata/policies/repositories#close
+		Simmons : http://oad.simmons.edu/oadwiki/Data_repositories
+		University of Minnesota : https://www.lib.umn.edu/datamanagement/datacenters
+-> E-Resources
+	ABI/INFORM Collection (Trial Access) : https://search.proquest.com/business/192373
+	Elsevier Science Direct Online Journals (Computational Biology collection - Trial Access) : https://www.sciencedirect.com/
+	Nature Methods (Trial Access) : https://www.nature.com/nmeth/
+	Nature Biotech (Trial Access) : https://www.nature.com/nbt/
+	Nature Genetics (Trial Access)  :  https://www.nature.com/ng/
+	Scientific American (Trial Access)  : https://www.nature.com/scientificamerican/index.html
+	Directory of Open Access Books : https://www.doabooks.org/doab?func=browse&uiLanguage=en
+	Directory of Open Access Journal : https://doaj.org/
+	Directory of Open Access Repositories : http://www.opendoar.org/search.php
+	Dissertation and Theses (Proquest) : https://pqdtopen.proquest.com/search.html
+	Dissertation and Theses (Shodhganga-INFLIBNET) : http://shodhganga.inflibnet.ac.in/
+	E-Journal Gateway : https://jgateplus.com/search/journalFinder/
+	FreeFictionBooks : http://www.freefictionbooks.org/
+	Internet Archive : https://archive.org/
+	National Digital Library : https://ndl.iitkgp.ac.in/
+	National Science Digital Library : https://nsdl.oercommons.org/
+	OAPEN : http://www.oapen.org/home
+	O'Reilly's CD Bookshelf : https://docstore.mik.ua/orelly/bookshelfs.html
+	Project Gutenberg  : http://www.gutenberg.org/
+	UCL Press : https://www.ucl.ac.uk/ucl-press/browse-books
+	World Digital Library : https://www.wdl.org/en/ 
+	Kindle E-Books : Open Search results for kindle edition books
+	ACM Digital Library : https://dl.acm.org/
+	American Chemical Society (ACS) : https://pubs.acs.org/
+	Economic & Political Weekly : http://www.epw.in/frontpage?0=ip_login_no_cache%3D9cb9c47f40a4b4523d6c1e02bcfdd76c
+	Elsevier Science Direct Online Journals (CS & Maths collection) : https://www.sciencedirect.com/
+	IEL online (IEEE/IET Electronic Library) : http://ieeexplore.ieee.org/Xplore/home.jsp
+	Institute for Studies in Industrial Development Database : http://isid.org.in/
+	JSTOR : https://www.inflibnet.ac.in/ess/journals.php?pg=collection&id=JSTOR
+	Nature Online Journal : https://www.nature.com/nature/
+	Now Publishers - Computer Science Package : https://www.nowpublishers.com/
+	SIAM Online Journals  : https://www.siam.org/journals/
+	Springer's Online Journals : https://link.springer.com/ 
+	South Asia Archive : http://www.southasiaarchive.com/
+	Taylor & Francis Online Journals : https://www.tandfonline.com/
+	Wiley-Blackwell Online Journals  : http://onlinelibrary.wiley.com/browse/publications?type=journal&activeLetter=
+	World eBook Library : http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245
+
+-> Daily News papers
+		English Newspapers
+			Business Standard : http://epaper.business-standard.com/bsepaper/login.php
+			Deccan Chronicle : http://epaper.deccanchronicle.com/states.aspx
+			Deccan Herald : http://deccanheraldepaper.com/
+			DNA : http://epaper.dnaindia.com/
+			Hindustan Times : http://paper.hindustantimes.com/epaper/viewer.aspx
+			Times Group : https://epaper.timesgroup.com/TOI/TimesOfIndia/index.html?a=c
+			Indian Express : http://epaper.indianexpress.com/
+			Mail today : http://epaper.mailtoday.in/
+			Mint : http://epaper.livemint.com/epaper/viewer.aspx
+			The Asian Age : http://onlineepaper.asianage.com/
+			Financial Express : http://epaper.financialexpress.com/
+			The Pioneer : http://www.dailypioneer.com/
+			The Statesman : http://www.thestatesman.net/
+			The Tribune : http://www.tribuneindia.com/
+		Hindi NewsPapers:
+			Amar Ujala : http://www.e-paperview.com/amar-ujala.html
+			Dhainik Bhaskar : http://epaper.bhaskar.com/
+			Dhainik Jagaran : http://epaper.jagran.com/homepage.aspx
 
 
 Tutorials
