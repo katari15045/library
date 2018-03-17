@@ -1,5 +1,6 @@
 To Do
 -----
+-> don't hardcode strings in fragment_occupancy.xml
 -> use string-array in strings.xml for e-resources in home etc
 -> Make e-resources in home point to eResources Fragment
 -> Remove Context args in hrzntl sliders
