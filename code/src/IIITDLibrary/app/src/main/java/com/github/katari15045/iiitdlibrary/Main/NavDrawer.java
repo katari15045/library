@@ -18,7 +18,7 @@ import com.github.katari15045.iiitdlibrary.Static.GivingFragment;
 import com.github.katari15045.iiitdlibrary.Static.OccupancyFragment;
 import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
-import com.github.katari15045.iiitdlibrary.Static.ServicesFragment;
+import com.github.katari15045.iiitdlibrary.Static.Services.ServicesFragment;
 
 /**
  * Created by Saketh Katari on 26-02-2018.

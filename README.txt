@@ -4,6 +4,7 @@ To Do
 -> Make e-resources in home point to eResources Fragment
 -> Remove Context args in hrzntl sliders
 -> Handle back button press at HomeFragment - With an alertDialog, ask if user wants to exit; DefaultPackage -> Gui -> MyAlertDialog -> NetworkIssue.java, Exit.java
+-> Google Books API has limited usage - 1000 requests per day and is not scalable for IIITD library's population
 -> Decrease the startup time
 -> Instead of creating new instances of fragments everytime, use factory design pattern
 -> Add collapsing toolbar to static screens
