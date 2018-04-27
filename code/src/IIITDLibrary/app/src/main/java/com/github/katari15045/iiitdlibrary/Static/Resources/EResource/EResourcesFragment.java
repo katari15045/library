@@ -28,7 +28,7 @@ public class EResourcesFragment extends Fragment{
     private String[] linksArray = null;
 
     public EResourcesFragment(){
-        title = ((AppCompatActivity) Global.context).getResources().getString
+        title = getActivity().getResources().getString
                 (R.string.eresources);
     }
 

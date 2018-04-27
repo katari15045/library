@@ -1,6 +1,7 @@
 package com.github.katari15045.iiitdlibrary.Main;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import com.github.katari15045.iiitdlibrary.Home.HomeFragment;
 import com.github.katari15045.iiitdlibrary.Login.LoginFragment;
 import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
+import com.github.katari15045.iiitdlibrary.search.SearchActivity;
 
 /**
  * Created by Saketh Katari on 05-03-2018.
@@ -61,7 +63,7 @@ class BottomNavBarListener implements BottomNavigationView.OnNavigationItemSelec
             }
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_search){
             Log.d("SAK", "BottomNavBar::Search");
-            Toast.makeText(context, "Search", Toast.LENGTH_SHORT).show();
+            context.startActivity(new Intent(context, SearchActivity.class));
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_login){
             if(item.getTitle().equals(context.getResources().getString(
                     R.string.bottom_nav_bar_title_login))){

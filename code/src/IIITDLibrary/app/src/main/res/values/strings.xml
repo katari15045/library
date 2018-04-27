@@ -38,6 +38,10 @@
     <string name="image_fetcher_api">https://www.googleapis.com/books/v1/volumes?country=IN&amp;key=AIzaSyDHlwmWnQVDDh-QVDE19aIu0WK7UEU7HWc&amp;q=isbn:</string>
     <string name="please_wait">Please wait</string>
 
+    <string name="search">Search</string>
+    <string name="search_hint">Search...</string>
+    <string name="results">Results</string>
+
     <string name="home_fragment_title">Home</string>
     <string name="home_fragment_new_arrivals_title">New Arrivals</string>
     <string name="home_fragment_e_resources_title">E Resources</string>
@@ -279,6 +283,9 @@
         <item>Most users generally carry laptops, therefore, the high speed 24x7 Wi-fi Internet connectivity is available in the whole Library and Information Center building. All students, PhD Scholars, Faculty Members, Guest/Visiting Faculty and Staff Members may use this facility; apart from a few desktop PCs connected with LAN.</item>
         <item>\n\u2022Only registered users (Faculty, Staff and Students) are allowed to borrow books/materials from the Library. Users should always carry their ID cards while using the Library and information center.\n\u2022All registered users may check their Library record and update/modify the personal information by logging in to their Library account.\n\u2022To know the full details and availability status of Library resources, please prefer to access the Library online catalogue.\n\u2022Users are not allowed to carry eatables and drinks in Library.\n\u2022Borrowers must satisfy themselves with the physical condition of the books before borrowing.\n\u2022Users should leave the books on the reading table after use.\n\u2022Users should not write in, mark, scratch, and disfigure or damage books and furniture of the Library.\n\u2022Changing the settings and display of the computers kept in Library is not allowed.\n\u2022Report to us regarding the loss of ID cards, so that the Library can keep it in record and nobody misuses it.\n\u2022Each user will receive e-mail intimation on issue/return, overdue reminder and related services.\n\u2022Belongings like bags, umbrellas, etc. are to be kept at the Library property counter at your own risk. All users are advised not to leave their valuables like money, passport, pen drive, cell phone, wallet etc. at the Library property counter.\n\u2022All users should observe strict silence inside the Library.</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -30,9 +30,10 @@ public class Database implements Runnable{
     @Override
     public void run() {
         try{
-            Log.d("SAK", "Connecting...");
+            Log.d("SAK", "Database::Connecting...");
             if(!connect()){
                 // Couldn't connect to the database
+                Log.d("SAK", "Database::couldn't connect to DB!");
                 isConnected = false;
                 return;
             }
@@ -63,7 +64,7 @@ public class Database implements Runnable{
             String password = "root";
             String driver = "com.mysql.jdbc.Driver";
             Class.forName(driver);
-            Log.d("SAK", "Validating credentials...");
+            Log.d("SAK", "Database::Validating credentials...");
             connection = DriverManager.getConnection(url, username, password);
         }catch (Exception e) {
             Log.d("SAK", "Can't connect to DB");

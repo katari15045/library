@@ -1,10 +1,13 @@
 package com.github.katari15045.iiitdlibrary.Main;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.github.katari15045.iiitdlibrary.Home.HomeFragment;
@@ -13,6 +16,7 @@ import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.Static.Resources.DailyNewsPapers.DailyNewsPapersFragment;
 import com.github.katari15045.iiitdlibrary.Static.Resources.EResource.EResourcesFragment;
 import com.github.katari15045.iiitdlibrary.Static.Resources.ResourcesFragment;
+import com.github.katari15045.iiitdlibrary.search.SearchActivity;
 
 // Adds Bottom Navigation Bar, Navigation Drawer and displays Home Fragment
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +32,21 @@ public class MainActivity extends AppCompatActivity {
         if(Global.currentFragment == null){
             displayHome();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.menu_search_icon){
+            Intent intent = new Intent(this, SearchActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setGlobalVars(){

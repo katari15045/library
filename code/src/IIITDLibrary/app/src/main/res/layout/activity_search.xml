@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingVertical="30dp"
+        android:id="@+id/activity_search_image_view_back_icon"
+        android:src="@drawable/ic_arrow_back"
+        android:tint="@color/white"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/activity_search_edit_text_search"
+        android:background="@color/colorPrimary"
+        android:hint="@string/search_hint"
+        android:paddingHorizontal="10dp"
+        android:layout_weight="8"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/white"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingVertical="30dp"
+        android:id="@+id/activity_search_image_view_search_icon"
+        android:src="@drawable/ic_action_search"
+        android:tint="@color/white"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        />
+
+</LinearLayout>
