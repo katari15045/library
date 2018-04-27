@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
+import java.util.HashSet;
+
 public class BiblioOverviewFragment extends Fragment {
 
     private View view = null;
@@ -24,6 +26,8 @@ public class BiblioOverviewFragment extends Fragment {
         Log.d("SAK", "BiblioOverviewFragment::onCreateView()");
         view = inflater.inflate(R.layout.fragment_biblio_overview, null);
         Log.d("SAK", "BiblioIverviewFragment::biblioNumber -> " + biblioNumber);
+        BiblioDataFetcher biblioDataFetcher = new BiblioDataFetcher(view.getContext());
+        biblioDataFetcher.execute();
         return view;
     }
 
