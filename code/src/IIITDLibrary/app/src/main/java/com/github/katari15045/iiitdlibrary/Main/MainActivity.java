@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.github.katari15045.iiitdlibrary.Biblio.BiblioOverviewFragment;
 import com.github.katari15045.iiitdlibrary.Home.HomeFragment;
 import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
@@ -21,6 +22,8 @@ import com.github.katari15045.iiitdlibrary.search.SearchActivity;
 // Adds Bottom Navigation Bar, Navigation Drawer and displays Home Fragment
 public class MainActivity extends AppCompatActivity {
 
+    public static boolean biblioOverview = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("SAK", "MainActivity::onCreate()");
@@ -31,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         // Don't replace the home fragment with Home Fragment which is of no use
         if(Global.currentFragment == null){
             displayHome();
+        }
+        // This will be used when you want to display BiblioOverviewFragment -
+        // from an activity other than MainActivity, like, SearchActivity
+        if(Global.currentFragment.getClass() == BiblioOverviewFragment.class){
+            Global.replaceFragment(new BiblioOverviewFragment());
         }
     }
 

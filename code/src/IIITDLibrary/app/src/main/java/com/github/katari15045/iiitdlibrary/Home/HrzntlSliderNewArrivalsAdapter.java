@@ -1,6 +1,7 @@
 package com.github.katari15045.iiitdlibrary.Home;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -78,6 +79,7 @@ class NewArrivalListener implements View.OnClickListener{
     public void onClick(View view){
         Log.d("SAK", "Clicked NewArrivals::Book");
         BiblioOverviewFragment biblioOverviewFragment = new BiblioOverviewFragment();
+        BiblioOverviewFragment.biblioNumber = card.getBiblionumber();
         Global.replaceFragment(biblioOverviewFragment);
     }
 }

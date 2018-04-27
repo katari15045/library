@@ -1,6 +1,9 @@
 package com.github.katari15045.iiitdlibrary.search;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.katari15045.iiitdlibrary.Biblio.BiblioOverviewFragment;
+import com.github.katari15045.iiitdlibrary.Main.MainActivity;
+import com.github.katari15045.iiitdlibrary.Misc.Global;
 import com.github.katari15045.iiitdlibrary.R;
 
 import java.util.ArrayList;
@@ -41,8 +47,12 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder>{
     @Override
     public void onBindViewHolder(SearchViewHolder holder, int position) {
         SearchResult searchResult = db.get(position);
+        if(searchResult == null){
+            return;
+        }
         holder.textViewTitle.setText(handleString(searchResult.getTitle()));
         holder.textViewAuthor.setText(handleString(searchResult.getAuthor()));
+        holder.cardView.setOnClickListener(new SearchResultListener(view, searchResult));
     }
 
     @Override
@@ -51,6 +61,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder>{
     }
 
     private String handleString(String inp){
+        if(inp == null){
+            return null;
+        }
         int maxLen = context.getResources().getInteger(R.integer.max_str_len);
         if(inp.length() > maxLen){
             StringBuilder sb = new StringBuilder();
@@ -80,20 +93,24 @@ class SearchViewHolder extends RecyclerView.ViewHolder{
         textViewTitle = view.findViewById(R.id.search_result_card_textview_title);
         textViewAuthor = view.findViewById(R.id.search_result_card_textview_author);
         cardView = view.findViewById(R.id.search_result_card_cardview);
-        cardView.setOnClickListener(new SearchResultListener(view));
     }
 }
 
 class SearchResultListener implements View.OnClickListener{
 
     private View view = null;
+    private SearchResult searchResult = null;
 
-    public SearchResultListener(View view){
+    public SearchResultListener(View view, SearchResult searchResult){
         this.view = view;
+        this.searchResult = searchResult;
     }
 
     @Override
     public void onClick(View view) {
-        Toast.makeText(view.getContext(), "Coming soon...", Toast.LENGTH_SHORT).show();
+        Global.currentFragment = new BiblioOverviewFragment();
+        BiblioOverviewFragment.biblioNumber = searchResult.getBiblioNum();
+        Intent intent = new Intent(view.getContext(), MainActivity.class);
+        view.getContext().startActivity(intent);
     }
 }

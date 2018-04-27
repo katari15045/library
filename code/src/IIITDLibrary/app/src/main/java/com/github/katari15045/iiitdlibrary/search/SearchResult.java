@@ -7,6 +7,7 @@ package com.github.katari15045.iiitdlibrary.search;
 public class SearchResult {
     private String title = null;
     private String author = null;
+    private String biblioNum = null;
 
     public String getTitle() {
         return title;
@@ -22,5 +23,13 @@ public class SearchResult {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public String getBiblioNum() {
+        return biblioNum;
+    }
+
+    public void setBiblioNum(String biblioNum) {
+        this.biblioNum = biblioNum;
     }
 }

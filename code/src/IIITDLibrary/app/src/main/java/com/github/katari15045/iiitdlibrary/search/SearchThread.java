@@ -31,9 +31,9 @@ public class SearchThread extends AsyncTask<Void, Void, Void> {
     @Override
     protected Void doInBackground(Void... voids) {
         results = new HashSet<>();
-        handleQuery("select title, author from biblio where title like '%" + query + "%';");
-        handleQuery("select title, author from biblio where author like '%" + query + "%';");
-        handleQuery("select title, author from biblio where notes like '%" + query + "%';");
+        handleQuery("select biblionumber, title, author from biblio where title like '%" + query + "%';");
+        handleQuery("select biblionumber, title, author from biblio where author like '%" + query + "%';");
+        handleQuery("select biblionumber, title, author from biblio where notes like '%" + query + "%';");
         return null;
     }
 
@@ -60,8 +60,9 @@ public class SearchThread extends AsyncTask<Void, Void, Void> {
         try{
             while(resultSet.next()){
                 SearchResult searchResult = new SearchResult();
-                searchResult.setTitle(resultSet.getString(1));
-                searchResult.setAuthor(resultSet.getString(2));
+                searchResult.setBiblioNum(resultSet.getString(1));
+                searchResult.setTitle(resultSet.getString(2));
+                searchResult.setAuthor(resultSet.getString(3));
                 results.add(searchResult);
             }
         }catch (Exception e){

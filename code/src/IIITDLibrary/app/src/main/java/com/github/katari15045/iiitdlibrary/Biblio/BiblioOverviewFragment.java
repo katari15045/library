@@ -16,12 +16,14 @@ public class BiblioOverviewFragment extends Fragment {
 
     private View view = null;
     private static String title = "Book";
+    public static String biblioNumber = null;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.d("SAK", "BiblioOverviewFragment::onCreateView()");
         view = inflater.inflate(R.layout.fragment_biblio_overview, null);
+        Log.d("SAK", "BiblioIverviewFragment::biblioNumber -> " + biblioNumber);
         return view;
     }
 
