@@ -38,6 +38,7 @@ public class MyTabLayout {
         TabLayout.Tab tabCopies = tabLayout.newTab();
         tabCopies.setText(resources.getString(R.string.biblio_fragment_copies_title));
         tabLayout.addTab(tabCopies);
+
     }
 
     public static void hideTabLayout(){

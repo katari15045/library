@@ -26,7 +26,7 @@ public class BiblioOverviewFragment extends Fragment {
         Log.d("SAK", "BiblioOverviewFragment::onCreateView()");
         view = inflater.inflate(R.layout.fragment_biblio_overview, null);
         Log.d("SAK", "BiblioIverviewFragment::biblioNumber -> " + biblioNumber);
-        BiblioDataFetcher biblioDataFetcher = new BiblioDataFetcher(view.getContext());
+        BiblioDataFetcher biblioDataFetcher = new BiblioDataFetcher(view);
         biblioDataFetcher.execute();
         return view;
     }

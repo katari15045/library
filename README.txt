@@ -1,6 +1,5 @@
 To Do
 -----
--> Look into biblioimages table in database!!!
 -> Display progress bar while fetching data from DB
 -> don't hardcode strings in fragment_occupancy.xml
 -> use string-array in strings.xml for e-resources in home etc

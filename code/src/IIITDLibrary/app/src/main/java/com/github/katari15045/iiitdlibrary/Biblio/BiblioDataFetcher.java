@@ -2,10 +2,15 @@ package com.github.katari15045.iiitdlibrary.Biblio;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.github.katari15045.iiitdlibrary.Misc.Database;
 import com.github.katari15045.iiitdlibrary.R;
+
+import org.w3c.dom.Text;
 
 import java.sql.ResultSet;
 import java.util.HashSet;
@@ -16,11 +21,11 @@ import java.util.HashSet;
 
 public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
 
-    private Context context = null;
+    private View view = null;
     public Biblio biblio = null;
 
-    public BiblioDataFetcher(Context context){
-        this.context = context;
+    public BiblioDataFetcher(View view){
+        this.view = view;
     }
 
     @Override
@@ -55,7 +60,24 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void aVoid) {
-        super.onPostExecute(aVoid);
+        TextView textViewTitle = view.findViewById(R.id.fragment_biblio_overview_textview_title);
+        TextView textViewAuthor = view.findViewById(R.id.fragment_biblio_overview_textview_author);
+        TextView textViewPublisher = view.findViewById(
+                R.id.fragment_biblio_overview_textview_publisher);
+        TextView textViewYear = view.findViewById(
+                R.id.fragment_biblio_overview_textview_copyright_year);
+        TextView textViewEdition = view.findViewById(R.id.fragment_biblio_overview_textview_edition);
+        TextView textViewPages = view.findViewById(R.id.fragment_biblio_overview_textview_pages);
+        TextView textViewIsbn = view.findViewById(R.id.fragment_biblio_overview_textview_isbn);
+        TextView textViewNotes = view.findViewById(R.id.fragment_biblio_overview_textview_notes);
+        textViewTitle.setText(biblio.getTitle());
+        textViewAuthor.setText(biblio.getAuthor());
+        textViewPublisher.setText(biblio.getPublisher());
+        textViewYear.setText(biblio.getCopyrightDate());
+        textViewEdition.setText(biblio.getEdition());
+        textViewPages.setText(biblio.getPages());
+        textViewIsbn.setText(biblio.getIsbn());
+        textViewNotes.setText(biblio.getNotes());
     }
 
     private Database executeQuery(String command){
@@ -96,7 +118,7 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
     }
 
     private void handleNullFieldsInBiblio(){
-        String notAvailable = context.getResources().getString(R.string.not_available);
+        String notAvailable = view.getContext().getResources().getString(R.string.not_available);
         if(biblio.getBiblioNumber() == null || biblio.getBiblioNumber().equals("")){
             biblio.setBiblioNumber(notAvailable);
         }

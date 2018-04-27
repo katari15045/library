@@ -27,16 +27,13 @@ public class EResourcesFragment extends Fragment{
     private String[] titleArray = null;
     private String[] linksArray = null;
 
-    public EResourcesFragment(){
-        title = getActivity().getResources().getString
-                (R.string.eresources);
-    }
-
     @Override
     public void onResume() {
         Log.d("SAK", "EResourcesFragment::onResume()");
         super.onResume();
-        Global.changeActionBarTitle(title);
+        if(title != null){
+            Global.changeActionBarTitle(title);
+        }
     }
 
     @Nullable
@@ -44,6 +41,9 @@ public class EResourcesFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.d("SAK", "EResourcesFragment::onCreateView()");
         view = inflater.inflate(R.layout.fragment_eresources, null);
+        title = view.getContext().getResources().getString
+                (R.string.eresources);
+        Global.changeActionBarTitle(title);
         storeData();
         setAdapter();
         return  view;
