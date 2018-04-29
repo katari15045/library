@@ -1,5 +1,8 @@
 To Do
 -----
+-> User should be able to keep a book on hold/checkout etc.
+-> Login with library credentials + Google Login
+-> preserve scroll position
 -> Display progress bar while fetching data from DB
 -> don't hardcode strings in fragment_occupancy.xml
 -> use string-array in strings.xml for e-resources in home etc

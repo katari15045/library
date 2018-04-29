@@ -19,6 +19,8 @@
     <string name="not_available">Not Available</string>
     <string name="overview">Overview</string>
     <string name="copies">Copies</string>
+    <string name="no_image">Preview not available!</string>
+    <string name="image_fetcher_api">https://www.googleapis.com/books/v1/volumes?country=IN&amp;key=AIzaSyDHlwmWnQVDDh-QVDE19aIu0WK7UEU7HWc&amp;q=ISBN:</string>
 
     <integer name="max_str_len">40</integer>
 

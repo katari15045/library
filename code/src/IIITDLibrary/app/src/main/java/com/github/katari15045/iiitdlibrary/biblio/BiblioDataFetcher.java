@@ -4,9 +4,11 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.misc.Database;
+import com.github.katari15045.iiitdlibrary.misc.ImageFetcher;
 
 import java.sql.ResultSet;
 
@@ -17,17 +19,16 @@ import java.sql.ResultSet;
 public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
 
     private Context context = null;
+    private ImageView imageView = null;
+    private TextView textView = null;
     private AppCompatActivity activity = null;
     public Biblio biblio = null;
 
-    public BiblioDataFetcher(Context context){
+    public BiblioDataFetcher(Context context, ImageView imageView, TextView textView){
         this.context = context;
         activity = (AppCompatActivity)context;
-    }
-
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
+        this.imageView = imageView;
+        this.textView = textView;
     }
 
     @Override
@@ -75,6 +76,10 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
         textViewPages.setText(biblio.getPages());
         textViewIsbn.setText(biblio.getIsbn());
         textViewNotes.setText(biblio.getNotes());
+        // Fetch Image
+        ImageFetcher imageFetcher = new ImageFetcher(context,
+                biblio.getIsbn(), imageView, textView);
+        imageFetcher.execute();
     }
 
     private Database executeQuery(String command){
