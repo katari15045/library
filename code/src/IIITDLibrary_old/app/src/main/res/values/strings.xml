@@ -1,0 +1,302 @@
+<resources>
+    <string name="app_name">IIITD Library</string>
+
+    <string name="splash_screen_startup_duration">3000</string>
+    <string name="splash_screen_sleep_duration">5000</string>
+    <string name="splash_screen_library_heading">Library</string>
+    <string name="splash_screen_loading">Loading...</string>
+
+    <string name="nav_drawer_About_title">About</string>
+    <string name="nav_drawer_resources_title">Resources</string>
+    <string name="nav_drawer_services_title">Services</string>
+    <string name="nav_drawer_occupancy_title">Occupancy</string>
+    <string name="nav_drawer_giving_title">Giving</string>
+    <string name="nav_drawer_header_library_title">Library</string>
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
+
+    <string name="bottom_nav_bar_title_home">Home</string>
+    <string name="bottom_nav_bar_title_search">Search</string>
+    <string name="bottom_nav_bar_title_login">Login</string>
+    <string name="bottom_nav_bar_title_profile">Profile</string>
+
+    <string name="progress_dialog_text">Processing...</string>
+
+    <string name="alert_dialog_cant_connect_text_view_title_db">Can\'t connect to the Database; Make sure you are connected to the Internet.</string>
+
+    <string name="alert_dialog_retry_title">Retry</string>
+
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_label">Login</string>
+    <string name="login_fragment_title">Login</string>
+
+    <string name="command_isbn_from_biblio">select isbn from biblioitems where biblionumber=</string>
+    <string name="command_recent_books">select isbn, biblionumber from biblioitems where isbn>999999999
+        order by timestamp limit</string>
+
+    <string name="image_fetcher_api">https://www.googleapis.com/books/v1/volumes?country=IN&amp;key=AIzaSyDHlwmWnQVDDh-QVDE19aIu0WK7UEU7HWc&amp;q=isbn:</string>
+    <string name="please_wait">Please wait</string>
+
+    <string name="search">Search</string>
+    <string name="search_hint">Search...</string>
+    <string name="results">Results</string>
+    <string name="no_results">No Results Found!</string>
+    <integer name="max_str_len">50</integer>
+    <string name="not_available">Not Available</string>
+
+    <string name="home_fragment_title">Home</string>
+    <string name="home_fragment_new_arrivals_title">New Arrivals</string>
+    <string name="home_fragment_e_resources_title">E Resources</string>
+    <string name="home_fragment_total_new_arrivals">10</string>
+    <string name="home_fragment_total_e_resources">16</string>
+
+    <string name="biblio_fragment_overview_title">Overview</string>
+    <string name="biblio_fragment_copies_title">Copies</string>
+    <string name="title">Title</string>
+    <string name="author">Author (s)</string>
+    <string name="publisher">Publisher</string>
+    <string name="copyright_year">Copyright Year</string>
+    <string name="edition">Edition</string>
+    <string name="pages">Pages</string>
+    <string name="isbn">ISBN</string>
+    <string name="notes">Notes</string>
+
+    <string name="e_resource_url_acm">https://dl.acm.org/</string>
+    <string name="e_resource_url_acs">https://www.acs.org/content/acs/en.html</string>
+    <string name="e_resource_url_elsevier">https://www.sciencedirect.com/</string>
+    <string name="e_resource_url_epw">http://www.epw.in/frontpage?0=ip_login_no_cache%3Dd94336b76282d826ae6e4eca56f7bf3d</string>
+    <string name="e_resource_url_ieee">http://ieeexplore.ieee.org/Xplore/home.jsp</string>
+    <string name="e_resource_url_jstor">http://www.jstor.org/</string>
+    <string name="e_resource_url_nature">https://www.nature.com/nature/</string>
+    <string name="e_resource_url_now">https://www.nowpublishers.com/</string>
+    <string name="e_resource_url_saa">http://www.southasiaarchive.com/</string>
+    <string name="e_resource_url_siam">https://www.siam.org/journals/</string>
+    <string name="e_resource_url_springer_cse">https://link.springer.com/bookseries/558</string>
+    <string name="e_resource_url_springer_link">https://link.springer.com/</string>
+    <string name="e_resource_url_tfo">https://www.tandfonline.com/</string>
+    <string name="e_resource_url_urkund">http://www.urkund.com/en</string>
+    <string name="e_resource_url_wbl">http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245</string>
+    <string name="e_resource_url_wbw">http://onlinelibrary.wiley.com/browse/publications?type=journal&amp;activeLetter=</string>
+
+    <string name="about_fragment_title">About</string>
+    <string name="about_fragment_brief_heading">Brief</string>
+    <string name="about_fragment_brief">The Library and Information Center of the Institute is housed in a separate building in its Campus. The Library is fully automated using RFID Technology with EM Security System.</string>
+    <string name="about_fragment_timings_heading">Timings</string>
+    <string name="about_fragment_mon_to_fri_normal_days">Monday to Friday during normal days</string>
+    <string name="about_fragment_library_opening_hours_heading">Opening Hours</string>
+    <string name="about_fragment_library_opening_hours">8:30 AM to 12:00 Mid Night</string>
+    <string name="about_fragment_issue_return_heading">Issue/Return Hours</string>
+    <string name="about_fragment_issue_return_timing">9:00 AM to 9:00 PM</string>
+    <string name="about_fragment_saturday_normal_days_heading">Saturday during normal days</string>
+    <string name="about_fragment_saturday_normal_days_opening_hours">8:30 AM to 6:00 PM</string>
+    <string name="about_fragment_saturday_normal_days_issue_return_hours">9:00 AM to 5:45 PM</string>
+    <string name="about_fragment_mon_to_sun_during_exams_heading">Mon-Sun during 3 days before Mid-Sem/End-Sem Exams till it\'s completion</string>
+    <string name="about_fragment_mon_to_sun_during_exams_opening_hours">8:30 AM to 2:00 AM</string>
+    <string name="about_fragment_mon_to_sun_during_exams_issue_return_hours">9:00 AM to 9:00 PM</string>
+    <string name="about_fragment_mon_to_sat_during_semester_break_mid_recess_public_holidays_heading">Mon-Sat during Semester Break, Mid recess, Public Holidays</string>
+    <string name="about_fragment_mon_to_sat_during_semester_break_mid_recess_public_holidays_opening_hours">8:30 AM to 6:00 PM</string>
+    <string name="about_fragment_mon_to_sat_during_semester_break_mid_recess_public_holidays_issue_return__hours">9:00 AM to 5:45 PM</string>
+    <string name="about_fragment_open_reading_hall_heading">Open Reading Hall</string>
+    <string name="about_fragment_open_reading_hall_timings">24 x 7</string>
+
+    <string name="resources_e_resources">E-Resources</string>
+    <string name="resources_daily_news_papers">Daily News Papers</string>
+    <string name="resources_computing_books_by_indian_authors">Computing Books by Indian Authors</string>
+    <string name="resources_computing_books_by_indian_authors_link">http://library.iiitd.edu.in/opac-tmpl/bootstrap/en/includes/cbia.html</string>
+    <string name="resources_journals_magazines">Journals &amp; magazines (Hard Copy in Library)</string>
+    <string name="resources_journals_magazines_link">http://library.iiitd.edu.in/opac-tmpl/bootstrap/en/includes/Subscribed%20Magazines.pdf</string>
+    <string name="resources_proof_reader">Proof Reader</string>
+    <string name="resources_proof_reader_link">https://support.grammarly.com/hc/en-us/categories/115000018631-Tips-Tutorials</string>
+    <string name="resources_anti_plagiarism_tool_urkund">Anti Plagiarism Tool, Urkund</string>
+    <string name="resources_anti_plagiarism_tool_urkund_link">http://www.urkund.com/en/</string>
+    <string name="resources_video_lectures_nptel">Video Lectures, NPTEL</string>
+    <string name="resources_video_lectures_nptel_link">http://library.iiitd.edu.in/nptel/</string>
+    <string name="resources_citation_tools">Citation Tools</string>
+    <string name="resources_mendeley">Mendeley</string>
+    <string name="resources_mendeley_link">https://www.mendeley.com/guides</string>
+    <string name="resources_zotero">Zotero</string>
+    <string name="resources_zotero_link">https://www.zotero.org/support/quick_start_guide</string>
+    <string name="resources_online_courses">Online Courses</string>
+    <string name="resources_academic_earth">Academic Earth</string>
+    <string name="resources_academic_earth_link">http://academicearth.org/</string>
+    <string name="resources_coursera">Coursera</string>
+    <string name="resources_coursera_link">https://www.coursera.org/</string>
+    <string name="resources_edx">edX</string>
+    <string name="resources_edx_link">https://www.edx.org/</string>
+    <string name="resources_mit_opencourseware">MIT OpenCourseWare</string>
+    <string name="resources_mit_opencourseware_link">https://ocw.mit.edu/index.htm</string>
+    <string name="resources_nptel">NPTEL</string>
+    <string name="resources_nptel_link">https://onlinecourses.nptel.ac.in/</string>
+    <string name="resources_research_data_repo">Research Data Repositories</string>
+    <string name="resources_re3data">re3data</string>
+    <string name="resources_re3data_link">https://www.re3data.org/</string>
+    <string name="resources_plos">Plos</string>
+    <string name="resources_plos_link">http://journals.plos.org/plosone/s/data-availability#loc-recommended-repositories</string>
+    <string name="resources_scientific">Scientific</string>
+    <string name="resources_scientific_link">https://www.nature.com/sdata/policies/repositories#close</string>
+    <string name="resources_simmons">Simmons</string>
+    <string name="resources_simmons_link">http://oad.simmons.edu/oadwiki/Data_repositories</string>
+    <string name="resources_university_of_minnesota">University of Minnesota</string>
+    <string name="resources_university_of_minnesota_link">https://www.lib.umn.edu/datamanagement/datacenters</string>
+
+    <string name="eresources">E-Resources</string>
+
+    <string-array name="eresources_fragment_titles">
+        <item>ACM Digital Library</item>
+        <item>American Chemical Society (ACS)</item>
+        <item>Directory of Open Access Books</item>
+        <item>Directory of Open Access Journal</item>
+        <item>Directory of Open Access Repositories</item>
+        <item>Dissertation and Thesis (Proquest)</item>
+        <item>Dissertation and Thesis (ShodhGanga-INFLIBNET)</item>
+        <item>Economic and political weekly</item>
+        <item>EJournal Gateway</item>
+        <item>Elsevier Science Direct (CS &amp; Math)</item>
+        <item>Fiction Books</item>
+        <item>Institute for Studies in Industrial Development Database</item>
+        <item>Internet Archive</item>
+        <item>JSTOR</item>
+        <item>Kindle E-Books</item>
+        <item>National Digital Library</item>
+        <item>National Science Digital Library</item>
+        <item>Nature Online Journal</item>
+        <item>Now Publishers (CSE)</item>
+        <item>OAPEN</item>
+        <item>O\'Reilly\'s CD Bookshelf</item>
+        <item>Project GutenBerg</item>
+        <item>SIAM Journals</item>
+        <item>South Asia Archive</item>
+        <item>Springer\'s Journals</item>
+        <item>Taylor &amp; Francis Journals</item>
+        <item>UCL Press</item>
+        <item>Wiley-Blackwell Journals</item>
+        <item>World Digital Library</item>
+        <item>World E-Book Library</item>
+        <item>ABI/Inform Collection - Trail Access</item>
+        <item>Elsevier Science Direct Journals (CB) - Trail Access</item>
+        <item>Nature Methods - Trail Access</item>
+        <item>Nature Biotech - Trail Access</item>
+        <item>Nature Genetics - Trail Access</item>
+        <item>Scientific American - Trail Access</item>
+    </string-array>
+
+    <string-array name="eresources_fragment_links">
+        <item>https://dl.acm.org/</item>
+        <item>https://pubs.acs.org/</item>
+        <item>https://www.doabooks.org/doab?func=browse&amp;uiLanguage=en</item>
+        <item>https://doaj.org/</item>
+        <item>http://www.opendoar.org/search.php</item>
+        <item>https://pqdtopen.proquest.com/search.html</item>
+        <item>http://shodhganga.inflibnet.ac.in/</item>
+        <item>http://www.epw.in/frontpage?0=ip_login_no_cache%3D9cb9c47f40a4b4523d6c1e02bcfdd76c</item>
+        <item>https://jgateplus.com/search/journalFinder/</item>
+        <item>https://www.sciencedirect.com/</item>
+        <item>http://www.freefictionbooks.org/</item>
+        <item>http://ieeexplore.ieee.org/Xplore/home.jsp</item>
+        <item>http://isid.org.in/</item>
+        <item>https://archive.org/</item>
+        <item>https://www.inflibnet.ac.in/ess/journals.php?pg=collection&amp;id=JSTOR</item>
+        <item>https://ndl.iitkgp.ac.in/</item>
+        <item>https://nsdl.oercommons.org/</item>
+        <item>https://www.nature.com/nature/</item>
+        <item>https://www.nowpublishers.com/</item>
+        <item>http://www.oapen.org/home</item>
+        <item>https://docstore.mik.ua/orelly/bookshelfs.html</item>
+        <item>http://www.gutenberg.org/</item>
+        <item>https://www.siam.org/journals/</item>
+        <item>http://www.southasiaarchive.com/</item>
+        <item>https://link.springer.com/</item>
+        <item>https://www.tandfonline.com/</item>
+        <item>https://www.ucl.ac.uk/ucl-press/browse-books</item>
+        <item>http://onlinelibrary.wiley.com/browse/publications?type=journal&amp;activeLetter=</item>
+        <item>https://www.wdl.org/en/</item>
+        <item>http://community.worldlibrary.in/?AffiliateKey=NDL-JS1245</item>
+        <item>https://search.proquest.com/business/192373</item>
+        <item>https://www.sciencedirect.com/</item>
+        <item>https://www.nature.com/nmeth/</item>
+        <item>https://www.nature.com/nbt/</item>
+        <item>https://www.nature.com/ng/</item>
+        <item>https://www.nature.com/scientificamerican/index.html</item>
+    </string-array>
+
+    <string-array name="resources_daily_newspaper_titles">
+        <item>Business Standard</item>
+        <item>Deccan Chronicle</item>
+        <item>Deccan Herald</item>
+        <item>DNA</item>
+        <item>Hindustan Times</item>
+        <item>Times Group</item>
+        <item>Indian Express</item>
+        <item>Mail Today</item>
+        <item>Mint</item>
+        <item>The Asian Age</item>
+        <item>Financial Express</item>
+        <item>The Pioneer</item>
+        <item>The Statesman</item>
+        <item>The Tribune</item>
+        <item>Amar Ujala</item>
+        <item>Dhainik Bhaskar</item>
+        <item>Dhainik jagaran</item>
+    </string-array>
+
+    <string-array name="resources_daily_newspaper_links">
+        <item>http://epaper.business-standard.com/bsepaper/login.php</item>
+        <item>http://epaper.deccanchronicle.com/states.aspx</item>
+        <item>http://deccanheraldepaper.com/</item>
+        <item>http://epaper.dnaindia.com/</item>
+        <item>http://paper.hindustantimes.com/epaper/viewer.aspx</item>
+        <item>https://epaper.timesgroup.com/TOI/TimesOfIndia/index.html?a=c</item>
+        <item>http://epaper.indianexpress.com/</item>
+        <item>http://epaper.mailtoday.in/</item>
+        <item>http://epaper.livemint.com/epaper/viewer.aspx</item>
+        <item>http://onlineepaper.asianage.com/</item>
+        <item>http://epaper.financialexpress.com/</item>
+        <item>http://www.dailypioneer.com/</item>
+        <item>http://www.thestatesman.net/</item>
+        <item>http://www.tribuneindia.com/</item>
+        <item>http://www.e-paperview.com/amar-ujala.html</item>
+        <item>http://epaper.bhaskar.com/</item>
+        <item>http://epaper.jagran.com/homepage.aspx</item>
+    </string-array>
+
+    <string-array name="serviceNames">
+        <item>24x7 Open Reading Hall</item>
+        <item>Book Exhibition/Display</item>
+        <item>Document Scanning</item>
+        <item>Full text access to subscribed E-Resources</item>
+        <item>Institute\u0027s Repository/Archive</item>
+        <item>Interlibrary Loan (ILL) and Document Delivery(DDS)</item>
+        <item>Issue/Return of Books</item>
+        <item>Kindle E-Book Readers</item>
+        <item>Online Book Reservation (Hold) and Renewal</item>
+        <item>Online Catalogue</item>
+        <item>Remote Access to subscribed E-Resources</item>
+        <item>Scholars' Cabin</item>
+        <item>User Awareness/Orientation Programme</item>
+        <item>WiFi Internet Connectivity</item>
+        <item>General Policy for all Users</item>
+    </string-array>
+    <string-array name="servicesDescriptions">
+        <item>The ground floor of library and Information Center remains open 24 hours all days as reading room for all users. Apart from this, there are three spacious reading halls on the first floor. The sitting capacity is around 178 users at a time. </item>
+        <item>Keeping in view the requirements of various programs and research activities at the institute, the collection development is necessary. For this purpose, the Library and Information Center organizes book exhibition every year. During the exhibition, users may recommend books for the Library and may also purchase the books right away for personal use at better discount rates. </item>
+        <item>Library provides document scanning service to all users. A dedicated color document scanner is kept at Library First floor.</item>
+        <item>Apart from the print resources, the Library and Information Center subscribes to various renowned electronic resources in areas of Engineering, Sciences and Technology. These e-resources are accessible at the institute’s intranet and the access is IP based, hence login/user name and password are not required. </item>
+        <item>IIITD <a href="https://repository.iiitd.edu.in/jspui">Institutional Repository</a> is a digital collection that collects, organizes, preserves and makes accessible the achievements/ intellectual output of faculty members, research scholars and UG/PG students. It may contain the following resources –\n\n\u2022Research Papers\n\u2022Technical Reports\n\u2022Newsletter\n\u2022Theses\n\u2022Lecture Presentations\n\u2022Lecture Notes\n\u2022Press Clippings\n\u2022Video \u0026 Audio Recordings\n\u2022Previous Year Question Papers\n\u2022Annual Reports\n\u2022Brochures\n\u2022Event Recordings</item>
+        <item>IIITD Library offers Interlibrary Loan and Document Delivery Service through Developing Library Network (DELNET- network of more than 2000 libraries worldwide). Users may use this facility in case the required books, journal/articles etc. are not available at the IIITD Library and Information Center but are available at DELNET member’s libraries. Users may search the <a href="http://164.100.247.30/">available resources</a> using following user id and password -\n\nUsers may search the resources but cannot post the request directly. They need to send the request to IIITD Library using <a href="https://docs.google.com/a/iiitd.ac.in/spreadsheet/viewform?formkey=dExzcHZqV050NlpQUS1tWlE2MWxPMGc6MQ">ILL and DDS form</a> to post required resources.</item>
+        <item>\u2022Overdue charges/late fee will be charged @ Rs.10/- per day on each book (There will be no charge for Saturday, Sunday, and other holidays). Book issue service may be suspended if the overdue charge exceeds Rs.1000/-. Once the charges are paid, the service will be activated again. Overdue charges shalll be submitted at the Library circulation desk.\n\u2022Books/Materials can be re-issued, if there is no reservation (Hold) placed on them by other users.\n\u2022The Library and Information Center sends overdue reminder to related borrowers.\n\u2022For loss of library books/materials, the borrower has to pay the current list price of the book plus overdue charge (if any). The overdue charge amount will not exceed the current list price of the book.\n\u2022No book/material from the Library and Information Center should be taken out without proper issuance/recording. If anyone is caught, the disciplinary action will be taken.\n\u2022Only one copy of a title can be issued at a time.\n\u2022The library and information center may recall any issued book even before the due date.\n\u2022Users are responsible for books issued against their ID cards (any damage or loss), even if someone else returns it on their behalf.</item>
+        <item>Few Kindle E-Book Readers are available for loan in the Library. Library users may borrow the same for a limited period, more readers may added in coming days on the basis of usage. </item>
+        <item>The Library and Information Center provides online book reservation (Hold) service to all registered users using following steps –\n\n\u0009\u2022Log in to your account on Library portal and go to search Library Catalog\n\u0009\u2022Type the author name or the title (or whatever information you have regarding that title)\n\u0009\u2022Library Catalog searches your query, retrieves results, select the required one, following which the Library Catalog tells you the status of the books\n\u0009\u2022Click on to place hold button on the right hand side button\n\u0009\u2022Library Catalog shows two options\n\u0009\u0009\u25e6Place hold for the next available copy\n\u0009\u2022Then again Click on Place hold button\n\nAlso, the Library provides online book renewal service as well using following steps –\n\n\u0009\u2022Log in to your account on Library portal\n\u0009\u2022Click on My Summary\n\u0009\u2022Click on Renew</item>
+        <item>Using this catalog the Library users may search and find the available resources by Title, Author, Publisher, Subject heading, Keywords, etc.</item>
+        <item>The center provides remote access to subscribed e-resources through VPN (Virtual Private Network). Now all IIIT-D Library users may access subscribed e-resources from outside campus as well. In case of any difficulty, please contact the IT help-desk (helpdesk@iiitd.ac.in). </item>
+        <item>On the Library’s ground floor, there are four scholar’s cabins for Library users. If the users seek to study in a group, give any demonstration on any topic or want pin-drop silence for self study, they may use these cabins accordingly. White board and laptop charging facilities are also available in all cabins.</item>
+        <item>Under this programme, users learn about the library resources and services. They also learn about how to access online catalogue for available resources, Institutional Repository, subscribed and open access electronic resources etc. </item>
+        <item>Most users generally carry laptops, therefore, the high speed 24x7 Wi-fi Internet connectivity is available in the whole Library and Information Center building. All students, PhD Scholars, Faculty Members, Guest/Visiting Faculty and Staff Members may use this facility; apart from a few desktop PCs connected with LAN.</item>
+        <item>\n\u2022Only registered users (Faculty, Staff and Students) are allowed to borrow books/materials from the Library. Users should always carry their ID cards while using the Library and information center.\n\u2022All registered users may check their Library record and update/modify the personal information by logging in to their Library account.\n\u2022To know the full details and availability status of Library resources, please prefer to access the Library online catalogue.\n\u2022Users are not allowed to carry eatables and drinks in Library.\n\u2022Borrowers must satisfy themselves with the physical condition of the books before borrowing.\n\u2022Users should leave the books on the reading table after use.\n\u2022Users should not write in, mark, scratch, and disfigure or damage books and furniture of the Library.\n\u2022Changing the settings and display of the computers kept in Library is not allowed.\n\u2022Report to us regarding the loss of ID cards, so that the Library can keep it in record and nobody misuses it.\n\u2022Each user will receive e-mail intimation on issue/return, overdue reminder and related services.\n\u2022Belongings like bags, umbrellas, etc. are to be kept at the Library property counter at your own risk. All users are advised not to leave their valuables like money, passport, pen drive, cell phone, wallet etc. at the Library property counter.\n\u2022All users should observe strict silence inside the Library.</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

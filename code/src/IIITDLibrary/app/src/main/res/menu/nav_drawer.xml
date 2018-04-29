@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_nav_drawer_about"
-        android:title="@string/nav_drawer_About_title"
-        android:orderInCategory="0"/>
+        android:id="@+id/menu_nav_drawer_login"
+        android:title="@string/login"
+        android:icon="@drawable/ic_action_user"/>
 
     <item
-        android:id="@+id/menu_nav_drawer_resources"
-        android:title="@string/nav_drawer_resources_title"
-        android:orderInCategory="1"/>
-
-    <item
-        android:id="@+id/menu_nav_drawer_services"
-        android:title="@string/nav_drawer_services_title"
-        android:orderInCategory="2" />
-
-    <item
-        android:id="@+id/menu_nav_drawer_occupancy"
-        android:title="@string/nav_drawer_occupancy_title"
-        android:orderInCategory="3"/>
-
-    <item
-        android:id="@+id/menu_nav_drawer_giving"
-        android:title="@string/nav_drawer_giving_title"
-        android:orderInCategory="4"/>
+        android:id="@+id/menu_nav_drawer_quit"
+        android:title="@string/quit"
+        android:icon="@drawable/ic_close"/>
 </menu>

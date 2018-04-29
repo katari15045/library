@@ -8,18 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="white_views_and_text">
-        <item name="android:textColorPrimary">@color/white</item>
+    <style name="toolbar">
         <item name="android:textColorSecondary">@color/white</item>
-    </style>
-
-    <style name="view_progress_bar">
-        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
 </resources>
