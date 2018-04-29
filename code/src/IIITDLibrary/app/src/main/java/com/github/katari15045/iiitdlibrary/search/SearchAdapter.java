@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.biblio.BiblioActivity;
@@ -45,7 +46,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder>{
         }
         holder.textViewTitle.setText(handleString(searchResult.getTitle()));
         holder.textViewAuthor.setText(handleString(searchResult.getAuthor()));
-        holder.cardView.setOnClickListener(new SearchResultListener(view, searchResult));
+        holder.container.setOnClickListener(new SearchResultListener(view, searchResult));
     }
 
     @Override
@@ -79,13 +80,13 @@ class SearchViewHolder extends RecyclerView.ViewHolder{
 
     TextView textViewTitle = null;
     TextView textViewAuthor = null;
-    CardView cardView = null;
+    LinearLayout container = null;
 
     public SearchViewHolder(View view){
         super(view);
         textViewTitle = view.findViewById(R.id.search_result_card_textview_title);
         textViewAuthor = view.findViewById(R.id.search_result_card_textview_author);
-        cardView = view.findViewById(R.id.search_result_card_cardview);
+        container = view.findViewById(R.id.search_result_card);
     }
 }
 

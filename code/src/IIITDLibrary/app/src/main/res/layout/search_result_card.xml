@@ -1,43 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:padding="10dp"
+    android:id="@+id/search_result_card"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/search_result_card_cardview"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="3dp"
-        app:cardCornerRadius="10dp">
+        android:id="@+id/search_result_card_textview_title"
+        android:text="Three Easy Pieces"
+        android:maxLength="@integer/max_str_len"
+        android:textSize="16dp"
+        android:textColor="@color/colorPrimary"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_result_card_textview_author"
+        android:text="Vitaly, Roman, Logan"
+        android:maxLength="@integer/max_str_len"
+        android:textColor="@color/black"
+        android:layout_marginTop="3dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/search_result_card_textview_title"
-                android:text="Three Easy Pieces"
-                android:maxLength="@integer/max_str_len"
-                android:textColor="@color/black"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/search_result_card_textview_author"
-                android:text="Vitaly, Roman, Logan"
-                android:maxLength="@integer/max_str_len"
-                android:textColor="@color/black"
-                android:layout_marginTop="3dp"/>
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>

@@ -57,16 +57,16 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void aVoid) {
-        TextView textViewTitle = activity.findViewById(R.id.activity_biblio_overview_textview_title);
-        TextView textViewAuthor = activity.findViewById(R.id.activity_biblio_overview_textview_author);
+        TextView textViewTitle = activity.findViewById(R.id.fragment_biblio_overview_textview_title);
+        TextView textViewAuthor = activity.findViewById(R.id.fragment_biblio_overview_textview_author);
         TextView textViewPublisher = activity.findViewById(
-                R.id.activity_biblio_overview_textview_publisher);
+                R.id.fragment_biblio_overview_textview_publisher);
         TextView textViewYear = activity.findViewById(
-                R.id.activity_biblio_overview_textview_copyright_year);
-        TextView textViewEdition = activity.findViewById(R.id.activity_biblio_overview_textview_edition);
-        TextView textViewPages = activity.findViewById(R.id.activity_biblio_overview_textview_pages);
-        TextView textViewIsbn = activity.findViewById(R.id.activity_biblio_overview_textview_isbn);
-        TextView textViewNotes = activity.findViewById(R.id.activity_biblio_overview_textview_notes);
+                R.id.fragment_biblio_overview_textview_copyright_year);
+        TextView textViewEdition = activity.findViewById(R.id.fragment_biblio_overview_textview_edition);
+        TextView textViewPages = activity.findViewById(R.id.fragment_biblio_overview_textview_pages);
+        TextView textViewIsbn = activity.findViewById(R.id.fragment_biblio_overview_textview_isbn);
+        TextView textViewNotes = activity.findViewById(R.id.fragment_biblio_overview_textview_notes);
         textViewTitle.setText(biblio.getTitle());
         textViewAuthor.setText(biblio.getAuthor());
         textViewPublisher.setText(biblio.getPublisher());
