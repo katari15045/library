@@ -35,7 +35,7 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
     protected Void doInBackground(Void... voids) {
         biblio = new Biblio();
         biblio.setBiblioNumber(BiblioActivity.biblioNumber);
-        Database db = executeQuery("select author, title, notes, copyrightdate from biblio where biblionumber=" +
+        Database db = executeQuery("select author, title, copyrightdate from biblio where biblionumber=" +
                 BiblioActivity.biblioNumber + ";");
         parseBiblioQuery(db.getResultSet());
         db.close();
@@ -43,11 +43,15 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
                 "biblionumber=" + BiblioActivity.biblioNumber + ";");
         parseBiblioItemQuery(db.getResultSet());
         db.close();
+        db = executeQuery("select max(price) from items where biblionumber=" +
+                BiblioActivity.biblioNumber + ";");
+        parsePrice(db.getResultSet());
+        db.close();
         handleNullFieldsInBiblio();
         StringBuilder sb = new StringBuilder();
         sb.append("biblionumber : ").append(biblio.getBiblioNumber()).append("\nauthor : ")
                 .append(biblio.getAuthor()).append("\ntitle : ").append(biblio.getTitle())
-                .append("\nnotes : ").append(biblio.getNotes()).append("\ncopyrightdate : ")
+                .append("\nprice : ").append(biblio.getPrice()).append("\ncopyrightdate : ")
                 .append(biblio.getCopyrightDate()).append("\nisbn : ").append(biblio.getIsbn())
                 .append("\npublisher : ").append(biblio.getPublisher()).append("\nedition : ")
                 .append(biblio.getEdition()).append("\npages : ").append(biblio.getPages())
@@ -67,7 +71,7 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
         TextView textViewEdition = activity.findViewById(R.id.fragment_biblio_overview_textview_edition);
         TextView textViewPages = activity.findViewById(R.id.fragment_biblio_overview_textview_pages);
         TextView textViewIsbn = activity.findViewById(R.id.fragment_biblio_overview_textview_isbn);
-        TextView textViewNotes = activity.findViewById(R.id.fragment_biblio_overview_textview_notes);
+        TextView textViewPrice = activity.findViewById(R.id.fragment_biblio_overview_textview_price);
         textViewTitle.setText(biblio.getTitle());
         textViewAuthor.setText(biblio.getAuthor());
         textViewPublisher.setText(biblio.getPublisher());
@@ -75,7 +79,7 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
         textViewEdition.setText(biblio.getEdition());
         textViewPages.setText(biblio.getPages());
         textViewIsbn.setText(biblio.getIsbn());
-        textViewNotes.setText(biblio.getNotes());
+        textViewPrice.setText(biblio.getPrice());
         // Fetch Image
         ImageFetcher imageFetcher = new ImageFetcher(context,
                 biblio.getIsbn(), imageView, textView);
@@ -100,8 +104,7 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
             resultSet.next();
             biblio.setAuthor(resultSet.getString(1));
             biblio.setTitle(resultSet.getString(2));
-            biblio.setNotes(resultSet.getString(3));
-            biblio.setCopyrightDate(resultSet.getString(4));
+            biblio.setCopyrightDate(resultSet.getString(3));
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -119,6 +122,15 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
         }
     }
 
+    private void parsePrice(ResultSet resultSet){
+        try{
+            resultSet.next();
+            biblio.setPrice("INR " + resultSet.getString(1));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     private void handleNullFieldsInBiblio(){
         String notAvailable = context.getResources().getString(R.string.not_available);
         if(biblio.getBiblioNumber() == null || biblio.getBiblioNumber().equals("")){
@@ -130,8 +142,8 @@ public class BiblioDataFetcher extends AsyncTask<Void, Void, Void> {
         if(biblio.getTitle() == null || biblio.getTitle().equals("")){
             biblio.setTitle(notAvailable);
         }
-        if(biblio.getNotes() == null || biblio.getNotes().equals("")){
-            biblio.setNotes(notAvailable);
+        if(biblio.getPrice() == null || biblio.getPrice().equals("")){
+            biblio.setPrice(notAvailable);
         }
         if(biblio.getCopyrightDate() == null || biblio.getCopyrightDate().equals("")){
             biblio.setCopyrightDate(notAvailable);

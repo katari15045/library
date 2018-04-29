@@ -47,7 +47,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Three Easy pieces, Operating Systems"
                 android:id="@+id/fragment_biblio_overview_textview_title"/>
 
             <View
@@ -67,7 +66,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bear Grylls, PK, David Miller"
                 android:id="@+id/fragment_biblio_overview_textview_author"/>
 
             <View
@@ -87,7 +85,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PK and associates"
                 android:id="@+id/fragment_biblio_overview_textview_publisher"/>
 
             <View
@@ -107,7 +104,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2001"
                 android:id="@+id/fragment_biblio_overview_textview_copyright_year"/>
 
             <View
@@ -127,7 +123,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="3 Ed"
                 android:id="@+id/fragment_biblio_overview_textview_edition"/>
 
             <View
@@ -147,7 +142,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="564"
                 android:id="@+id/fragment_biblio_overview_textview_pages"/>
 
             <View
@@ -167,7 +161,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="7358923625"
                 android:id="@+id/fragment_biblio_overview_textview_isbn"/>
 
             <View
@@ -180,15 +173,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/notes"
+                android:text="@string/price"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Man vs. Wild, also called Born Survivor: Bear Grylls."
-                android:id="@+id/fragment_biblio_overview_textview_notes"/>
+                android:id="@+id/fragment_biblio_overview_textview_price"/>
 
             <View
                 android:layout_width="match_parent"

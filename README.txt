@@ -23,6 +23,24 @@ To Do
 -> Top 9 UI Design Trends for Mobile Apps in 2018: https://medium.com/life-never-dead-and-gone/top-9-ui-design-trends-for-mobile-apps-in-2018-645993c802d4
 -> Change variable names to m<varName>
 
+useful data on Biblio
+---------------------
+items::price, datelastborrowed, datelastseen, notforloan, onloan
+issues::itemnumber, date_due, borrowernumber, issuedate
+borrowers::surname, firstname, email, dateexpiry
+
+Biblio Copies Fragment
+----------------------
+Total copies available (loan + not on loan) : select count(*) from items where biblionumber=6610;
+Total copies available for loan : select count(*) from items where biblionumber=6610 and onloan is NULL;
+Copies that can't be taken as loan : select count(*) from items where notforloan=1 and biblionumber=6610;
+Total Copies on loan : select count(*) from items where biblionumber=6610 and onloan is not NULL;
+
+Biblio Overview Fragment
+------------------------
+Price : select min(price) from items where biblionumber=6610; to select max(price) from items where biblionumber=6610;
+
+
 Resources Static Page
 ---------------------
 -> Resources Page

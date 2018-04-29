@@ -9,7 +9,7 @@ public class Biblio {
     private String biblioNumber = null;
     private String author = null;           // biblio::author
     private String title = null;            // biblio::title
-    private String notes = null;            // biblio::notes
+    private String price = null;            // items::price
     private String copyrightDate = null;    // biblio::copyrightdate
     private String isbn = null;             // biblioitems::isbn
     private String publisher = null;        // biblioitems::publishercode
@@ -40,12 +40,12 @@ public class Biblio {
         this.author = author;
     }
 
-    public String getNotes() {
-        return notes;
+    public String getPrice() {
+        return price;
     }
 
-    public void setNotes(String notes) {
-        this.notes = notes;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getCopyrightDate() {

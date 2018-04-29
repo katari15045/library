@@ -23,6 +23,9 @@ public class BiblioCopiesFragment extends Fragment{
             Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_biblio_copies, container, false);
         debug();
+        BiblioCopiesDataFetcher biblioCopiesDataFetcher = new BiblioCopiesDataFetcher(
+                view.getContext());
+        biblioCopiesDataFetcher.execute();
         return view;
     }
 
