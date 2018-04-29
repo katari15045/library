@@ -16,14 +16,15 @@ import android.view.WindowManager;
 
 public class Universal {
 
-    public static void initNavDrawer(Context context, Toolbar toolbar, DrawerLayout drawerLayout,
-                                     NavigationView navView){
+    public static void initNavDrawer(Context context, DrawerLayout drawerLayout){
         AppCompatActivity activity = (AppCompatActivity) context;
+        Toolbar toolbar = activity.findViewById(R.id.toolbar);
         activity.setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(activity, drawerLayout, toolbar,
                 R.string.open, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        NavigationView navView = activity.findViewById(R.id.nav_view);
         navView.setNavigationItemSelectedListener(new NavDrawerListener(activity));
     }
 

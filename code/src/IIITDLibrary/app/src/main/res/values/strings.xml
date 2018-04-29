@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IIITDLibrary</string>
+    <string name="app_name">IIITD Library</string>
     <string name="login">Login</string>
     <string name="quit">Quit</string>
     <string name="open">Open</string>

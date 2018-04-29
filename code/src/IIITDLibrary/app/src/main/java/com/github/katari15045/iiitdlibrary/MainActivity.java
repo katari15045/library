@@ -18,22 +18,18 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar = null;
     private DrawerLayout drawerLayout = null;
-    private NavigationView navView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         captureViews();
-        Universal.initNavDrawer(this, toolbar, drawerLayout, navView);
+        Universal.initNavDrawer(this, drawerLayout);
         Universal.initStatusCumNavBar(this);
     }
 
     private void captureViews(){
-        toolbar = findViewById(R.id.activity_main_toolbar);
         drawerLayout = findViewById(R.id.activity_main_drawer_layout);
-        navView = findViewById(R.id.activity_main_nav_view);
     }
 }
