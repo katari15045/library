@@ -6,4 +6,17 @@
     <string name="close">Close</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
+    <string name="debug_tag">Mars</string>
+    <string name="no_results">No Results!</string>
+    <string name="title">Title</string>
+    <string name="author">Author (s)</string>
+    <string name="publisher">Publisher</string>
+    <string name="copyright_year">Copyright Year</string>
+    <string name="edition">Edition</string>
+    <string name="pages">Pages</string>
+    <string name="isbn">ISBN</string>
+    <string name="notes">Notes</string>
+    <string name="not_available">Not Available</string>
+
+    <integer name="max_str_len">50</integer>
 </resources>

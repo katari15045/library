@@ -17,14 +17,18 @@ import android.widget.Toast;
 public class NavDrawerListener implements NavigationView.OnNavigationItemSelectedListener{
 
     private Context context = null;
+    private DrawerLayout drawerLayout = null;
+    private String debugTag = null;
 
-    public NavDrawerListener(Context context){
+    public NavDrawerListener(Context context, DrawerLayout drawerLayout){
         this.context = context;
+        this.drawerLayout = drawerLayout;
+        debugTag = context.getResources().getString(R.string.debug_tag);
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Log.d("Mars", "NavDrawerListener::clicked!");
+        Log.d(debugTag, "NavDrawerListener::clicked!");
         boolean ret = false;
         if(item.getItemId() == R.id.menu_nav_drawer_login){
             Toast.makeText(context, "Login", Toast.LENGTH_SHORT).show();
@@ -33,8 +37,6 @@ public class NavDrawerListener implements NavigationView.OnNavigationItemSelecte
             Toast.makeText(context, "Quit", Toast.LENGTH_SHORT).show();
             ret = true;
         }
-        DrawerLayout drawerLayout = ((AppCompatActivity)context).findViewById(
-                R.id.activity_main_drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
         return ret;
     }

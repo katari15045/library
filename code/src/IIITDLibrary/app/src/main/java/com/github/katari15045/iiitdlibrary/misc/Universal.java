@@ -1,4 +1,4 @@
-package com.github.katari15045.iiitdlibrary;
+package com.github.katari15045.iiitdlibrary.misc;
 
 import android.content.Context;
 import android.os.Build;
@@ -10,6 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.github.katari15045.iiitdlibrary.BottomNavViewListener;
+import com.github.katari15045.iiitdlibrary.NavDrawerListener;
+import com.github.katari15045.iiitdlibrary.R;
 
 /**
  * Created by Saketh Katari on 29-04-2018.
@@ -26,7 +30,7 @@ public class Universal {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navView = activity.findViewById(R.id.nav_view);
-        navView.setNavigationItemSelectedListener(new NavDrawerListener(activity));
+        navView.setNavigationItemSelectedListener(new NavDrawerListener(activity, drawerLayout));
     }
 
     public static void initBottomNavView(Context context){
