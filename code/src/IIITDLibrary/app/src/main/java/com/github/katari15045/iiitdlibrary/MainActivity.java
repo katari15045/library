@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
@@ -22,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("Mars", "MainActivity::onCreate()");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         captureViews();
         Universal.initNavDrawer(this, drawerLayout);
-        Universal.initStatusCumNavBar(this);
+        Universal.initBottomNavView(this);
+        Universal.initStatusBar(this);
     }
 
     private void captureViews(){

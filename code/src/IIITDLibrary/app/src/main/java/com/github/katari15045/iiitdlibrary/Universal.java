@@ -2,6 +2,7 @@ package com.github.katari15045.iiitdlibrary;
 
 import android.content.Context;
 import android.os.Build;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -28,13 +29,18 @@ public class Universal {
         navView.setNavigationItemSelectedListener(new NavDrawerListener(activity));
     }
 
-    public static void initStatusCumNavBar(Context context){
+    public static void initBottomNavView(Context context){
+        AppCompatActivity activity = (AppCompatActivity)context;
+        BottomNavigationView bottomNavigationView = activity.findViewById(R.id.bottom_nav_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavViewListener(context));
+    }
+
+    public static void initStatusBar(Context context){
         AppCompatActivity activity = (AppCompatActivity) context;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(activity.getResources().getColor(R.color.colorPrimaryDark));
-            window.setNavigationBarColor(activity.getResources().getColor(R.color.colorPrimary));
         }
     }
 }

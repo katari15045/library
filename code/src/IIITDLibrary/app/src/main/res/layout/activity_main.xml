@@ -13,21 +13,22 @@
         android:layout_height="match_parent">
 
         <include layout="@layout/toolbar"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="?attr/actionBarSize">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Music!!!"/>
-
-        </LinearLayout>
-
     </FrameLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music!!!"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/botom_nav_view"/>
+    <!--Should be the last child of the root-->
     <include layout="@layout/nav_view"/>
 
 </android.support.v4.widget.DrawerLayout>

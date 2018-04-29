@@ -6,6 +6,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class NavDrawerListener implements NavigationView.OnNavigationItemSelecte
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Log.d("Mars", "NavDrawerListener::clicked!");
         boolean ret = false;
         if(item.getItemId() == R.id.menu_nav_drawer_login){
             Toast.makeText(context, "Login", Toast.LENGTH_SHORT).show();
