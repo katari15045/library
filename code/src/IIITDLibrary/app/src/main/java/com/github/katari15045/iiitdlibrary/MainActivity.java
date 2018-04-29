@@ -18,61 +18,22 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Toolbar toolbar = null;
     private DrawerLayout drawerLayout = null;
+    private NavigationView navView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryDark));
-            window.setNavigationBarColor(getResources().getColor(R.color.colorPrimary));
-        }
-        Toolbar toolbar = findViewById(R.id.activity_main_toolbar);
-        setSupportActionBar(toolbar);
+        captureViews();
+        Universal.initNavDrawer(this, toolbar, drawerLayout, navView);
+        Universal.initStatusCumNavBar(this);
+    }
+
+    private void captureViews(){
+        toolbar = findViewById(R.id.activity_main_toolbar);
         drawerLayout = findViewById(R.id.activity_main_drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
-                R.string.open, R.string.close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-        NavigationView navigationView = findViewById(R.id.activity_main_nav_view);
-        navigationView.setNavigationItemSelectedListener(new NavDrawerListener(this));
-    }
-
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_main_drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
-}
-
-class NavDrawerListener implements NavigationView.OnNavigationItemSelectedListener{
-
-    private Context context = null;
-
-    public NavDrawerListener(Context context){
-        this.context = context;
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        boolean ret = false;
-        if(item.getItemId() == R.id.menu_nav_drawer_login){
-            Toast.makeText(context, "Login", Toast.LENGTH_SHORT).show();
-            ret = true;
-        }else if(item.getItemId() == R.id.menu_nav_drawer_quit){
-            Toast.makeText(context, "Quit", Toast.LENGTH_SHORT).show();
-            ret = true;
-        }
-        DrawerLayout drawerLayout = ((AppCompatActivity)context).findViewById(
-                R.id.activity_main_drawer_layout);
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return ret;
+        navView = findViewById(R.id.activity_main_nav_view);
     }
 }
