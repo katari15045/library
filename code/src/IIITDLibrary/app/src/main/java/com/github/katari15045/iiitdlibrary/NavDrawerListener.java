@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.github.katari15045.iiitdlibrary.home.HomeActivity;
 import com.github.katari15045.iiitdlibrary.login.LoginActivity;
+import com.github.katari15045.iiitdlibrary.startup.SplashScreenActivity;
 
 /**
  * Created by Saketh Katari on 29-04-2018.
@@ -50,6 +51,7 @@ public class NavDrawerListener implements NavigationView.OnNavigationItemSelecte
         }else if(item.getItemId() == R.id.menu_nav_drawer_quit){
             Log.d(debugTag, "Clicked on Quit");
             if(Build.VERSION.SDK_INT >= 16){
+                SplashScreenActivity.hasStarted = false;
                 ((AppCompatActivity)context).finishAffinity();
             }
             ret = true;

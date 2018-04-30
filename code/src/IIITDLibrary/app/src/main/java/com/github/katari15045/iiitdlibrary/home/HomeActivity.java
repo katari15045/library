@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.misc.Universal;
 import com.github.katari15045.iiitdlibrary.startup.NewArrivalsFetcher;
+import com.github.katari15045.iiitdlibrary.startup.SplashScreenActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -37,6 +38,7 @@ public class HomeActivity extends AppCompatActivity {
     public void onBackPressed() {
         Log.d(debugTag, "HomeActivity::BackButton");
         if(Build.VERSION.SDK_INT >= 16){
+            SplashScreenActivity.hasStarted = false;
             finishAffinity();
         }
     }
