@@ -8,6 +8,9 @@
     <string name="quit">Quit</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="discharge">Discharge</string>
+    <string name="suggestion">Suggestions</string>
+    <string name="messaging">Messaging</string>
     <string name="loading">Loading...</string>
     <string name="cant_connect">Can\'t Connect</string>
     <string name="home">Home</string>
@@ -42,6 +45,37 @@
     <string name="logged_in">Logged in successfully!</string>
     <string name="total_new_arrivals">10</string>
 
+    <!--Foo starts-->
+    <string name="text_home">Home</string>
+    <string name="text_search">Search</string>
+    <string name="text_profile">Profile</string>
+
+    <string name="text_about">About</string>
+    <string name="text_resources">Resources</string>
+    <string name="text_services">Services</string>
+    <string name="text_occupancy">Occupancy</string>
+    <string name="text_giving">Giving</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile_summary_text_fine">FINE</string>
+    <string name="profilel_spinner_text_action">Action"</string>
+    <string name="profile_update_changepassword_text_sumbit">SUBMIT REQUEST</string>
+
+    <string name="profile_summary_text_issued">Issued</string>
+    <string name="profile_summary_text_list">List</string>
+
+    <string name="profile_text_ask_for_a_discharge">Ask for a dishcharge</string>
+    <string name="profile_text_warning_details"><b>Warning:</b> This request is only valid if you are in good standing with the library. Once the application is made, you can not borrow library materials.</string>
+    <string name="profile_text_about_discharge">This document certifies that you have returned all borrowed items. It is sometimes asked during a file transfer from a school to another. The discharge is sent by us to your school. You will also find it available on your reader account.</string>
+    <string name="profile_text_discharge_question">What is a discharge?</string>
+
+    <string name="text_cancel">Cancel</string>
+    <string name="update_password_note">Your password must be at least 3 characters long.</string>
+    <string name="text_ok">OK</string>
+
+    <!--Foo ends-->
+
     <string name="command_isbn_from_biblio">select isbn from biblioitems where biblionumber=</string>
     <string name="command_recent_books">select isbn, biblionumber from biblioitems where isbn>999999999
         order by timestamp limit</string>
@@ -51,6 +85,4 @@
 
     <integer name="max_str_len">40</integer>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

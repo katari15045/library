@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id = "@+id/action_about"
+        android:enabled="true"
+        android:title = "@string/text_about"
+        app:showAsAction="never"
+        />
+    <item
+        android:id = "@+id/action_resources"
+        android:enabled="true"
+        android:title = "@string/text_resources"
+        app:showAsAction="never"/>
+    <item
+        android:id = "@+id/action_services"
+        android:enabled="true"
+        android:title = "@string/text_services"
+        app:showAsAction="never"
+        />
+    <item
+        android:id = "@+id/action_occupancy"
+        android:enabled="true"
+        android:title = "@string/text_occupancy"
+        app:showAsAction="never"/>
+    <item
+        android:id = "@+id/action_giving"
+        android:enabled="true"
+        android:title = "@string/text_giving"
+        app:showAsAction="never"
+        />
+
+
+</menu>

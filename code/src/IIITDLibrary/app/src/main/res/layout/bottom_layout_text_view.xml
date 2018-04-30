@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Library Opening Hours"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Mon-Fri 8:30 AM to 12 Midnight\nSat &amp; Breaks 8:30 AM to 6 PM\nDuring Exams-All days till 2 AM\n(including Saturdays &amp; Sundays)"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Issue/Return Hours: "
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="24sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Mon-Fri 9 AM to 9 PM\nSat &amp; Breaks 9 AM to 5:45 PM "/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "© IIIT-Delhi, 2013"
+                style = "@style/style_bottom_text_view"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Phone: +91-11-26907510"
+                style = "@style/style_bottom_text_view"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "FAX +91-11-26907405"
+                style = "@style/style_bottom_text_view"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "E-mail: library@iiitd.ac.in"
+                android:id = "@+id/email_text_view"
+                style = "@style/style_bottom_text_view"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

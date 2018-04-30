@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text = "Title"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:id = "@+id/purchase_suggestion_title"
+            />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+
+            android:layout_height="wrap_content"
+            android:text = "Author"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:id = "@+id/purchase_suggestion_author"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text = "Copyright date"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:id = "@+id/purchase_suggestion_copyrightdate"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text = "Standard Number"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:id = "@+id/purchase_suggestion_standardnumber"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text = "Publisher"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:id = "@+id/purchase_suggestion_publisher"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text = "Collection title"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:id = "@+id/purchase_suggestion_collectiontitle"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="4dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text = "Publication Place"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content"
+            android:id = "@+id/purchase_suggestion_publicationplace"
+            />
+    </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

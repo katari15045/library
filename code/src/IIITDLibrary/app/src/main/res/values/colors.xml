@@ -6,4 +6,8 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="gray">#FFC1BDBD</color>
+    <color name = "color_red">#F44336</color>
+    <color name = "color_lightblue">#BBDEFB</color>
+    <color name=  "color_lightgray">#E0E0E0</color>
+    <color name="but_color">#FFB74D</color>
 </resources>

@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.github.katari15045.iiitdlibrary.R;
+import com.github.katari15045.iiitdlibrary.Util.UsernameUtil;
 
 public class LoginListener implements View.OnClickListener{
 
@@ -20,6 +21,7 @@ public class LoginListener implements View.OnClickListener{
     public void onClick(View view) {
         username = LoginActivity.editTextUname.getText().toString();
         password = LoginActivity.editTextPass.getText().toString();
+        UsernameUtil.username = username;
         if(username.isEmpty()){
             Toast.makeText(context, context.getString(R.string.empty_username), Toast.LENGTH_LONG)
                     .show();

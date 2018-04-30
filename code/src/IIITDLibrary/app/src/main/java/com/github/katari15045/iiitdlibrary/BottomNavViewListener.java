@@ -42,7 +42,7 @@ public class BottomNavViewListener implements BottomNavigationView.OnNavigationI
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_login){
             Log.d(debugTab, "clicked on Login");
             if(LoginActivity.loggedIn){
-                activityClass = ProfileActivity.class;
+                activityClass = com.github.katari15045.iiitdlibrary.MainActivity.class;
             }else{
                 activityClass = LoginActivity.class;
             }

@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+   <Spinner
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       android:id = "@+id/profile_update_spinner"
+       android:prompt="@string/profilel_spinner_text_action"
+
+       />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <include layout="@layout/form_changepassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id = "@+id/profile_activity_update_password"/>
+
+
+        <include layout="@layout/form_profiledetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id = "@+id/profile_activity_update_profile"/>
+
+    </LinearLayout>
+</LinearLayout>
+</FrameLayout>

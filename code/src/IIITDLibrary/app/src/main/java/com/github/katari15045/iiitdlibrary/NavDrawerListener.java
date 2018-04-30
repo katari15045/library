@@ -55,6 +55,15 @@ public class NavDrawerListener implements NavigationView.OnNavigationItemSelecte
                 ((AppCompatActivity)context).finishAffinity();
             }
             ret = true;
+        }else if(item.getItemId() == R.id.menu_nav_drawer_discharge){
+            activityClass = AskForDischargeActivity.class;
+            ret = true;
+        } else if(item.getItemId() == R.id.menu_nav_drawer_suggestion){
+            activityClass = SuggestionActivity.class;
+            ret = true;
+        }else if(item.getItemId() == R.id.menu_nav_drawer_message){
+            activityClass = MessagingActivity.class;
+            ret = true;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         if(activityClass != null){

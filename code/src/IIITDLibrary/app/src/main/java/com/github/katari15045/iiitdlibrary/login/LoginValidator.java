@@ -3,16 +3,12 @@ package com.github.katari15045.iiitdlibrary.login;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.github.katari15045.iiitdlibrary.MainActivity;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.misc.Universal;
-import com.github.katari15045.iiitdlibrary.profile.ProfileActivity;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -93,7 +89,7 @@ public class LoginValidator extends AsyncTask<Void, Void, Void> {
                     show();
             LoginActivity.loggedIn = true;
             Universal.postLogin(context);
-            Intent intent = new Intent(context, ProfileActivity.class);
+            Intent intent = new Intent(context, MainActivity.class);
             context.startActivity(intent);
         }else{
             Toast.makeText(context, context.getString(R.string.invallid_details),
