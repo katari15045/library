@@ -1,5 +1,8 @@
 To Do
 -----
+-> Handle the case where there's no internet
+-> Activity Titles
+-> Beware of SQLInjections, use prepared statements
 -> User should be able to keep a book on hold/checkout etc.
 -> Login with library credentials + Google Login
 -> preserve scroll position
@@ -22,6 +25,20 @@ To Do
 -> Latest GUIs : https://medium.com/@mmbialas/30-new-android-libraries-and-projects-released-in-summer-2017-which-should-catch-your-attention-d3702bd9bdc6
 -> Top 9 UI Design Trends for Mobile Apps in 2018: https://medium.com/life-never-dead-and-gone/top-9-ui-design-trends-for-mobile-apps-in-2018-645993c802d4
 -> Change variable names to m<varName>
+
+Successful Login
+----------------
+-> welcome
+-> hello
+-> logout
+-> click here if you're not
+-> change your password
+-> your fines
+-> Your library home
+
+Unsuccessful Login
+------------------
+-> above 6 strings are missing
 
 useful data on Biblio
 ---------------------

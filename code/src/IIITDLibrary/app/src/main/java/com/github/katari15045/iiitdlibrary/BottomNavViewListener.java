@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.github.katari15045.iiitdlibrary.login.LoginActivity;
+import com.github.katari15045.iiitdlibrary.profile.ProfileActivity;
 import com.github.katari15045.iiitdlibrary.search.SearchActivity;
 
 /**
@@ -29,20 +31,28 @@ public class BottomNavViewListener implements BottomNavigationView.OnNavigationI
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Log.d(debugTab, "BottomNavViewListener::clicked!");
         Object activityClass = null;
+        boolean retVal = false;
         if(item.getItemId() == R.id.menu_bottom_nav_bar_home){
-            Toast.makeText(context, "home", Toast.LENGTH_SHORT).show();
-            return true;
+            Log.d(debugTab, "clicked on Home");
+            activityClass = MainActivity.class;
+            retVal = true;
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_search){
-            activityClass = SearchActivity.class;
             Log.d(debugTab, "clicked on Search");
+            activityClass = SearchActivity.class;
+            retVal = true;
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_login){
-            Toast.makeText(context, "login", Toast.LENGTH_SHORT).show();
-            return true;
+            Log.d(debugTab, "clicked on Login");
+            if(LoginActivity.loggedIn){
+                activityClass = ProfileActivity.class;
+            }else{
+                activityClass = LoginActivity.class;
+            }
+            retVal = true;
         }
         if(activityClass != null){
             Intent intent = new Intent(context, (Class<?>) activityClass);
             context.startActivity(intent);
         }
-        return false;
+        return retVal;
     }
 }

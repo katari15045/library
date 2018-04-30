@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">IIITD Library</string>
     <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="profile">Profile</string>
     <string name="quit">Quit</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
@@ -23,7 +25,15 @@
     <string name="copies_available_for_loan">Available for Loan</string>
     <string name="copies_taken_for_loan">Taken for Loan</string>
     <string name="copies_no_loan">Can\'t be taken for loan</string>
-    
+    <string name="_ends_with_iiitd">\@iiitd.ac.in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="empty_username">Username can\'t be empty</string>
+    <string name="empty_password">Password can\'t be empty</string>
+    <string name="invallid_details">Invalid Details!</string>
+    <string name="logged_out">Logged out successfully!</string>
+    <string name="logged_in">Logged in successfully!</string>
+
     <string name="image_fetcher_api">https://www.googleapis.com/books/v1/volumes?country=IN&amp;key=AIzaSyDHlwmWnQVDDh-QVDE19aIu0WK7UEU7HWc&amp;q=ISBN:</string>
 
     <integer name="max_str_len">40</integer>
