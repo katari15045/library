@@ -39,8 +39,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:textStyle="bold"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center"
@@ -53,7 +54,8 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginVertical="10dp"
                             android:textStyle="bold"
                             android:textColor="@color/colorPrimary"
@@ -68,8 +70,9 @@
                         android:layout_columnSpan="2">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:textStyle="bold"
                             android:textColor="@color/colorPrimary"
                             android:gravity="center"
@@ -83,7 +86,8 @@
                         android:layout_rowSpan="3">
                         <TextView
                             android:layout_height="match_parent"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:textColor="@color/black"
                             android:gravity="center"
                             android:text="3rd"/>
@@ -95,8 +99,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="L31 area"/>
@@ -108,8 +113,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="55"/>
@@ -122,7 +128,8 @@
                         android:layout_rowSpan="3">
                         <TextView
                             android:layout_height="match_parent"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="125"/>
@@ -134,8 +141,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="L32 area"/>
@@ -147,8 +155,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="35"/>
@@ -160,8 +169,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="L33 area"/>
@@ -173,7 +183,8 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginVertical="10dp"
                             android:gravity="center"
                             android:textColor="@color/black"
@@ -186,8 +197,9 @@
                         android:layout_columnWeight="1"
                         android:layout_rowSpan="6">
                         <TextView
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="2nd"/>
@@ -199,8 +211,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Inside L21"/>
@@ -212,8 +225,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="35"/>
@@ -225,8 +239,9 @@
                         android:layout_columnWeight="1"
                         android:layout_rowSpan="6">
                         <TextView
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="195"/>
@@ -238,8 +253,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Inside L22"/>
@@ -251,8 +267,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="35"/>
@@ -264,8 +281,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Inside L23"/>
@@ -277,8 +295,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="35"/>
@@ -290,8 +309,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Near L21 in Gallery"/>
@@ -303,10 +323,11 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
                             android:gravity="center"
                             android:textColor="@color/black"
+                            android:layout_gravity="center"
                             android:text="50"/>
                     </android.support.v7.widget.CardView>
 
@@ -316,10 +337,11 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
                             android:gravity="center"
                             android:textColor="@color/black"
+                            android:layout_gravity="center"
                             android:text="Near L22 in Gallery"/>
                     </android.support.v7.widget.CardView>
 
@@ -329,10 +351,11 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
                             android:gravity="center"
                             android:textColor="@color/black"
+                            android:layout_gravity="center"
                             android:text="20"/>
                     </android.support.v7.widget.CardView>
 
@@ -342,8 +365,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Near L21 in Gallery"/>
@@ -355,8 +379,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="20"/>
@@ -368,8 +393,9 @@
                         android:layout_columnWeight="1"
                         android:layout_rowSpan="3">
                         <TextView
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="1st"/>
@@ -381,8 +407,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Reading Room 1"/>
@@ -394,8 +421,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="40"/>
@@ -407,9 +435,10 @@
                         android:layout_columnWeight="1"
                         android:layout_rowSpan="3">
                         <TextView
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="85"/>
@@ -421,8 +450,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Reading Room 2"/>
@@ -434,8 +464,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="20"/>
@@ -447,8 +478,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Reading Room 3"/>
@@ -460,8 +492,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="25"/>
@@ -473,8 +506,9 @@
                         android:layout_columnWeight="1"
                         android:layout_rowSpan="3">
                         <TextView
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Ground"/>
@@ -486,8 +520,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Near Entrance"/>
@@ -499,8 +534,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="45"/>
@@ -512,8 +548,9 @@
                         android:layout_columnWeight="1"
                         android:layout_rowSpan="3">
                         <TextView
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginVertical="10dp"
                             android:gravity="center"
                             android:textColor="@color/black"
@@ -526,8 +563,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Near center"/>
@@ -539,8 +577,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="55"/>
@@ -552,8 +591,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="Opposite to entrance"/>
@@ -565,8 +605,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="55"/>
@@ -579,8 +620,9 @@
                         android:layout_columnSpan="2">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/colorPrimary"
                             android:textStyle="bold"
@@ -594,8 +636,9 @@
                         android:layout_columnWeight="1">
                         <TextView
                             android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_marginVertical="10dp"
+                            android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/black"
                             android:text="560"/>
@@ -606,7 +649,6 @@
             </LinearLayout>
 
         </ScrollView>
-
 
         <include layout="@layout/toolbar"/>
     </FrameLayout>

@@ -13,14 +13,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.github.katari15045.iiitdlibrary.BottomNavViewListener;
 import com.github.katari15045.iiitdlibrary.NavDrawerListener;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.login.LoginActivity;
-import com.github.katari15045.iiitdlibrary.login.LoginValidator;
-import com.github.katari15045.iiitdlibrary.staticScreens.AboutActivity;
+import com.github.katari15045.iiitdlibrary.staticScreens.TimingsActivity;
 import com.github.katari15045.iiitdlibrary.staticScreens.OccupancyActivity;
 
 /**
@@ -32,8 +30,8 @@ public class Universal {
     public static void optionsMenuInit(Context context, Menu menu){
         AppCompatActivity activity = (AppCompatActivity)context;
         activity.getMenuInflater().inflate(R.menu.options_menu, menu);
-        if(context.getClass() == AboutActivity.class){
-            menu.findItem(R.id.menu_options_about).setVisible(false);
+        if(context.getClass() == TimingsActivity.class){
+            menu.findItem(R.id.menu_options_timings).setVisible(false);
         }else if(context.getClass() == OccupancyActivity.class){
             menu.findItem(R.id.menu_options_occupancy).setVisible(false);
         }
@@ -41,8 +39,8 @@ public class Universal {
 
     public static void optionsMenuListener(Context context, MenuItem item){
         Object activityClass = null;
-        if(item.getItemId() == R.id.menu_options_about){
-            activityClass = AboutActivity.class;
+        if(item.getItemId() == R.id.menu_options_timings){
+            activityClass = TimingsActivity.class;
         }else if(item.getItemId() == R.id.menu_options_occupancy){
             activityClass = OccupancyActivity.class;
         }

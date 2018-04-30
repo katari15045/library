@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.misc.Universal;
 
-public class AboutActivity extends AppCompatActivity {
+public class TimingsActivity extends AppCompatActivity {
 
     private String debugTag = null;
     private DrawerLayout drawerLayout = null;
@@ -18,9 +18,9 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_timings);
         debugTag = getResources().getString(R.string.debug_tag);
-        Log.d(debugTag, "AboutActivity::onCreate()");
+        Log.d(debugTag, "TimingsActivity::onCreate()");
         captureViews();
         Universal.initNavDrawer(this, drawerLayout);
         Universal.initBottomNavView(this);
@@ -28,13 +28,13 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void captureViews(){
-        drawerLayout = findViewById(R.id.activity_about_drawer_layout);
+        drawerLayout = findViewById(R.id.activity_timings_drawer_layout);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        getSupportActionBar().setTitle(R.string.about);
+        getSupportActionBar().setTitle(R.string.timings);
     }
 
     @Override
