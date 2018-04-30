@@ -6,6 +6,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,6 +47,18 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         }
         getSupportActionBar().setTitle(R.string.login);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        Universal.optionsMenuInit(this, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Universal.optionsMenuListener(this, item);
+        return true;
     }
 
     private void captureViews(){

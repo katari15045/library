@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -45,6 +47,18 @@ public class SearchActivity extends AppCompatActivity {
             addRecyclerView(this);
         }
         getSupportActionBar().setTitle(R.string.search);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        Universal.optionsMenuInit(this, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Universal.optionsMenuListener(this, item);
+        return true;
     }
 
     public static void addRecyclerView(Context context){

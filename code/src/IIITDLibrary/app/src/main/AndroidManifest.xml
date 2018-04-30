@@ -21,7 +21,9 @@
         <activity android:name=".search.SearchActivity" />
         <activity android:name=".biblio.BiblioActivity" />
         <activity android:name=".login.LoginActivity" />
-        <activity android:name=".profile.ProfileActivity"></activity>
+        <activity android:name=".profile.ProfileActivity" />
+        <activity android:name=".staticScreens.AboutActivity" />
+        <activity android:name=".staticScreens.OccupancyActivity"></activity>
     </application>
 
 </manifest>

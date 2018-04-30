@@ -1,6 +1,7 @@
 package com.github.katari15045.iiitdlibrary.misc;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -8,20 +9,48 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.github.katari15045.iiitdlibrary.BottomNavViewListener;
 import com.github.katari15045.iiitdlibrary.NavDrawerListener;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.login.LoginActivity;
 import com.github.katari15045.iiitdlibrary.login.LoginValidator;
+import com.github.katari15045.iiitdlibrary.staticScreens.AboutActivity;
+import com.github.katari15045.iiitdlibrary.staticScreens.OccupancyActivity;
 
 /**
  * Created by Saketh Katari on 29-04-2018.
  */
 
 public class Universal {
+
+    public static void optionsMenuInit(Context context, Menu menu){
+        AppCompatActivity activity = (AppCompatActivity)context;
+        activity.getMenuInflater().inflate(R.menu.options_menu, menu);
+        if(context.getClass() == AboutActivity.class){
+            menu.findItem(R.id.menu_options_about).setVisible(false);
+        }else if(context.getClass() == OccupancyActivity.class){
+            menu.findItem(R.id.menu_options_occupancy).setVisible(false);
+        }
+    }
+
+    public static void optionsMenuListener(Context context, MenuItem item){
+        Object activityClass = null;
+        if(item.getItemId() == R.id.menu_options_about){
+            activityClass = AboutActivity.class;
+        }else if(item.getItemId() == R.id.menu_options_occupancy){
+            activityClass = OccupancyActivity.class;
+        }
+        if(activityClass != null){
+            Intent intent = new Intent(context, (Class<?>)activityClass);
+            context.startActivity(intent);
+        }
+    }
 
     public static void initNavDrawer(Context context, DrawerLayout drawerLayout){
         AppCompatActivity activity = (AppCompatActivity) context;
