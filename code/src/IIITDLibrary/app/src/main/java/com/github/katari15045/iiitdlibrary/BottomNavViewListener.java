@@ -4,11 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import com.github.katari15045.iiitdlibrary.home.HomeActivity;
 import com.github.katari15045.iiitdlibrary.login.LoginActivity;
 import com.github.katari15045.iiitdlibrary.profile.ProfileActivity;
 import com.github.katari15045.iiitdlibrary.search.SearchActivity;
@@ -34,7 +33,7 @@ public class BottomNavViewListener implements BottomNavigationView.OnNavigationI
         boolean retVal = false;
         if(item.getItemId() == R.id.menu_bottom_nav_bar_home){
             Log.d(debugTab, "clicked on Home");
-            activityClass = MainActivity.class;
+            activityClass = HomeActivity.class;
             retVal = true;
         }else if(item.getItemId() == R.id.menu_bottom_nav_bar_search){
             Log.d(debugTab, "clicked on Search");

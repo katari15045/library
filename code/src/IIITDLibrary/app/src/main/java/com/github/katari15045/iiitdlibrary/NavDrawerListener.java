@@ -12,8 +12,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.github.katari15045.iiitdlibrary.home.HomeActivity;
 import com.github.katari15045.iiitdlibrary.login.LoginActivity;
-import com.github.katari15045.iiitdlibrary.profile.ProfileActivity;
 
 /**
  * Created by Saketh Katari on 29-04-2018.
@@ -39,7 +39,7 @@ public class NavDrawerListener implements NavigationView.OnNavigationItemSelecte
         if(item.getItemId() == R.id.menu_nav_drawer_login){
             Log.d(debugTag, "Clicked on Login");
             if(LoginActivity.loggedIn){
-                activityClass = MainActivity.class;
+                activityClass = HomeActivity.class;
                 LoginActivity.loggedIn = false;
                 Toast.makeText(context, context.getString(R.string.logged_out), Toast.LENGTH_SHORT)
                         .show();

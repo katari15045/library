@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">IIITD Library</string>
+    <string name="library">Library</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
     <string name="profile">Profile</string>
@@ -7,8 +8,11 @@
     <string name="quit">Quit</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="loading">Loading...</string>
+    <string name="cant_connect">Can\'t Connect</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
+    <string name="new_arrivals">New Arrivals</string>
     <string name="timings">Timings</string>
     <string name="occupancy">Occupancy</string>
     <string name="debug_tag">Mars</string>
@@ -36,8 +40,14 @@
     <string name="invallid_details">Invalid Details!</string>
     <string name="logged_out">Logged out successfully!</string>
     <string name="logged_in">Logged in successfully!</string>
+    <string name="total_new_arrivals">10</string>
 
+    <string name="command_isbn_from_biblio">select isbn from biblioitems where biblionumber=</string>
+    <string name="command_recent_books">select isbn, biblionumber from biblioitems where isbn>999999999
+        order by timestamp limit</string>
     <string name="image_fetcher_api">https://www.googleapis.com/books/v1/volumes?country=IN&amp;key=AIzaSyDHlwmWnQVDDh-QVDE19aIu0WK7UEU7HWc&amp;q=ISBN:</string>
+    <string name="alert_dialog_cant_connect_text_view_title_db">Can\'t connect to the Database; Make sure you are connected to the Internet.</string>
+    <string name="alert_dialog_retry_title">Retry</string>
 
     <integer name="max_str_len">40</integer>
 

@@ -59,7 +59,7 @@ public class Universal {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navView = activity.findViewById(R.id.nav_view);
-        navView.setNavigationItemSelectedListener(new NavDrawerListener(activity, drawerLayout));
+        navView.setNavigationItemSelectedListener(new NavDrawerListener(context, drawerLayout));
         if(LoginActivity.loggedIn){
             postLoginNavDrawer(context);
         }
