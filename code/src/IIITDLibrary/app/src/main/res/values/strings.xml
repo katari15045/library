@@ -3,6 +3,7 @@
     <string name="login">Login</string>
     <string name="logout">Logout</string>
     <string name="profile">Profile</string>
+    <string name="book">Book</string>
     <string name="quit">Quit</string>
     <string name="open">Open</string>
     <string name="close">Close</string>

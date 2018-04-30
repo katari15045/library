@@ -1,12 +1,12 @@
 To Do
 -----
+-> Display progress bar while fetching data from DB
 -> Handle the case where there's no internet
 -> Activity Titles
 -> Beware of SQLInjections, use prepared statements
 -> User should be able to keep a book on hold/checkout etc.
 -> Login with library credentials + Google Login
 -> preserve scroll position
--> Display progress bar while fetching data from DB
 -> don't hardcode strings in fragment_occupancy.xml
 -> use string-array in strings.xml for e-resources in home etc
 -> Make e-resources in home point to eResources Fragment

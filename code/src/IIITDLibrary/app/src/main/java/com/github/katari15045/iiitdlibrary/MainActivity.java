@@ -24,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
         Universal.initStatusBar(this);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getSupportActionBar().setTitle(R.string.app_name);
+    }
+
     private void captureViews(){
         drawerLayout = findViewById(R.id.activity_main_drawer_layout);
     }

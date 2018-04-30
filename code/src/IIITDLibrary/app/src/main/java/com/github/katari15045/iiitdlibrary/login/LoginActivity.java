@@ -33,6 +33,12 @@ public class LoginActivity extends AppCompatActivity {
         Universal.initStatusBar(this);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getSupportActionBar().setTitle(R.string.login);
+    }
+
     private void captureViews(){
         drawerLayout = findViewById(R.id.activity_login_drawer_layout);
         editTextUname = findViewById(R.id.activity_login_edittext_username);

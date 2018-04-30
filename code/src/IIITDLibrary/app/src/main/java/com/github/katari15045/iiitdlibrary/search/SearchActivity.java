@@ -44,6 +44,7 @@ public class SearchActivity extends AppCompatActivity {
         if(SearchActivity.resultsFetched){
             addRecyclerView(this);
         }
+        getSupportActionBar().setTitle(R.string.search);
     }
 
     public static void addRecyclerView(Context context){

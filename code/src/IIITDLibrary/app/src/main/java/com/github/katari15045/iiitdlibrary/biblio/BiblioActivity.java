@@ -31,6 +31,12 @@ public class BiblioActivity extends AppCompatActivity {
         addFrags();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getSupportActionBar().setTitle(R.string.book);
+    }
+
     private void addFrags(){
         fragAdapter = new BiblioFragAdapter(getSupportFragmentManager());
         fragAdapter.addFragment(new BiblioOverviewFragment(), getResources().getString
