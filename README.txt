@@ -1,5 +1,6 @@
 To Do
 -----
+-> In Overview Fragment of Biblio, don't fetch the data every time you rotate the screen.
 -> Display progress bar while fetching data from DB
 -> Handle the case where there's no internet
 -> Activity Titles

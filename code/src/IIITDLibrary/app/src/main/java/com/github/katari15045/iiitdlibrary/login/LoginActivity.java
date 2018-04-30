@@ -1,6 +1,7 @@
 package com.github.katari15045.iiitdlibrary.login;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.github.katari15045.iiitdlibrary.MainActivity;
 import com.github.katari15045.iiitdlibrary.R;
 import com.github.katari15045.iiitdlibrary.misc.Universal;
 
@@ -35,7 +37,13 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        Log.d(debugTag, "LoginActivity::onResume()");
         super.onResume();
+        if(loggedIn){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
         getSupportActionBar().setTitle(R.string.login);
     }
 
