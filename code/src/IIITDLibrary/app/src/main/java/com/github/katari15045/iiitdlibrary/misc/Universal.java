@@ -62,6 +62,10 @@ public class Universal {
         navView.setNavigationItemSelectedListener(new NavDrawerListener(context, drawerLayout));
         if(LoginActivity.loggedIn){
             postLoginNavDrawer(context);
+        }else{
+            navView.getMenu().findItem(R.id.menu_nav_drawer_discharge).setVisible(false);
+            navView.getMenu().findItem(R.id.menu_nav_drawer_message).setVisible(false);
+            navView.getMenu().findItem(R.id.menu_nav_drawer_suggestion).setVisible(false);
         }
     }
 
