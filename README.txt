@@ -1,6 +1,6 @@
 Documentation: https://docs.google.com/document/d/1KU-T0CHd0P6km-gEMZzrxE97QnGpBg-sh6wl-Mtt54Q/edit?usp=sharing
 
-How to improve this Androi app?
+How to improve this Android application?
 -> In Overview Fragment of Biblio, don't fetch the data every time you rotate the screen.
 -> Display progress bar while fetching data from DB
 -> Handle the case where there's no internet
